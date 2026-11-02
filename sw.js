@@ -9,8 +9,8 @@ self.addEventListener("fetch", e => {
   const url = new URL(e.request.url);
   if (e.request.method !== "GET") return;
   if (url.hostname.endsWith("supabase.co")) return;                       // données du foyer : toujours en direct
-  if (url.origin === location.origin) {                                     // coquille : réseau d'abord, cache en secours
-    e.respondWith(fetch(e.request).then(r => { const copy = r.clone(); caches.open(VERSION).then(c => c.put(e.request, copy)); return r; })
+  if (url.origin === location.origin) {                                     // coquille : réseau d'abord (revalidé, jamais le cache HTTP périmé), cache en secours
+    e.respondWith(fetch(url.href, { cache: "no-cache", credentials: "same-origin" }).then(r => { const copy = r.clone(); caches.open(VERSION).then(c => c.put(e.request, copy)); return r; })
       .catch(() => caches.match(e.request).then(r => r || caches.match("./index.html"))));
     return;
   }
