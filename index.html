@@ -316,6 +316,8 @@ function actionPartage(a){
   if(a==="partage-copier"){ var ta=document.getElementById("codePartage"); ta.select(); try{ navigator.clipboard.writeText(ta.value); }catch(e){ document.execCommand("copy"); } toast("Code copié. Colle-le sur l'autre appareil."); }
   if(a==="partage-quitter"){ localStorage.removeItem(LS+"partage"); toast("Cet appareil ne partage plus. Rechargement…"); setTimeout(function(){ location.reload(); },800); }
 }
+/* lien d'invitation : https://…/tablee/#rejoindre=CODE relie l'appareil au foyer en un clic */
+(function(){ var m=/^#rejoindre=([A-Za-z0-9+\/_=-]+)/.exec(location.hash||""); if(!m) return; var cfg=lireCodePartage(decodeURIComponent(m[1])); try{ history.replaceState(null,"",location.pathname+location.search); }catch(e){} if(cfg){ lsSet("partage",cfg); window.__rejoint=true; } })();
 window.__partage={codePartage:codePartage,lireCodePartage:lireCodePartage};
 /* ====================== mise à jour de l'application ====================== */
 if("serviceWorker" in navigator && location.protocol!=="file:"){ window.addEventListener("load",function(){ navigator.serviceWorker.register("sw.js").then(function(reg){
