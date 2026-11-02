@@ -1,0 +1,569 @@
+{
+  "version": 1,
+  "note": "Quantités par personne, dans l'unité du catalogue (ingredients.json). Les étapes portent une durée en secondes quand un minuteur a du sens.",
+  "recettes": [
+
+    {"id": "jp-saumon-teriyaki", "nom": "Saumon teriyaki maison, riz complet, brocoli et edamame", "cuisine": "Japon", "continent": "Asie",
+     "creneau": ["soir"], "profil": ["sain", "perte", "muscle"], "temps_actif": 25, "temps_total": 45, "difficulte": 1, "tags": ["rapide"],
+     "proteine": "poisson", "feculent": "riz", "sante": 92, "pourquoi": "Poisson gras riche en oméga-3, riz complet, deux légumes verts, sauce maison sans sucre caché.",
+     "ingredients": [
+       {"ing": "saumon-pave", "qte": 1, "unite": "piece"},
+       {"ing": "riz-complet", "qte": 60, "unite": "g"},
+       {"ing": "brocoli", "qte": 125, "unite": "g"},
+       {"ing": "edamame-surgele", "qte": 50, "unite": "g"},
+       {"ing": "sauce-soja", "qte": 15, "unite": "ml", "groupe": "sauce"},
+       {"ing": "miel", "qte": 4, "unite": "g", "groupe": "sauce"},
+       {"ing": "vinaigre-riz", "qte": 4, "unite": "ml", "groupe": "sauce"},
+       {"ing": "gingembre-frais", "qte": 5, "unite": "g", "groupe": "sauce", "prep": "râpé"},
+       {"ing": "ail", "qte": 0.25, "unite": "piece", "groupe": "sauce"},
+       {"ing": "maizena", "qte": 1, "unite": "g", "groupe": "sauce"},
+       {"ing": "graine-sesame", "qte": 2, "unite": "g"},
+       {"ing": "oignon-nouveau", "qte": 0.1, "unite": "botte", "prep": "émincés"}
+     ],
+     "etapes": [
+       {"texte": "Lancer le riz complet dans 2,5 fois son volume d'eau.", "duree": 2400, "type": "attente"},
+       {"texte": "Chauffer soja, miel, vinaigre, gingembre et ail 2 min, ajouter la maïzena délayée dans un peu d'eau, laisser épaissir 1 min.", "duree": 180, "type": "actif"},
+       {"texte": "Brocoli en fleurettes 5 min à la vapeur. Edamame 3 min dans l'eau bouillante.", "duree": 300, "type": "attente"},
+       {"texte": "Poêle bien chaude, 1 c. à c. d'huile : saumon côté peau 4 min, retourner 2 min, verser la sauce et laquer 1 min.", "duree": 420, "type": "actif"},
+       {"texte": "Servir riz, saumon nappé, brocoli et edamame, sésame et oignons nouveaux dessus.", "type": "actif"}
+     ]},
+
+    {"id": "mx-tacos-dinde", "nom": "Tacos de dinde épicée, pico de gallo, haricots noirs", "cuisine": "Mexique", "continent": "Amérique",
+     "creneau": ["soir"], "profil": ["sain", "perte", "muscle"], "temps_actif": 30, "temps_total": 35, "difficulte": 1, "tags": ["rapide"],
+     "proteine": "dinde", "feculent": "tortilla", "sante": 82, "pourquoi": "Viande maigre, légumineuses, crudités, et le yaourt remplace la crème.",
+     "ingredients": [
+       {"ing": "emince-dinde", "qte": 125, "unite": "g"},
+       {"ing": "oignon-jaune", "qte": 0.25, "unite": "piece", "prep": "émincé"},
+       {"ing": "poivron-rouge", "qte": 0.25, "unite": "piece", "prep": "en lanières"},
+       {"ing": "ail", "qte": 0.5, "unite": "piece"},
+       {"ing": "paprika-fume", "qte": 1, "unite": "g"},
+       {"ing": "cumin-moulu", "qte": 1, "unite": "g"},
+       {"ing": "origan-seche", "qte": 0.5, "unite": "g"},
+       {"ing": "haricot-noir-boite", "qte": 60, "unite": "g"},
+       {"ing": "tortilla-mais", "qte": 2.5, "unite": "piece"},
+       {"ing": "tomate", "qte": 1, "unite": "piece", "groupe": "pico de gallo", "prep": "en petits dés"},
+       {"ing": "oignon-rouge", "qte": 0.25, "unite": "piece", "groupe": "pico de gallo"},
+       {"ing": "coriandre-fraiche", "qte": 0.25, "unite": "botte", "groupe": "pico de gallo"},
+       {"ing": "citron-vert", "qte": 0.5, "unite": "piece", "groupe": "pico de gallo"},
+       {"ing": "laitue", "qte": 0.25, "unite": "piece", "prep": "ciselée"},
+       {"ing": "avocat", "qte": 0.25, "unite": "piece"},
+       {"ing": "yaourt-grec-0", "qte": 15, "unite": "g"}
+     ],
+     "etapes": [
+       {"texte": "Pico de gallo : tomates, oignon rouge en petits dés, coriandre ciselée, jus de citron vert, sel. Laisser reposer.", "type": "actif"},
+       {"texte": "Dinde en lanières, mélangée aux épices, sel, poivre et un filet de citron vert.", "type": "actif"},
+       {"texte": "Poêle chaude, 1 c. à s. d'huile : oignon et poivron 4 min, puis ail et dinde 6 à 7 min à feu vif.", "duree": 660, "type": "actif"},
+       {"texte": "Haricots noirs rincés, chauffés 3 min avec une pincée de cumin et 3 c. à s. d'eau.", "duree": 180, "type": "attente"},
+       {"texte": "Tortillas 30 s par face dans une poêle sèche. Chacun garnit : laitue, dinde, haricots, pico, avocat, yaourt.", "type": "actif"}
+     ]},
+
+    {"id": "in-dahl-corail", "nom": "Dahl de lentilles corail aux épinards, riz basmati, raïta", "cuisine": "Inde", "continent": "Asie",
+     "creneau": ["soir", "midi"], "profil": ["sain", "perte", "vege"], "temps_actif": 20, "temps_total": 35, "difficulte": 1, "tags": ["rechauffe", "hiver", "batch"],
+     "proteine": "vege", "feculent": "riz", "sante": 90, "pourquoi": "Légumineuses, épinards, épices, lait de coco allégé : complet et rassasiant pour pas cher.",
+     "ingredients": [
+       {"ing": "lentille-corail", "qte": 80, "unite": "g"},
+       {"ing": "oignon-jaune", "qte": 0.25, "unite": "piece", "prep": "émincé"},
+       {"ing": "ail", "qte": 0.5, "unite": "piece"},
+       {"ing": "gingembre-frais", "qte": 5, "unite": "g", "prep": "râpé"},
+       {"ing": "tomate-concassee", "qte": 100, "unite": "g"},
+       {"ing": "lait-coco-allege", "qte": 100, "unite": "ml"},
+       {"ing": "epinard-frais", "qte": 75, "unite": "g"},
+       {"ing": "curcuma", "qte": 1, "unite": "g"},
+       {"ing": "cumin-moulu", "qte": 1, "unite": "g"},
+       {"ing": "coriandre-moulue", "qte": 1, "unite": "g"},
+       {"ing": "garam-masala", "qte": 0.5, "unite": "g"},
+       {"ing": "riz-basmati", "qte": 60, "unite": "g"},
+       {"ing": "concombre", "qte": 0.25, "unite": "piece", "groupe": "raïta", "prep": "râpé et pressé"},
+       {"ing": "yaourt-grec-0", "qte": 75, "unite": "g", "groupe": "raïta"},
+       {"ing": "menthe-fraiche", "qte": 0.1, "unite": "botte", "groupe": "raïta"},
+       {"ing": "citron", "qte": 0.25, "unite": "piece"}
+     ],
+     "etapes": [
+       {"texte": "Rincer les lentilles. Lancer le riz basmati : 12 min dans 1,5 fois son volume d'eau.", "duree": 720, "type": "attente"},
+       {"texte": "Casserole, 1 c. à s. d'huile : oignon 4 min, ail et gingembre 1 min, épices 30 s.", "duree": 330, "type": "actif"},
+       {"texte": "Ajouter lentilles, tomates, lait de coco et 500 ml d'eau pour 4. Mijoter 18 à 20 min en remuant. Saler.", "duree": 1140, "type": "attente"},
+       {"texte": "Épinards les 3 dernières minutes. Jus de citron au moment de servir.", "duree": 180, "type": "attente"},
+       {"texte": "Raïta : concombre râpé et pressé, yaourt, menthe ciselée, cumin, sel.", "type": "actif"}
+     ]},
+
+    {"id": "it-spaghetti-crevettes", "nom": "Spaghetti complets aux crevettes, ail, citron et roquette", "cuisine": "Italie", "continent": "Europe",
+     "creneau": ["soir"], "profil": ["sain", "perte", "muscle"], "temps_actif": 25, "temps_total": 25, "difficulte": 1, "tags": ["rapide"],
+     "proteine": "crevettes", "feculent": "pates", "sante": 80, "pourquoi": "Pâtes complètes en portion mesurée, crevettes maigres, roquette et tomates crues, huile d'olive comptée.",
+     "ingredients": [
+       {"ing": "spaghetti-complets", "qte": 70, "unite": "g"},
+       {"ing": "crevette-crue-surgele", "qte": 125, "unite": "g"},
+       {"ing": "ail", "qte": 0.75, "unite": "piece", "prep": "émincé"},
+       {"ing": "piment-flocons", "qte": 0.3, "unite": "g"},
+       {"ing": "tomate-cerise", "qte": 75, "unite": "g", "prep": "coupées en deux"},
+       {"ing": "roquette", "qte": 25, "unite": "g"},
+       {"ing": "citron", "qte": 0.25, "unite": "piece", "prep": "zeste et jus"},
+       {"ing": "persil-plat", "qte": 0.12, "unite": "botte"},
+       {"ing": "huile-olive", "qte": 8, "unite": "ml"},
+       {"ing": "parmesan", "qte": 8, "unite": "g", "facultatif": true}
+     ],
+     "etapes": [
+       {"texte": "Sortir les crevettes du congélateur le matin, au frigo.", "type": "attente"},
+       {"texte": "Spaghetti dans une grande casserole d'eau salée, 1 min de moins que le paquet. Garder un verre d'eau de cuisson.", "duree": 540, "type": "attente"},
+       {"texte": "Grande poêle, huile d'olive : ail et piment 1 min à feu doux, tomates cerises 3 min.", "duree": 240, "type": "actif"},
+       {"texte": "Crevettes épongées, feu vif, 2 min par face jusqu'à ce qu'elles soient roses. Zeste et jus de citron.", "duree": 240, "type": "actif"},
+       {"texte": "Spaghetti égouttés dans la poêle, un demi-verre d'eau de cuisson, 1 min. Hors du feu : roquette, persil, poivre. Parmesan pour ceux qui veulent.", "type": "actif"}
+     ]},
+
+    {"id": "lb-keftas-taboule", "nom": "Keftas au four, taboulé libanais, houmous, crudités, pita", "cuisine": "Liban", "continent": "Moyen-Orient",
+     "creneau": ["soir"], "profil": ["sain", "perte", "muscle"], "temps_actif": 30, "temps_total": 40, "difficulte": 2, "tags": [],
+     "proteine": "boeuf", "feculent": "boulgour", "sante": 85, "pourquoi": "Bœuf à 5 %, cuisson au four sans gras, et un taboulé qui est surtout des herbes.",
+     "ingredients": [
+       {"ing": "boeuf-hache-5", "qte": 125, "unite": "g", "groupe": "keftas"},
+       {"ing": "oignon-jaune", "qte": 0.25, "unite": "piece", "groupe": "keftas", "prep": "râpé"},
+       {"ing": "persil-plat", "qte": 0.6, "unite": "botte", "prep": "ciselé fin"},
+       {"ing": "menthe-fraiche", "qte": 0.3, "unite": "botte", "prep": "ciselée"},
+       {"ing": "cumin-moulu", "qte": 0.5, "unite": "g", "groupe": "keftas"},
+       {"ing": "paprika", "qte": 0.5, "unite": "g", "groupe": "keftas"},
+       {"ing": "cannelle", "qte": 0.2, "unite": "g", "groupe": "keftas"},
+       {"ing": "boulgour-fin", "qte": 20, "unite": "g", "groupe": "taboulé"},
+       {"ing": "tomate", "qte": 0.75, "unite": "piece", "groupe": "taboulé", "prep": "en petits dés"},
+       {"ing": "oignon-nouveau", "qte": 0.3, "unite": "botte", "groupe": "taboulé"},
+       {"ing": "citron", "qte": 0.5, "unite": "piece", "groupe": "taboulé"},
+       {"ing": "huile-olive", "qte": 8, "unite": "ml", "groupe": "taboulé"},
+       {"ing": "concombre", "qte": 0.25, "unite": "piece", "groupe": "crudités", "prep": "en bâtonnets"},
+       {"ing": "carotte", "qte": 50, "unite": "g", "groupe": "crudités", "prep": "en bâtonnets"},
+       {"ing": "radis", "qte": 0.25, "unite": "botte", "groupe": "crudités"},
+       {"ing": "pita-complet", "qte": 1, "unite": "piece"},
+       {"ing": "pois-chiche-boite", "qte": 60, "unite": "g", "groupe": "houmous"},
+       {"ing": "tahini", "qte": 10, "unite": "g", "groupe": "houmous"}
+     ],
+     "etapes": [
+       {"texte": "Four à 200 °C. Boulgour recouvert d'eau bouillante 15 min, puis égoutté et pressé.", "duree": 900, "type": "attente"},
+       {"texte": "Keftas : bœuf, oignon râpé, un tiers des herbes, cumin, paprika, cannelle, sel, mélangés à la main. Former 3 boudins par personne.", "type": "actif"},
+       {"texte": "Keftas au four sur papier cuisson, 15 min.", "duree": 900, "type": "attente"},
+       {"texte": "Taboulé : persil et menthe ciselés, tomates, oignons nouveaux, boulgour, jus de citron, huile, sel.", "type": "actif"},
+       {"texte": "Houmous (mixer pois chiches, tahini, citron, ail, cumin, eau), crudités en bâtonnets, pitas 1 min au grille-pain. Chacun compose.", "type": "actif"}
+     ]},
+
+    {"id": "th-curry-vert-poulet", "nom": "Curry vert de poulet aux légumes, riz jasmin", "cuisine": "Thaïlande", "continent": "Asie",
+     "creneau": ["soir", "midi"], "profil": ["sain", "perte", "muscle"], "temps_actif": 20, "temps_total": 30, "difficulte": 1, "tags": ["rapide", "rechauffe"],
+     "proteine": "poulet", "feculent": "riz", "sante": 84, "pourquoi": "Poulet maigre, trois légumes, lait de coco allégé et pas de sucre à part la cuillère de la sauce.",
+     "ingredients": [
+       {"ing": "blanc-poulet", "qte": 125, "unite": "g", "prep": "en morceaux"},
+       {"ing": "pate-curry-vert", "qte": 12, "unite": "g"},
+       {"ing": "lait-coco-allege", "qte": 100, "unite": "ml"},
+       {"ing": "haricot-vert-surgele", "qte": 60, "unite": "g"},
+       {"ing": "poivron-rouge", "qte": 0.25, "unite": "piece", "prep": "en lanières"},
+       {"ing": "courgette", "qte": 0.25, "unite": "piece", "prep": "en demi-rondelles"},
+       {"ing": "oignon-jaune", "qte": 0.25, "unite": "piece", "prep": "émincé"},
+       {"ing": "pousse-bambou", "qte": 35, "unite": "g", "facultatif": true},
+       {"ing": "nuoc-mam", "qte": 4, "unite": "ml"},
+       {"ing": "sucre", "qte": 1, "unite": "g"},
+       {"ing": "citron-vert", "qte": 0.25, "unite": "piece"},
+       {"ing": "basilic-frais", "qte": 0.25, "unite": "botte"},
+       {"ing": "riz-jasmin", "qte": 60, "unite": "g"}
+     ],
+     "etapes": [
+       {"texte": "Lancer le riz jasmin, 12 min.", "duree": 720, "type": "attente"},
+       {"texte": "Sauteuse, 1 c. à c. d'huile : pâte de curry 1 min à feu moyen pour la réveiller.", "duree": 60, "type": "actif"},
+       {"texte": "Poulet enrobé 2 min, puis oignon, poivron et courgette.", "duree": 180, "type": "actif"},
+       {"texte": "Lait de coco, un peu d'eau, nuoc-mâm, sucre. Mijoter 12 min. Haricots verts les 6 dernières minutes, bambou les 2 dernières.", "duree": 720, "type": "attente"},
+       {"texte": "Hors du feu : jus de citron vert et basilic. Servir sur le riz.", "type": "actif"}
+     ]},
+
+    {"id": "fr-poulet-roti-automne", "nom": "Cuisses de poulet rôties, butternut, carottes et oignons au four", "cuisine": "France", "continent": "Europe",
+     "creneau": ["soir"], "profil": ["sain", "perte", "muscle", "famille"], "temps_actif": 15, "temps_total": 55, "difficulte": 1, "tags": ["hiver"],
+     "proteine": "poulet", "feculent": "butternut", "sante": 86, "pourquoi": "Tout cuit au four sans ajout de gras, et la courge remplace les pommes de terre.",
+     "ingredients": [
+       {"ing": "cuisse-poulet", "qte": 1, "unite": "piece"},
+       {"ing": "butternut", "qte": 200, "unite": "g", "prep": "en cubes de 3 cm"},
+       {"ing": "carotte", "qte": 100, "unite": "g", "prep": "en tronçons"},
+       {"ing": "oignon-jaune", "qte": 0.5, "unite": "piece", "prep": "en quartiers"},
+       {"ing": "ail", "qte": 1, "unite": "piece", "prep": "en chemise"},
+       {"ing": "herbes-provence", "qte": 1, "unite": "g"},
+       {"ing": "huile-olive", "qte": 8, "unite": "ml"},
+       {"ing": "citron", "qte": 0.25, "unite": "piece"}
+     ],
+     "etapes": [
+       {"texte": "Four à 200 °C. Légumes sur la plaque avec l'huile, les herbes, sel, poivre. Poulet posé dessus, peau salée, demi-citron pressé par-dessus.", "type": "actif"},
+       {"texte": "Au four 40 min, en retournant les légumes à mi-cuisson.", "duree": 2400, "type": "attente"},
+       {"texte": "Si la peau n'est pas dorée, 5 min sous le gril. Servir avec l'ail écrasé sur les légumes.", "duree": 300, "type": "attente"}
+     ]},
+
+    {"id": "eus-poulet-basquaise", "nom": "Poulet basquaise, riz basmati", "cuisine": "Pays basque", "continent": "Europe",
+     "creneau": ["soir", "midi"], "profil": ["sain", "perte", "famille"], "temps_actif": 20, "temps_total": 50, "difficulte": 1, "tags": ["rechauffe", "batch"],
+     "proteine": "poulet", "feculent": "riz", "sante": 85, "pourquoi": "Une piperade pleine de poivrons et de tomates, du poulet, et un riz en portion mesurée.",
+     "ingredients": [
+       {"ing": "haut-cuisse-poulet", "qte": 125, "unite": "g"},
+       {"ing": "poivron-rouge", "qte": 0.5, "unite": "piece", "prep": "en lanières"},
+       {"ing": "poivron-vert", "qte": 0.25, "unite": "piece", "prep": "en lanières"},
+       {"ing": "oignon-jaune", "qte": 0.5, "unite": "piece", "prep": "émincé"},
+       {"ing": "ail", "qte": 0.5, "unite": "piece"},
+       {"ing": "tomate-concassee", "qte": 100, "unite": "g"},
+       {"ing": "jambon-bayonne", "qte": 0.5, "unite": "tranche", "prep": "en lanières"},
+       {"ing": "piment-espelette", "qte": 0.5, "unite": "g"},
+       {"ing": "thym-seche", "qte": 0.3, "unite": "g"},
+       {"ing": "riz-basmati", "qte": 60, "unite": "g"}
+     ],
+     "etapes": [
+       {"texte": "Cocotte, 1 c. à s. d'huile : poulet doré 4 min par face, retiré.", "duree": 480, "type": "actif"},
+       {"texte": "Oignon, poivrons, jambon 6 min. Ail, tomates, piment, thym, sel. Poulet remis dedans.", "duree": 360, "type": "actif"},
+       {"texte": "Couvert, 25 min à feu doux.", "duree": 1500, "type": "attente"},
+       {"texte": "Riz basmati lancé pendant ce temps, 12 min.", "duree": 720, "type": "attente"}
+     ]},
+
+    {"id": "kr-bibimbap-boeuf", "nom": "Bibimbap au bœuf, légumes sautés et œuf", "cuisine": "Corée", "continent": "Asie",
+     "creneau": ["soir"], "profil": ["sain", "perte", "muscle"], "temps_actif": 35, "temps_total": 40, "difficulte": 2, "tags": [],
+     "proteine": "boeuf", "feculent": "riz", "sante": 86, "pourquoi": "Beaucoup de légumes, viande maigre, œuf, et la sauce piquante dose le gras.",
+     "ingredients": [
+       {"ing": "boeuf-a-sauter", "qte": 100, "unite": "g", "prep": "émincé fin"},
+       {"ing": "sauce-soja", "qte": 10, "unite": "ml"},
+       {"ing": "ail", "qte": 0.5, "unite": "piece"},
+       {"ing": "huile-sesame", "qte": 3, "unite": "ml"},
+       {"ing": "riz-basmati", "qte": 60, "unite": "g"},
+       {"ing": "carotte", "qte": 75, "unite": "g", "prep": "en julienne"},
+       {"ing": "courgette", "qte": 0.25, "unite": "piece", "prep": "en bâtonnets"},
+       {"ing": "epinard-frais", "qte": 60, "unite": "g"},
+       {"ing": "germes-soja", "qte": 40, "unite": "g"},
+       {"ing": "oeuf", "qte": 1, "unite": "piece"},
+       {"ing": "gochujang", "qte": 10, "unite": "g"},
+       {"ing": "graine-sesame", "qte": 2, "unite": "g"}
+     ],
+     "etapes": [
+       {"texte": "Riz lancé, 12 min. Bœuf dans soja, ail et huile de sésame.", "duree": 720, "type": "attente"},
+       {"texte": "Même poêle, 1 c. à c. d'huile à chaque fois, légume par légume 2 min : carotte, courgette, germes de soja, épinards. Réserver en petits tas.", "duree": 480, "type": "actif"},
+       {"texte": "Bœuf saisi 2 min à feu vif.", "duree": 120, "type": "actif"},
+       {"texte": "Œufs au plat, jaune coulant.", "duree": 180, "type": "actif"},
+       {"texte": "Bols : riz, légumes en quartiers, bœuf, œuf dessus, une cuillère de gochujang, sésame. On mélange à table.", "type": "actif"}
+     ]},
+
+    {"id": "gr-brochettes-poulet-tzatziki", "nom": "Brochettes de poulet au citron, tzatziki, salade et pita", "cuisine": "Grèce", "continent": "Europe",
+     "creneau": ["soir"], "profil": ["sain", "perte", "muscle"], "temps_actif": 25, "temps_total": 40, "difficulte": 1, "tags": ["ete"],
+     "proteine": "poulet", "feculent": "pita", "sante": 87, "pourquoi": "Poulet mariné sans gras ajouté, sauce au yaourt 0 %, moitié de l'assiette en crudités.",
+     "ingredients": [
+       {"ing": "blanc-poulet", "qte": 140, "unite": "g", "prep": "en cubes"},
+       {"ing": "citron", "qte": 0.5, "unite": "piece"},
+       {"ing": "origan-seche", "qte": 1, "unite": "g"},
+       {"ing": "ail", "qte": 0.5, "unite": "piece"},
+       {"ing": "huile-olive", "qte": 5, "unite": "ml"},
+       {"ing": "yaourt-grec-0", "qte": 75, "unite": "g", "groupe": "tzatziki"},
+       {"ing": "concombre", "qte": 0.25, "unite": "piece", "groupe": "tzatziki", "prep": "râpé et pressé"},
+       {"ing": "menthe-fraiche", "qte": 0.1, "unite": "botte", "groupe": "tzatziki"},
+       {"ing": "tomate", "qte": 1, "unite": "piece", "groupe": "salade"},
+       {"ing": "oignon-rouge", "qte": 0.25, "unite": "piece", "groupe": "salade"},
+       {"ing": "laitue", "qte": 0.25, "unite": "piece", "groupe": "salade"},
+       {"ing": "olive-noire", "qte": 15, "unite": "g", "groupe": "salade"},
+       {"ing": "pita-complet", "qte": 1, "unite": "piece"}
+     ],
+     "etapes": [
+       {"texte": "Poulet en cubes dans jus de citron, origan, ail, huile, sel, poivre. 15 min minimum.", "duree": 900, "type": "attente"},
+       {"texte": "Tzatziki : concombre râpé et pressé, yaourt, menthe, une pointe d'ail, sel.", "type": "actif"},
+       {"texte": "Salade : tomates, oignon rouge, laitue, olives, filet de citron.", "type": "actif"},
+       {"texte": "Brochettes sur poêle-gril ou sous le gril du four, 4 min par face.", "duree": 480, "type": "actif"},
+       {"texte": "Pitas 1 min au grille-pain. Servir.", "type": "actif"}
+     ]},
+
+    {"id": "pe-cabillaud-citron-vert", "nom": "Cabillaud rôti au citron vert et coriandre, patate douce et maïs", "cuisine": "Pérou", "continent": "Amérique",
+     "creneau": ["soir"], "profil": ["sain", "perte", "muscle"], "temps_actif": 15, "temps_total": 35, "difficulte": 1, "tags": [],
+     "proteine": "poisson", "feculent": "patate douce", "sante": 90, "pourquoi": "Poisson blanc maigre, patate douce rôtie à la place des frites, salsa crue au citron vert.",
+     "ingredients": [
+       {"ing": "cabillaud-filet", "qte": 140, "unite": "g"},
+       {"ing": "patate-douce", "qte": 150, "unite": "g", "prep": "en frites épaisses"},
+       {"ing": "mais-boite", "qte": 40, "unite": "g"},
+       {"ing": "oignon-rouge", "qte": 0.25, "unite": "piece", "prep": "émincé très fin"},
+       {"ing": "citron-vert", "qte": 0.75, "unite": "piece"},
+       {"ing": "coriandre-fraiche", "qte": 0.25, "unite": "botte"},
+       {"ing": "piment-flocons", "qte": 0.3, "unite": "g"},
+       {"ing": "huile-olive", "qte": 5, "unite": "ml"},
+       {"ing": "cumin-moulu", "qte": 0.5, "unite": "g"}
+     ],
+     "etapes": [
+       {"texte": "Four à 210 °C. Patate douce en frites, huile, cumin, sel. 25 min sur plaque.", "duree": 1500, "type": "attente"},
+       {"texte": "Oignon rouge émincé dans le jus d'un demi-citron vert avec le piment, à mariner.", "type": "actif"},
+       {"texte": "Cabillaud salé, zeste de citron vert, au four 10 min sur une plaque à part (les 10 dernières minutes des patates).", "duree": 600, "type": "attente"},
+       {"texte": "Maïs chauffé 1 min. Servir poisson, patates, maïs, oignon mariné et coriandre dessus.", "type": "actif"}
+     ]},
+
+    {"id": "cn-poulet-brocoli-gingembre", "nom": "Poulet sauté au brocoli et gingembre, riz", "cuisine": "Chine", "continent": "Asie",
+     "creneau": ["soir", "midi"], "profil": ["sain", "perte", "muscle"], "temps_actif": 20, "temps_total": 25, "difficulte": 1, "tags": ["rapide", "rechauffe"],
+     "proteine": "poulet", "feculent": "riz", "sante": 86, "pourquoi": "Un sauté minute, peu d'huile, une grosse part de brocoli, sauce légère.",
+     "ingredients": [
+       {"ing": "blanc-poulet", "qte": 125, "unite": "g", "prep": "en lamelles"},
+       {"ing": "brocoli", "qte": 150, "unite": "g", "prep": "en fleurettes"},
+       {"ing": "gingembre-frais", "qte": 6, "unite": "g", "prep": "en bâtonnets fins"},
+       {"ing": "ail", "qte": 0.5, "unite": "piece"},
+       {"ing": "sauce-soja", "qte": 12, "unite": "ml"},
+       {"ing": "sauce-huitre", "qte": 8, "unite": "ml"},
+       {"ing": "maizena", "qte": 2, "unite": "g"},
+       {"ing": "huile-neutre", "qte": 5, "unite": "ml"},
+       {"ing": "oignon-nouveau", "qte": 0.15, "unite": "botte"},
+       {"ing": "graine-sesame", "qte": 2, "unite": "g"},
+       {"ing": "riz-basmati", "qte": 60, "unite": "g"}
+     ],
+     "etapes": [
+       {"texte": "Riz lancé, 12 min. Poulet enrobé de maïzena et d'un peu de soja.", "duree": 720, "type": "attente"},
+       {"texte": "Brocoli 3 min dans l'eau bouillante, égoutté.", "duree": 180, "type": "attente"},
+       {"texte": "Wok ou grande poêle très chaude, huile : poulet 3 min, retiré.", "duree": 180, "type": "actif"},
+       {"texte": "Gingembre et ail 30 s, brocoli 2 min, poulet remis, soja, sauce huître et 3 c. à s. d'eau, 1 min.", "duree": 240, "type": "actif"},
+       {"texte": "Oignons nouveaux et sésame par-dessus, sur le riz.", "type": "actif"}
+     ]},
+
+    {"id": "gr-bol-quinoa-pois-chiches", "nom": "Bol grec quinoa, pois chiches rôtis, feta, concombre, tomates, olives", "cuisine": "Grèce", "continent": "Europe",
+     "creneau": ["midi"], "profil": ["sain", "perte", "vege"], "temps_actif": 20, "temps_total": 30, "difficulte": 1, "tags": ["froid", "ete"],
+     "proteine": "vege", "feculent": "quinoa", "sante": 88, "pourquoi": "Quinoa et pois chiches pour les protéines, crudités à volonté, feta comptée.",
+     "ingredients": [
+       {"ing": "quinoa", "qte": 60, "unite": "g"},
+       {"ing": "pois-chiche-boite", "qte": 80, "unite": "g"},
+       {"ing": "paprika", "qte": 0.5, "unite": "g"},
+       {"ing": "origan-seche", "qte": 0.5, "unite": "g"},
+       {"ing": "huile-olive", "qte": 10, "unite": "ml"},
+       {"ing": "concombre", "qte": 0.33, "unite": "piece", "prep": "en dés"},
+       {"ing": "tomate-cerise", "qte": 80, "unite": "g", "prep": "coupées en deux"},
+       {"ing": "oignon-rouge", "qte": 0.17, "unite": "piece", "prep": "émincé fin"},
+       {"ing": "olive-noire", "qte": 20, "unite": "g"},
+       {"ing": "feta", "qte": 40, "unite": "g", "prep": "en cubes"},
+       {"ing": "citron", "qte": 0.33, "unite": "piece"},
+       {"ing": "menthe-fraiche", "qte": 0.1, "unite": "botte"}
+     ],
+     "etapes": [
+       {"texte": "Four à 200 °C. Pois chiches rincés, séchés, mélangés à un tiers de l'huile, paprika, origan, sel. 20 min sur plaque.", "duree": 1200, "type": "attente"},
+       {"texte": "Quinoa rincé, 12 min dans 2 fois son volume d'eau salée, 5 min couvert, égrainé, refroidi.", "duree": 1020, "type": "attente"},
+       {"texte": "Concombre en dés, tomates cerises en deux, oignon émincé, feta en cubes.", "type": "actif"},
+       {"texte": "Boîtes : quinoa au fond, légumes, pois chiches, olives, feta, menthe. Vinaigrette (reste d'huile, citron, origan, poivre) dans un petit pot.", "type": "actif"}
+     ]},
+
+    {"id": "vn-bo-bun-boeuf", "nom": "Bo bun léger au bœuf citronnelle", "cuisine": "Vietnam", "continent": "Asie",
+     "creneau": ["midi"], "profil": ["sain", "perte", "muscle"], "temps_actif": 30, "temps_total": 30, "difficulte": 2, "tags": ["froid", "ete"],
+     "proteine": "boeuf", "feculent": "vermicelles", "sante": 84, "pourquoi": "Beaucoup de crudités et d'herbes, viande maigre saisie, vermicelles en petite portion.",
+     "ingredients": [
+       {"ing": "boeuf-a-sauter", "qte": 130, "unite": "g", "prep": "émincé fin"},
+       {"ing": "citronnelle", "qte": 0.33, "unite": "tige", "groupe": "marinade", "prep": "hachée"},
+       {"ing": "ail", "qte": 1, "unite": "piece", "groupe": "marinade"},
+       {"ing": "sauce-soja", "qte": 5, "unite": "ml", "groupe": "marinade"},
+       {"ing": "nuoc-mam", "qte": 15, "unite": "ml"},
+       {"ing": "sucre", "qte": 5, "unite": "g"},
+       {"ing": "vermicelle-riz", "qte": 50, "unite": "g"},
+       {"ing": "carotte", "qte": 60, "unite": "g", "prep": "râpée"},
+       {"ing": "concombre", "qte": 0.33, "unite": "piece", "prep": "en bâtonnets"},
+       {"ing": "laitue", "qte": 0.17, "unite": "piece", "prep": "ciselée"},
+       {"ing": "germes-soja", "qte": 50, "unite": "g", "facultatif": true},
+       {"ing": "menthe-fraiche", "qte": 0.17, "unite": "botte"},
+       {"ing": "coriandre-fraiche", "qte": 0.17, "unite": "botte"},
+       {"ing": "cacahuete-non-salee", "qte": 13, "unite": "g", "prep": "concassées"},
+       {"ing": "citron-vert", "qte": 0.67, "unite": "piece"}
+     ],
+     "etapes": [
+       {"texte": "Bœuf dans la marinade (citronnelle, ail, soja, un tiers du nuoc-mâm, un tiers du sucre), 15 min.", "duree": 900, "type": "attente"},
+       {"texte": "Vermicelles 3 min dans l'eau bouillante, rincés à l'eau froide.", "duree": 180, "type": "attente"},
+       {"texte": "Carottes râpées, concombre en bâtonnets, laitue ciselée, herbes effeuillées, cacahuètes concassées.", "type": "actif"},
+       {"texte": "Sauce nuoc-cham : reste de nuoc-mâm et de sucre, jus de citron vert, 2 fois le volume d'eau, ail, piment. En petit pot.", "type": "actif"},
+       {"texte": "Poêle très chaude, 1 c. à c. d'huile : bœuf saisi 2 min. Laisser refroidir. Boîtes : laitue, vermicelles, crudités, bœuf, herbes, cacahuètes.", "duree": 120, "type": "actif"}
+     ]},
+
+    {"id": "ma-tajine-poulet-butternut", "nom": "Tajine express de poulet au butternut, semoule complète", "cuisine": "Maroc", "continent": "Afrique",
+     "creneau": ["midi", "soir"], "profil": ["sain", "perte", "famille"], "temps_actif": 20, "temps_total": 40, "difficulte": 1, "tags": ["rechauffe", "hiver", "batch"],
+     "proteine": "poulet", "feculent": "semoule", "sante": 87, "pourquoi": "Trois légumes, poulet sans peau, semoule complète, et les épices font le goût sans gras.",
+     "ingredients": [
+       {"ing": "haut-cuisse-poulet", "qte": 150, "unite": "g", "prep": "en gros morceaux"},
+       {"ing": "butternut", "qte": 165, "unite": "g", "prep": "en cubes de 2 cm"},
+       {"ing": "carotte", "qte": 100, "unite": "g", "prep": "en rondelles épaisses"},
+       {"ing": "courgette", "qte": 0.33, "unite": "piece", "prep": "en gros tronçons"},
+       {"ing": "oignon-jaune", "qte": 0.33, "unite": "piece", "prep": "émincé"},
+       {"ing": "ail", "qte": 0.67, "unite": "piece"},
+       {"ing": "tomate-concassee", "qte": 130, "unite": "g"},
+       {"ing": "ras-el-hanout", "qte": 1.5, "unite": "g"},
+       {"ing": "olive-verte", "qte": 17, "unite": "g"},
+       {"ing": "citron-confit", "qte": 0.33, "unite": "piece", "facultatif": true, "prep": "haché"},
+       {"ing": "coriandre-fraiche", "qte": 0.17, "unite": "botte"},
+       {"ing": "bouillon-volaille-cube", "qte": 0.33, "unite": "piece"},
+       {"ing": "semoule-complete", "qte": 60, "unite": "g"}
+     ],
+     "etapes": [
+       {"texte": "Cocotte, 1 c. à s. d'huile : poulet doré 4 min, retiré.", "duree": 240, "type": "actif"},
+       {"texte": "Oignon 3 min, ail et ras-el-hanout 1 min. Butternut, carottes, courgette.", "duree": 240, "type": "actif"},
+       {"texte": "Poulet remis, tomates, cube émietté, 200 ml d'eau pour 3. Couvert, 25 min à feu doux. Olives et citron confit les 5 dernières minutes, coriandre à la fin.", "duree": 1500, "type": "attente"},
+       {"texte": "Semoule : même volume d'eau bouillante salée, couvert 5 min, égrainée.", "duree": 300, "type": "attente"},
+       {"texte": "Boîtes : semoule d'un côté, tajine de l'autre. Laisser tiédir avant le frigo. 2 min au micro-ondes le lendemain.", "type": "actif"}
+     ]},
+
+    {"id": "es-tortilla-courgette", "nom": "Tortilla légère courgette et pomme de terre, salade tomates-concombre", "cuisine": "Espagne", "continent": "Europe",
+     "creneau": ["midi"], "profil": ["sain", "perte", "vege"], "temps_actif": 25, "temps_total": 35, "difficulte": 2, "tags": ["froid"],
+     "proteine": "oeuf", "feculent": "pomme de terre", "sante": 80, "pourquoi": "Les légumes sont cuits à la vapeur au lieu de frire dans l'huile : 2 cuillères d'huile au lieu de 15 cl.",
+     "ingredients": [
+       {"ing": "oeuf", "qte": 2.7, "unite": "piece"},
+       {"ing": "pomme-de-terre", "qte": 130, "unite": "g", "prep": "en dés de 1 cm"},
+       {"ing": "courgette", "qte": 0.33, "unite": "piece", "prep": "en demi-rondelles"},
+       {"ing": "oignon-jaune", "qte": 0.33, "unite": "piece", "prep": "émincé"},
+       {"ing": "huile-olive", "qte": 10, "unite": "ml"},
+       {"ing": "tomate", "qte": 1, "unite": "piece", "groupe": "salade"},
+       {"ing": "concombre", "qte": 0.33, "unite": "piece", "groupe": "salade"},
+       {"ing": "oignon-rouge", "qte": 0.17, "unite": "piece", "groupe": "salade"},
+       {"ing": "vinaigre-xeres", "qte": 5, "unite": "ml", "groupe": "salade"},
+       {"ing": "persil-plat", "qte": 0.1, "unite": "botte", "groupe": "salade"}
+     ],
+     "etapes": [
+       {"texte": "Pommes de terre en dés et courgette en demi-rondelles, 8 min à la vapeur.", "duree": 480, "type": "attente"},
+       {"texte": "Poêle anti-adhésive, moitié de l'huile : oignon 5 min à feu doux.", "duree": 300, "type": "actif"},
+       {"texte": "Œufs battus avec sel et poivre, mélangés aux légumes.", "type": "actif"},
+       {"texte": "Même poêle, reste d'huile, feu doux : cuire 8 min couvert, retourner avec une assiette, 4 min. Refroidir, filmer, frigo.", "duree": 720, "type": "actif"},
+       {"texte": "Salade : tomates et concombre en morceaux, oignon rouge, vinaigre, un filet d'huile, persil. Boîtes : part de tortilla + salade. Se mange froid.", "type": "actif"}
+     ]},
+
+    {"id": "fr-salade-pates-nicoise", "nom": "Salade de pâtes niçoise au thon", "cuisine": "France", "continent": "Europe",
+     "creneau": ["midi"], "profil": ["sain", "perte", "muscle"], "temps_actif": 20, "temps_total": 25, "difficulte": 1, "tags": ["froid", "ete"],
+     "proteine": "poisson", "feculent": "pates", "sante": 82, "pourquoi": "Thon et œufs pour les protéines, haricots verts et tomates, pâtes complètes en portion mesurée.",
+     "ingredients": [
+       {"ing": "pates-completes-courtes", "qte": 60, "unite": "g"},
+       {"ing": "thon-naturel", "qte": 65, "unite": "g"},
+       {"ing": "haricot-vert-surgele", "qte": 80, "unite": "g"},
+       {"ing": "oeuf", "qte": 1, "unite": "piece"},
+       {"ing": "tomate-cerise", "qte": 80, "unite": "g"},
+       {"ing": "oignon-rouge", "qte": 0.17, "unite": "piece", "prep": "émincé"},
+       {"ing": "olive-noire", "qte": 17, "unite": "g"},
+       {"ing": "huile-olive", "qte": 10, "unite": "ml"},
+       {"ing": "vinaigre-vin", "qte": 5, "unite": "ml"},
+       {"ing": "moutarde", "qte": 2, "unite": "g"},
+       {"ing": "basilic-frais", "qte": 0.1, "unite": "botte"}
+     ],
+     "etapes": [
+       {"texte": "Œufs durs 9 min, écalés, en quartiers.", "duree": 540, "type": "attente"},
+       {"texte": "Haricots verts 6 min dans l'eau bouillante, sortis. Pâtes dans la même eau, al dente, rincées à l'eau froide.", "duree": 960, "type": "attente"},
+       {"texte": "Thon égoutté et émietté, tomates cerises en deux, oignon, olives. Vinaigrette : huile, vinaigre, moutarde, poivre.", "type": "actif"},
+       {"texte": "Tout mélanger sauf les œufs, posés dessus. Basilic ciselé. Boîtes au frigo, se mange froid.", "type": "actif"}
+     ]},
+
+    {"id": "lb-salade-lentilles-feta", "nom": "Salade de lentilles vertes, feta, concombre et menthe", "cuisine": "Liban", "continent": "Moyen-Orient",
+     "creneau": ["midi"], "profil": ["sain", "perte", "vege"], "temps_actif": 15, "temps_total": 35, "difficulte": 1, "tags": ["froid"],
+     "proteine": "vege", "feculent": "lentilles", "sante": 90, "pourquoi": "Lentilles rassasiantes à index glycémique bas, crudités, herbes, et une feta pour le goût.",
+     "ingredients": [
+       {"ing": "lentille-verte", "qte": 70, "unite": "g"},
+       {"ing": "concombre", "qte": 0.33, "unite": "piece", "prep": "en dés"},
+       {"ing": "tomate", "qte": 1, "unite": "piece", "prep": "en dés"},
+       {"ing": "oignon-rouge", "qte": 0.17, "unite": "piece", "prep": "émincé fin"},
+       {"ing": "feta", "qte": 35, "unite": "g"},
+       {"ing": "menthe-fraiche", "qte": 0.2, "unite": "botte"},
+       {"ing": "persil-plat", "qte": 0.15, "unite": "botte"},
+       {"ing": "citron", "qte": 0.5, "unite": "piece"},
+       {"ing": "huile-olive", "qte": 10, "unite": "ml"},
+       {"ing": "cumin-moulu", "qte": 0.5, "unite": "g"}
+     ],
+     "etapes": [
+       {"texte": "Lentilles rincées, 20 à 25 min dans l'eau non salée, égouttées, refroidies.", "duree": 1380, "type": "attente"},
+       {"texte": "Concombre et tomates en dés, oignon émincé, herbes ciselées, feta émiettée.", "type": "actif"},
+       {"texte": "Vinaigrette : citron, huile, cumin, sel, poivre. Tout mélanger, boîtes au frigo.", "type": "actif"}
+     ]},
+
+    {"id": "th-salade-vermicelles-crevettes", "nom": "Salade thaïe de vermicelles aux crevettes et cacahuètes", "cuisine": "Thaïlande", "continent": "Asie",
+     "creneau": ["midi"], "profil": ["sain", "perte", "muscle"], "temps_actif": 20, "temps_total": 20, "difficulte": 1, "tags": ["froid", "rapide", "ete"],
+     "proteine": "crevettes", "feculent": "vermicelles", "sante": 85, "pourquoi": "Crevettes maigres, crudités, sauce au citron vert sans huile.",
+     "ingredients": [
+       {"ing": "vermicelle-riz", "qte": 50, "unite": "g"},
+       {"ing": "crevette-crue-surgele", "qte": 120, "unite": "g"},
+       {"ing": "carotte", "qte": 60, "unite": "g", "prep": "râpée"},
+       {"ing": "concombre", "qte": 0.33, "unite": "piece", "prep": "en bâtonnets"},
+       {"ing": "cacahuete-non-salee", "qte": 13, "unite": "g"},
+       {"ing": "citron-vert", "qte": 0.67, "unite": "piece"},
+       {"ing": "nuoc-mam", "qte": 10, "unite": "ml"},
+       {"ing": "sucre", "qte": 3, "unite": "g"},
+       {"ing": "coriandre-fraiche", "qte": 0.2, "unite": "botte"},
+       {"ing": "piment-flocons", "qte": 0.3, "unite": "g"}
+     ],
+     "etapes": [
+       {"texte": "Vermicelles 3 min dans l'eau bouillante, rincés à l'eau froide.", "duree": 180, "type": "attente"},
+       {"texte": "Crevettes décongelées, 2 min dans l'eau frémissante, égouttées, refroidies.", "duree": 120, "type": "attente"},
+       {"texte": "Sauce : jus de citron vert, nuoc-mâm, sucre, piment. Carottes râpées, concombre, coriandre, cacahuètes concassées.", "type": "actif"},
+       {"texte": "Boîtes : vermicelles, crudités, crevettes, cacahuètes. Sauce à part.", "type": "actif"}
+     ]},
+
+    {"id": "it-salade-penne-poulet-pesto", "nom": "Salade de penne au poulet, pesto, roquette et tomates cerises", "cuisine": "Italie", "continent": "Europe",
+     "creneau": ["midi"], "profil": ["sain", "muscle", "famille"], "temps_actif": 20, "temps_total": 25, "difficulte": 1, "tags": ["froid", "rapide"],
+     "proteine": "poulet", "feculent": "pates", "sante": 76, "pourquoi": "Du poulet grillé et des légumes crus ; le pesto est compté à la cuillère.",
+     "ingredients": [
+       {"ing": "pates-completes-courtes", "qte": 60, "unite": "g"},
+       {"ing": "blanc-poulet", "qte": 110, "unite": "g"},
+       {"ing": "pesto", "qte": 20, "unite": "g"},
+       {"ing": "roquette", "qte": 25, "unite": "g"},
+       {"ing": "tomate-cerise", "qte": 80, "unite": "g"},
+       {"ing": "parmesan", "qte": 7, "unite": "g"},
+       {"ing": "citron", "qte": 0.25, "unite": "piece"}
+     ],
+     "etapes": [
+       {"texte": "Pâtes al dente, rincées à l'eau froide.", "duree": 600, "type": "attente"},
+       {"texte": "Poulet salé et poivré, 5 min par face à la poêle sans gras ajouté, refroidi, en lamelles.", "duree": 600, "type": "actif"},
+       {"texte": "Pâtes mélangées au pesto et au jus de citron, tomates cerises en deux, poulet, parmesan. Roquette ajoutée au moment de manger.", "type": "actif"}
+     ]},
+
+    {"id": "mx-burrito-bowl-poulet", "nom": "Burrito bowl au poulet, haricots rouges, maïs et avocat", "cuisine": "Mexique", "continent": "Amérique",
+     "creneau": ["midi"], "profil": ["sain", "perte", "muscle"], "temps_actif": 20, "temps_total": 30, "difficulte": 1, "tags": ["froid", "rechauffe"],
+     "proteine": "poulet", "feculent": "riz", "sante": 83, "pourquoi": "Légumineuses et poulet, riz mesuré, et le yaourt à la place de la crème.",
+     "ingredients": [
+       {"ing": "riz-basmati", "qte": 55, "unite": "g"},
+       {"ing": "blanc-poulet", "qte": 110, "unite": "g"},
+       {"ing": "paprika-fume", "qte": 1, "unite": "g"},
+       {"ing": "cumin-moulu", "qte": 1, "unite": "g"},
+       {"ing": "haricot-rouge-boite", "qte": 70, "unite": "g"},
+       {"ing": "mais-boite", "qte": 40, "unite": "g"},
+       {"ing": "avocat", "qte": 0.33, "unite": "piece"},
+       {"ing": "laitue", "qte": 0.17, "unite": "piece", "prep": "ciselée"},
+       {"ing": "citron-vert", "qte": 0.5, "unite": "piece"},
+       {"ing": "coriandre-fraiche", "qte": 0.17, "unite": "botte"},
+       {"ing": "yaourt-grec-0", "qte": 20, "unite": "g"}
+     ],
+     "etapes": [
+       {"texte": "Riz lancé, 12 min, refroidi.", "duree": 720, "type": "attente"},
+       {"texte": "Poulet en lanières avec paprika fumé, cumin, sel : 6 min à la poêle avec 1 c. à c. d'huile.", "duree": 360, "type": "actif"},
+       {"texte": "Haricots et maïs rincés. Avocat en dés avec jus de citron vert.", "type": "actif"},
+       {"texte": "Boîtes : riz, laitue, haricots, maïs, poulet, avocat, coriandre. Yaourt citronné dans un petit pot.", "type": "actif"}
+     ]},
+
+    {"id": "in-curry-pois-chiches-epinards", "nom": "Curry de pois chiches aux épinards, riz basmati", "cuisine": "Inde", "continent": "Asie",
+     "creneau": ["midi", "soir"], "profil": ["sain", "perte", "vege"], "temps_actif": 15, "temps_total": 25, "difficulte": 1, "tags": ["rechauffe", "rapide", "batch", "hiver"],
+     "proteine": "vege", "feculent": "riz", "sante": 88, "pourquoi": "Légumineuses, épinards, tomates, sans crème : le yaourt fait la rondeur.",
+     "ingredients": [
+       {"ing": "pois-chiche-boite", "qte": 120, "unite": "g"},
+       {"ing": "epinard-frais", "qte": 80, "unite": "g"},
+       {"ing": "oignon-jaune", "qte": 0.33, "unite": "piece", "prep": "émincé"},
+       {"ing": "ail", "qte": 0.67, "unite": "piece"},
+       {"ing": "gingembre-frais", "qte": 5, "unite": "g", "prep": "râpé"},
+       {"ing": "tomate-concassee", "qte": 130, "unite": "g"},
+       {"ing": "curry-poudre", "qte": 2, "unite": "g"},
+       {"ing": "garam-masala", "qte": 0.5, "unite": "g"},
+       {"ing": "yaourt-grec-0", "qte": 30, "unite": "g"},
+       {"ing": "riz-basmati", "qte": 60, "unite": "g"}
+     ],
+     "etapes": [
+       {"texte": "Riz lancé, 12 min.", "duree": 720, "type": "attente"},
+       {"texte": "Casserole, 1 c. à s. d'huile : oignon 4 min, ail, gingembre et curry 1 min.", "duree": 300, "type": "actif"},
+       {"texte": "Tomates et pois chiches rincés, 10 min à feu doux. Épinards 2 min. Garam masala, sel.", "duree": 720, "type": "attente"},
+       {"texte": "Yaourt hors du feu. Boîtes : riz d'un côté, curry de l'autre. Se réchauffe 2 min.", "type": "actif"}
+     ]},
+
+    {"id": "lb-houmous", "nom": "Houmous maison", "cuisine": "Liban", "continent": "Moyen-Orient",
+     "creneau": ["encas"], "profil": ["sain", "perte", "muscle", "vege", "famille"], "temps_actif": 10, "temps_total": 10, "difficulte": 1, "tags": ["froid", "batch"],
+     "proteine": "vege", "feculent": "lentilles", "sante": 88, "pourquoi": "Protéines et fibres des pois chiches, tahini en petite dose, zéro produit transformé.",
+     "ingredients": [
+       {"ing": "pois-chiche-boite", "qte": 120, "unite": "g"},
+       {"ing": "tahini", "qte": 15, "unite": "g"},
+       {"ing": "citron", "qte": 0.5, "unite": "piece"},
+       {"ing": "ail", "qte": 0.25, "unite": "piece"},
+       {"ing": "cumin-moulu", "qte": 0.5, "unite": "g"},
+       {"ing": "huile-olive", "qte": 4, "unite": "ml"}
+     ],
+     "etapes": [
+       {"texte": "Pois chiches rincés et égouttés, une cuillerée gardée pour le dessus.", "type": "actif"},
+       {"texte": "Mixer pois chiches, tahini, citron, ail, cumin, sel. Ajouter de l'eau froide cuillère par cuillère jusqu'à une texture lisse.", "type": "actif"},
+       {"texte": "Boîte hermétique, filet d'huile dessus, frigo. Se garde 5 jours.", "type": "actif"}
+     ]},
+
+    {"id": "mm-energy-balls", "nom": "Energy balls dattes, avoine, cacao", "cuisine": "Maison", "continent": "Maison",
+     "creneau": ["encas"], "profil": ["sain", "muscle", "famille"], "temps_actif": 15, "temps_total": 75, "difficulte": 1, "tags": ["froid", "batch"],
+     "proteine": "vege", "feculent": "avoine", "sante": 70, "pourquoi": "Sucre des fruits seulement, fibres de l'avoine, amandes. Dense : 2 par jour maximum.",
+     "ingredients": [
+       {"ing": "datte", "qte": 40, "unite": "g"},
+       {"ing": "flocon-avoine", "qte": 20, "unite": "g"},
+       {"ing": "amande", "qte": 12, "unite": "g"},
+       {"ing": "cacao-non-sucre", "qte": 3, "unite": "g"},
+       {"ing": "sel", "qte": 0.2, "unite": "g"}
+     ],
+     "etapes": [
+       {"texte": "Dattes trempées 10 min dans l'eau chaude si elles sont sèches, égouttées.", "duree": 600, "type": "attente"},
+       {"texte": "Mixer dattes, flocons, amandes, cacao et sel jusqu'à une pâte qui se tient.", "type": "actif"},
+       {"texte": "Rouler en boules de la taille d'une noix. Frigo 1 h. Se gardent une semaine en boîte.", "duree": 3600, "type": "attente"}
+     ]}
+  ]
+}

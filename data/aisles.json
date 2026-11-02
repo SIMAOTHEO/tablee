@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "rayons": [
+    {"id": "fruits-legumes", "nom": "Fruits et légumes", "ordre": 1},
+    {"id": "boucherie-volaille", "nom": "Boucherie, volaille", "ordre": 2},
+    {"id": "poissonnerie", "nom": "Poissonnerie", "ordre": 3},
+    {"id": "charcuterie-traiteur", "nom": "Charcuterie, traiteur", "ordre": 4},
+    {"id": "cremerie", "nom": "Crémerie", "ordre": 5},
+    {"id": "surgeles", "nom": "Surgelés", "ordre": 6},
+    {"id": "epicerie-salee", "nom": "Épicerie salée", "ordre": 7},
+    {"id": "epicerie-sucree", "nom": "Épicerie sucrée", "ordre": 8},
+    {"id": "boissons", "nom": "Boissons", "ordre": 9},
+    {"id": "produits-du-monde", "nom": "Produits du monde", "ordre": 10, "fusionnable_dans": "epicerie-salee"},
+    {"id": "bio", "nom": "Bio", "ordre": 11, "optionnel": true},
+    {"id": "autres", "nom": "Autres", "ordre": 12}
+  ],
+  "categories": ["legume", "herbe", "fruit", "proteine", "feculent", "legumineuse", "laitier", "surgele", "epicerie", "placard", "boisson"],
+  "unites": {
+    "g": "grammes",
+    "ml": "millilitres",
+    "piece": "pièce",
+    "botte": "botte",
+    "tranche": "tranche",
+    "tige": "tige",
+    "sachet": "sachet"
+  },
+  "regle_arrondi": "quantite_totale / achat.taille, arrondi vers le haut, puis affiché en achat.nom. Pour 'au poids', arrondi au multiple de taille supérieur."
+}
