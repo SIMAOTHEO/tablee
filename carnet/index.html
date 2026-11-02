@@ -1,0 +1,685 @@
+<!doctype html><html lang="fr"><head><title>Carnet de la semaine saine</title><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: a phone-first cookbook. One chapter per cooking evening; each chapter = the order of the evening,
+   then the dinner recipe, then tomorrow's lunch recipe. Illustrated plates drawn on canvas per dish. */
+:root{
+  --paper:#f4f5ef;
+  --card:#ffffff;
+  --ink:#1d241f;
+  --muted:#5e6a61;
+  --line:#d8ddd2;
+  --accent:#2f5d3a;
+  --accent-ink:#ffffff;
+  --soft:#e8eee5;
+  --display:"Fraunces","Iowan Old Style","Georgia",serif;
+  --body:"Figtree","Avenir Next","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#131714; --card:#1b201c; --ink:#eceee7; --muted:#a3ab9f; --line:#2b332c;
+    --accent:#8fc79a; --accent-ink:#0f170f; --soft:#222a24; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#131714; --card:#1b201c; --ink:#eceee7; --muted:#a3ab9f; --line:#2b332c;
+  --accent:#8fc79a; --accent-ink:#0f170f; --soft:#222a24; color-scheme:dark;
+}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{transition:none !important} }
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+*,*::before,*::after{box-sizing:border-box}
+.wrap{max-width:960px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 56px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.08;text-wrap:balance;margin:0}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+/* cover */
+.cover{padding-block:36px 28px;display:grid;gap:18px}
+.cover h1{font-size:clamp(38px,9vw,64px);font-variation-settings:"opsz" 144}
+.cover .sub{font-size:18px;max-width:34rem;color:var(--muted);margin:0}
+.guests{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.guests li{background:var(--soft);border-radius:999px;padding:6px 12px;font-size:14px;font-weight:600}
+.rules{margin:4px 0 0;padding:0 0 0 1.1em;display:grid;gap:4px;max-width:36rem}
+.rules li{padding-left:.2em}
+.toc{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:0;padding:0;list-style:none}
+.toc a{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;text-decoration:none;height:100%}
+.toc a:hover{border-color:var(--accent)}
+.toc .d{font-family:var(--display);font-size:20px;font-weight:700;display:block}
+.toc .m{display:block;font-size:13px;color:var(--muted);margin-top:4px}
+.toc .m b{color:var(--ink);font-weight:600}
+
+/* sticky nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);margin:0 calc(-1 * max(16px,env(safe-area-inset-left,0px))) 0 calc(-1 * max(16px,env(safe-area-inset-right,0px)))}
+.nav-in{display:flex;align-items:center;gap:8px;overflow-x:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:10px;scrollbar-width:none}
+.nav-in::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:7px 13px;font:600 14px var(--body);text-decoration:none;white-space:nowrap;cursor:pointer}
+.chip:hover{border-color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.chip.wake{margin-left:auto}
+
+/* chapters */
+.session{margin-top:52px;scroll-margin-top:72px}
+.session-head{display:grid;gap:8px;padding-bottom:18px;border-bottom:2px solid var(--ink)}
+.session-head h2{font-size:clamp(30px,7vw,44px)}
+.session-head .lead{margin:0;font-size:17px;max-width:38rem}
+.plan{margin-top:20px;background:var(--soft);border-radius:16px;padding:16px 18px}
+.plan h3{font-size:19px;margin-bottom:10px}
+.timeline{list-style:none;margin:0;padding:0;display:grid;gap:8px;counter-reset:t}
+.timeline li{display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:start;counter-increment:t}
+.timeline li::before{content:counter(t);font:700 13px var(--display);width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;margin-top:1px}
+.plan .note{margin:12px 0 0;font-size:14px;color:var(--muted)}
+
+/* recipe cards */
+.recipe{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;margin-top:24px;scroll-margin-top:72px}
+.art{position:relative;aspect-ratio:16/9;max-width:100%;background:var(--soft)}
+.art canvas{display:block;width:100%;height:100%}
+.origin{position:absolute;top:12px;left:12px;background:var(--card);color:var(--ink);border-radius:999px;padding:6px 12px;font:700 12px var(--body);letter-spacing:.08em;text-transform:uppercase;box-shadow:0 2px 10px rgba(0,0,0,.15)}
+.rb{padding:18px 18px 20px;display:grid;gap:14px}
+.rb h3{font-size:clamp(24px,5.6vw,32px)}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px 16px;margin:0;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.meta div{min-width:0}
+.meta dt{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.meta dd{margin:2px 0 0;font-weight:600;font-size:15px}
+.cols{display:grid;gap:22px}
+@media (min-width:720px){.cols{grid-template-columns:1fr 1.55fr;gap:30px}}
+.cols section{min-width:0}
+.cols h4{font:700 12px var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.ing{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.ing li{display:flex;gap:10px;align-items:flex-start}
+.ing input{appearance:none;-webkit-appearance:none;flex:0 0 auto;width:20px;height:20px;margin:3px 0 0;border:1.5px solid var(--muted);border-radius:50%;background:transparent;position:relative;cursor:pointer}
+.ing input:checked{background:var(--accent);border-color:var(--accent)}
+.ing input:checked::after{content:"";position:absolute;left:6px;top:3px;width:5px;height:9px;border:solid var(--accent-ink);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.ing label{cursor:pointer}
+.ing input:checked + label{color:var(--muted);text-decoration:line-through}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.step{display:block}
+.step input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.step label{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;cursor:pointer}
+.step .num{width:34px;height:34px;border-radius:50%;border:1.5px solid var(--ink);display:grid;place-items:center;font:700 15px var(--display);transition:background .15s}
+.step input:checked + label .num{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.step input:checked + label .txt{opacity:.5}
+.step input:focus-visible + label .num{outline:3px solid var(--accent);outline-offset:2px}
+.reset{justify-self:start;border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:999px;padding:6px 12px;font:600 13px var(--body);cursor:pointer}
+.reset:hover{color:var(--ink);border-color:var(--ink)}
+.tip{margin:0;padding:10px 14px;border-left:3px solid var(--accent);background:var(--soft);border-radius:0 10px 10px 0;font-size:15px}
+
+/* snacks + courses */
+.snacks{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.snacks li{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:15px}
+.snacks li b{display:block;font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:2px}
+.rayons{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-top:16px}
+.rayon{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px;min-width:0}
+.rayon h3{font-size:19px;margin-bottom:8px}
+.rayon .ing li{font-size:15px}
+footer{margin-top:48px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);padding-top:16px}
+</style>
+
+<div class="wrap">
+  <header class="cover">
+    <p class="eyebrow">Carnet de recettes · du dimanche 1er au vendredi 6 novembre 2026</p>
+    <h1>Carnet de la semaine saine</h1>
+    <p class="sub">Six dîners à quatre, cinq midis à trois préparés la veille au soir, des encas qui calent. Un plat d'un pays différent à chaque repas, pensé pour perdre du poids sans frustration.</p>
+    <ul class="guests" aria-label="À table">
+      <li>Homme, 51 ans</li><li>Femme, 49 ans</li><li>Homme, 23 ans</li><li>Femme, 21 ans · le soir</li>
+    </ul>
+    <ul class="rules">
+      <li>Des protéines à chaque repas : 120 à 150 g de viande ou de poisson cru par personne.</li>
+      <li>Féculents pesés crus : 60 g le midi, 60 à 70 g le soir, complets dès que possible.</li>
+      <li>Légumes à volonté, au moins la moitié de l'assiette.</li>
+      <li>1 c. à s. d'huile par personne et par repas, pas plus. Pas de friture, yaourt grec 0 % à la place de la crème.</li>
+      <li>Pas de sucre ajouté, sauf la cuillère à café des sauces asiatiques.</li>
+      <li>Coche les ingrédients et les étapes en cuisinant : la page s'en souvient sur ton téléphone.</li>
+    </ul>
+    <ul class="toc" id="toc"></ul>
+  </header>
+
+  <nav class="nav" aria-label="Jours">
+    <div class="nav-in" id="navchips"></div>
+  </nav>
+
+  <main id="book"></main>
+
+  <section class="session" id="encas">
+    <div class="session-head">
+      <p class="eyebrow">Toute la semaine</p>
+      <h2>Grignotages sains</h2>
+      <p class="lead">Un à deux encas par jour, à heure fixe (vers 10 h 30 et 16 h 30), jamais devant un écran. Tout est prêt ou acheté le dimanche.</p>
+    </div>
+    <ul class="snacks">
+      <li><b>Bâtonnets et houmous</b>Carotte, concombre, radis, avec 2 c. à s. de houmous maison.</li>
+      <li><b>Un fruit</b>Pomme, poire, 2 clémentines, kiwi ou banane. Un fruit = un encas.</li>
+      <li><b>Yaourt grec 0 %</b>Ou 150 g de fromage blanc 0 %, cannelle et morceaux de fruit.</li>
+      <li><b>Amandes ou noix</b>Une poignée de 30 g, pas plus : c'est vite 200 kcal.</li>
+      <li><b>Œufs durs</b>1 ou 2. Six cuits le dimanche, gardés au frigo dans leur coquille.</li>
+      <li><b>Edamame</b>Une petite poignée, 3 min dans l'eau bouillante, fleur de sel.</li>
+      <li><b>Pop-corn maison</b>2 c. à s. de maïs, 1 c. à c. d'huile, casserole couverte, sel.</li>
+      <li><b>Chocolat noir 85 %</b>2 carrés, pour l'envie de sucré du soir.</li>
+      <li><b>Compote sans sucre ajouté</b>Une, en dépannage.</li>
+      <li><b>Energy balls</b>2 maximum, avant le sport. Recette ci-dessous.</li>
+    </ul>
+    <div id="snackrecipes"></div>
+  </section>
+
+  <section class="session" id="courses">
+    <div class="session-head">
+      <p class="eyebrow">Avant dimanche</p>
+      <h2>Liste de courses</h2>
+      <p class="lead">Tout ce qu'il faut pour la semaine. Compte 220 à 240 € en grande surface, hors facultatif. Coche en magasin.</p>
+    </div>
+    <div class="rayons" id="rayons"></div>
+  </section>
+
+  <footer>Carnet préparé le dimanche 1er novembre 2026. Les jours sont décalables : la seule contrainte est l'ordre soir, puis midi du lendemain.</footer>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+/* ---------- Données ---------- */
+var SESSIONS = [
+{ id:"dimanche", num:1, short:"Dim.", day:"Dimanche 1er novembre", time:"1 h 15",
+  lead:"Ce soir, saumon teriyaki. On prépare aussi le bol grec de lundi midi, le houmous et les six œufs durs de la semaine. Le soir le plus chargé de la semaine.",
+  plan:["Œufs durs (6, 9 min) et riz complet (40 min) lancés en premier.",
+        "Four à 200 °C : pois chiches rôtis 20 min. Quinoa 12 min, puis 5 min de repos.",
+        "Houmous au mixeur, en boîte au frigo.",
+        "Sauce teriyaki, brocoli à la vapeur, edamame.",
+        "Saumon à la poêle, laqué. À table.",
+        "Les 3 boîtes du bol grec, vinaigrette à part."],
+  recipes:[
+  { id:"teriyaki", kind:"Dîner", persons:"4 personnes", origin:"Japon", color:"#c8453c",
+    title:"Saumon teriyaki maison, riz complet, brocoli et edamame",
+    eat:"Dimanche 1er nov., soir", prep:"Dimanche 1er nov., juste avant", time:"45 min",
+    ingredients:["4 pavés de saumon (130 g chacun)","240 g de riz complet","1 grosse tête de brocoli","200 g d'edamame décortiqués (surgelés)","4 c. à s. de sauce soja","1 c. à s. de miel","1 c. à s. de vinaigre de riz (ou de cidre)","2 cm de gingembre frais râpé","1 gousse d'ail","1 c. à c. de maïzena délayée dans 3 c. à s. d'eau","1 c. à s. de graines de sésame","2 oignons nouveaux (ou ciboulette)"],
+    steps:["Lancer le riz complet : 35 à 40 min dans 2,5 fois son volume d'eau.",
+           "Sauce : chauffer soja, miel, vinaigre, gingembre et ail 2 min dans une petite casserole. Ajouter la maïzena délayée, laisser épaissir 1 min, réserver.",
+           "Brocoli en fleurettes, 5 min à la vapeur (ou 4 min dans l'eau bouillante). Edamame 3 min dans l'eau bouillante, égoutter.",
+           "Poêle anti-adhésive bien chaude, 1 c. à c. d'huile : saumon côté peau 4 min, retourner 2 min. Verser la sauce, laquer 1 min en arrosant.",
+           "Servir riz, saumon nappé, brocoli et edamame. Sésame et oignons nouveaux par-dessus."],
+    art:{layers:[
+      {s:"grain",c:"#f1ecd9",n:170,size:.028,ox:-.42,oy:.06,spread:.3},
+      {s:"slab",c:"#e9826a",n:1,size:.34,ox:.06,oy:-.02,rot:-.35,lines:"#f7bcaa"},
+      {s:"disc",c:"#4a8a42",n:16,size:.07,ox:.46,oy:-.3,spread:.22},
+      {s:"disc",c:"#6aa35a",n:10,size:.045,ox:.46,oy:-.3,spread:.2},
+      {s:"oval",c:"#8fc24f",n:16,size:.055,ox:.38,oy:.45,spread:.2},
+      {s:"disc",c:"#f4e9c9",n:40,size:.012,ox:.06,oy:-.02,spread:.3},
+      {s:"disc",c:"#2b2b2b",n:14,size:.009,ox:.06,oy:-.02,spread:.3},
+      {s:"strip",c:"#5fae5a",n:8,size:.035,ox:0,oy:.05,spread:.55,len:1.8}]}
+  },
+  { id:"grec", kind:"Midi de demain", persons:"3 personnes", origin:"Grèce", color:"#2b6cb0",
+    title:"Bol grec quinoa, pois chiches rôtis, feta, concombre, tomates, olives",
+    eat:"Lundi 2 nov., midi", prep:"Dimanche 1er nov., soir", time:"30 min, en parallèle",
+    ingredients:["180 g de quinoa","1 boîte de pois chiches (400 g)","1 c. à c. de paprika, 1 c. à c. d'origan","1 c. à s. d'huile d'olive (pour rôtir)","1 concombre","250 g de tomates cerises","1/2 oignon rouge","1 poivron jaune (facultatif)","60 g d'olives noires dénoyautées","120 g de feta","Vinaigrette : 2 c. à s. d'huile d'olive, jus d'1 citron, 1 c. à c. d'origan, poivre","Quelques feuilles de menthe ou de persil"],
+    steps:["Four à 200 °C. Pois chiches rincés, bien séchés dans un torchon, mélangés avec l'huile, le paprika, l'origan et du sel. 20 min sur plaque.",
+           "Quinoa rincé, cuit 12 min dans 2 fois son volume d'eau salée, laissé 5 min couvert, puis égrainé et refroidi.",
+           "Concombre et poivron en dés, tomates cerises coupées en deux, oignon rouge émincé fin, feta en cubes.",
+           "Dans chaque boîte : quinoa au fond, légumes, pois chiches, olives, feta, herbes. Vinaigrette dans un petit pot, à verser au moment de manger."],
+    art:{layers:[
+      {s:"grain",c:"#e9dfb6",n:170,size:.024,spread:.7},
+      {s:"disc",c:"#d8392f",n:9,size:.075,spread:.62,inner:"#ef9a8c",innerF:.45},
+      {s:"disc",c:"#cfe8a0",n:8,size:.08,spread:.62,edge:"#6fa84f"},
+      {s:"disc",c:"#d8b062",n:16,size:.04,spread:.66},
+      {s:"cube",c:"#fafaf7",n:8,size:.09,spread:.6,edge:"#d9d9d0"},
+      {s:"disc",c:"#2c2a2e",n:8,size:.038,spread:.64},
+      {s:"oval",c:"#a04a8a",n:6,size:.045,spread:.6},
+      {s:"leaf",c:"#3e7d3a",n:7,size:.06,spread:.66}]}
+  },
+  { id:"houmous", kind:"Pour toute la semaine", persons:"Un gros bol", origin:"Liban", color:"#6b5b95",
+    title:"Houmous maison",
+    eat:"Toute la semaine, en encas et jeudi soir", prep:"Dimanche 1er nov., soir", time:"10 min",
+    ingredients:["2 boîtes de pois chiches (400 g chacune)","4 c. à s. de tahini (crème de sésame)","Jus de 2 citrons","1 gousse d'ail","1 c. à c. de cumin, sel","6 à 8 c. à s. d'eau froide","1 c. à s. d'huile d'olive"],
+    steps:["Pois chiches rincés et égouttés, une cuillerée gardée pour le dessus.",
+           "Mixer pois chiches, tahini, citron, ail, cumin et sel. Ajouter l'eau cuillère par cuillère jusqu'à une texture lisse et crémeuse.",
+           "En boîte hermétique, filet d'huile d'olive sur le dessus, frigo. Se garde 5 jours."],
+    art:{layers:[
+      {s:"disc",c:"#e8d8ad",n:1,size:.62},
+      {s:"swirl",c:"#d2b985",n:1,size:.5},
+      {s:"disc",c:"#d6b227",n:1,size:.14,ox:-.1,oy:-.06,alpha:.8},
+      {s:"disc",c:"#b5412f",n:30,size:.012,spread:.55},
+      {s:"disc",c:"#d8b062",n:6,size:.035,ox:.15,oy:.1,spread:.15},
+      {s:"leaf",c:"#3e7d3a",n:4,size:.05,spread:.5},
+      {s:"strip",c:"#f08a24",n:5,size:.045,len:3,ox:.58,oy:.42,spread:.14},
+      {s:"strip",c:"#a8d08d",n:4,size:.045,len:3,ox:-.58,oy:.45,spread:.14},
+      {s:"disc",c:"#e24b6f",n:4,size:.045,ox:0,oy:.7,spread:.08,inner:"#ffffff",innerF:.5}]}
+  }]
+},
+{ id:"lundi", num:2, short:"Lun.", day:"Lundi 2 novembre", time:"50 min",
+  lead:"Tacos de dinde ce soir, et le bo bun de mardi midi dans les boîtes.",
+  plan:["Bœuf dans sa marinade, au frigo (15 min).",
+        "Pico de gallo dans un bol, à reposer.",
+        "Vermicelles 3 min, rincés à l'eau froide. Carottes râpées, concombre en bâtonnets, laitue ciselée (pour le bo bun et les tacos), herbes effeuillées. Sauce nuoc-cham dans un petit pot.",
+        "Bœuf saisi 2 min à feu très vif, mis à refroidir. Poêle rincée.",
+        "Dîner : oignon et poivron 4 min, dinde épicée 6 à 7 min, haricots noirs réchauffés, tortillas, avocat, yaourt.",
+        "Boîtes bo bun assemblées, sauce à part."],
+  recipes:[
+  { id:"tacos", kind:"Dîner", persons:"4 personnes", origin:"Mexique", color:"#e3792b",
+    title:"Tacos de dinde épicée, pico de gallo, haricots noirs",
+    eat:"Lundi 2 nov., soir", prep:"Lundi 2 nov., juste avant", time:"35 min",
+    ingredients:["500 g d'émincé ou d'escalopes de dinde","1 oignon jaune, 1 poivron rouge, 2 gousses d'ail","2 c. à c. de paprika fumé, 2 c. à c. de cumin, 1 c. à c. d'origan, piment au goût","1 boîte de haricots noirs (400 g)","8 à 12 petites tortillas de maïs (2 à 3 par personne)","Pico de gallo : 4 tomates, 1 oignon rouge, 1 bouquet de coriandre, 2 citrons verts, 1 petit piment vert (facultatif)","1 laitue ciselée","1 avocat","4 c. à s. de yaourt grec 0 %"],
+    steps:["Pico de gallo : tomates, oignon rouge et piment en petits dés, coriandre ciselée, jus d'1 citron vert, sel. Laisser reposer.",
+           "Dinde en lanières, mélangée aux épices, sel, poivre et jus d'1 citron vert.",
+           "Poêle chaude, 1 c. à s. d'huile : oignon et poivron émincés 4 min, puis ail et dinde 6 à 7 min à feu vif.",
+           "Haricots noirs rincés, chauffés 3 min avec une pincée de cumin et 3 c. à s. d'eau.",
+           "Tortillas 30 s par face dans une poêle sèche. Chacun garnit : laitue, dinde, haricots, pico, avocat en lamelles, 1 c. à s. de yaourt."],
+    art:{layers:[
+      {s:"disc",c:"#f1d793",n:3,size:.36,pos:[[-.42,.02],[.12,-.3],[.3,.36]],edge:"#e0bd6a"},
+      {s:"strip",c:"#c98a5a",n:14,size:.05,spread:.6},
+      {s:"disc",c:"#2f2b35",n:16,size:.028,spread:.62},
+      {s:"disc",c:"#d8392f",n:10,size:.035,spread:.6},
+      {s:"leaf",c:"#9ccc65",n:8,size:.08,spread:.62},
+      {s:"leaf",c:"#3f8f35",n:8,size:.04,spread:.6},
+      {s:"slab",c:"#8cb85c",n:4,size:.09,spread:.6},
+      {s:"disc",c:"#ffffff",n:6,size:.025,spread:.5}]}
+  },
+  { id:"bobun", kind:"Midi de demain", persons:"3 personnes", origin:"Vietnam", color:"#3b8c5a",
+    title:"Bo bun léger au bœuf citronnelle",
+    eat:"Mardi 3 nov., midi", prep:"Lundi 2 nov., soir", time:"30 min",
+    ingredients:["400 g de bœuf à sauter (rumsteck ou bavette), émincé fin","Marinade : 1 tige de citronnelle hachée (sinon zeste d'1 citron vert + 2 cm de gingembre), 2 gousses d'ail, 1 c. à s. de sauce soja, 1 c. à s. de nuoc-mâm, 1 c. à c. de sucre","150 g de vermicelles de riz","2 carottes, 1 concombre, 1/2 laitue","150 g de germes de soja (facultatif)","1/2 bouquet de menthe, 1/2 bouquet de coriandre","40 g de cacahuètes non salées","Sauce nuoc-cham : 3 c. à s. de nuoc-mâm, jus de 2 citrons verts, 1 c. à s. de sucre, 6 c. à s. d'eau, 1 gousse d'ail hachée, piment"],
+    steps:["Bœuf dans la marinade 15 min, pendant que tu fais le reste.",
+           "Vermicelles 3 min dans l'eau bouillante, rincés à l'eau froide, égouttés.",
+           "Carottes râpées, concombre en bâtonnets, laitue ciselée, herbes effeuillées, cacahuètes concassées. Sauce nuoc-cham mélangée dans un petit pot.",
+           "Poêle très chaude, 1 c. à c. d'huile : bœuf saisi 2 min, pas plus. Laisser refroidir.",
+           "Boîtes : laitue au fond, vermicelles, crudités, bœuf, herbes, cacahuètes. Sauce à verser au moment de manger. Se mange froid."],
+    art:{layers:[
+      {s:"noodle",c:"#f6f1e3",n:70,size:.03,spread:.62},
+      {s:"leaf",c:"#9ccc65",n:6,size:.09,spread:.66},
+      {s:"strip",c:"#8c4a32",n:10,size:.06,len:2.2,ox:.15,oy:-.1,spread:.4},
+      {s:"noodle",c:"#f08a24",n:14,size:.025,len:3,ox:-.35,oy:.25,spread:.3},
+      {s:"strip",c:"#bfe39a",n:8,size:.04,len:2.2,ox:.35,oy:.4,spread:.3,edge:"#6fa84f"},
+      {s:"leaf",c:"#3e7d3a",n:7,size:.05,spread:.6},
+      {s:"leaf",c:"#5aa348",n:6,size:.045,spread:.6},
+      {s:"disc",c:"#c9a06a",n:12,size:.028,spread:.6}]}
+  }]
+},
+{ id:"mardi", num:3, short:"Mar.", day:"Mardi 3 novembre", time:"50 min",
+  lead:"Dahl de lentilles ce soir, tajine de poulet pour mercredi midi. Deux feux en parallèle : si tu es seul en cuisine, lance le tajine avant tout.",
+  plan:["Tajine en premier, dans la cocotte : poulet doré, oignon, épices, légumes, tomates, bouillon, 25 min couvert.",
+        "En parallèle, le dahl dans une casserole : oignon, ail, gingembre, épices, lentilles, tomates, coco, 20 min.",
+        "Riz basmati 12 min. Raïta.",
+        "Tajine : olives et citron confit, coriandre. Semoule 5 min couverte.",
+        "Dahl : épinards 3 min, citron. À table.",
+        "Boîtes tajine + semoule, laissées tiédir 30 min couvercle entrouvert avant le frigo."],
+  recipes:[
+  { id:"dahl", kind:"Dîner", persons:"4 personnes", origin:"Inde", color:"#d4a017",
+    title:"Dahl de lentilles corail aux épinards, riz basmati, raïta",
+    eat:"Mardi 3 nov., soir", prep:"Mardi 3 nov., juste avant", time:"35 min",
+    ingredients:["320 g de lentilles corail","1 oignon, 2 gousses d'ail, 2 cm de gingembre","1 boîte de tomates concassées (400 g)","400 ml de lait de coco allégé","300 g d'épinards frais (ou surgelés en branches)","2 c. à c. de curcuma, 2 c. à c. de cumin, 2 c. à c. de coriandre moulue","1 c. à c. de garam masala ou de curry en poudre","240 g de riz basmati","Raïta : 1 concombre, 300 g de yaourt grec 0 %, 10 feuilles de menthe, 1 pincée de cumin","1 citron"],
+    steps:["Rincer les lentilles. Lancer le riz basmati en même temps : 12 min dans 1,5 fois son volume d'eau.",
+           "Casserole, 1 c. à s. d'huile : oignon émincé 4 min, ail et gingembre râpés 1 min, épices 30 s.",
+           "Ajouter lentilles, tomates, lait de coco et 500 ml d'eau. Mijoter 18 à 20 min en remuant de temps en temps. Saler.",
+           "Épinards ajoutés les 3 dernières minutes, jusqu'à ce qu'ils tombent. Jus de citron au moment de servir.",
+           "Raïta : concombre râpé et pressé dans les mains pour enlever l'eau, mélangé au yaourt, menthe ciselée, cumin, sel."],
+    art:{layers:[
+      {s:"disc",c:"#e4a233",n:1,size:.5,ox:-.22,oy:.02},
+      {s:"grain",c:"#c8841a",n:60,size:.02,ox:-.22,oy:.02,spread:.4,alpha:.6},
+      {s:"leaf",c:"#2f6b3a",n:12,size:.07,ox:-.22,oy:.02,spread:.4},
+      {s:"grain",c:"#f6f2e6",n:150,size:.022,ox:.55,oy:-.2,spread:.25},
+      {s:"disc",c:"#fbfaf5",n:1,size:.2,ox:.5,oy:.45,edge:"#e3ddcd"},
+      {s:"disc",c:"#9ccf86",n:10,size:.02,ox:.5,oy:.45,spread:.14},
+      {s:"leaf",c:"#5aa348",n:5,size:.04,ox:-.2,oy:0,spread:.4}]}
+  },
+  { id:"tajine", kind:"Midi de demain", persons:"3 personnes", origin:"Maroc", color:"#a0522d",
+    title:"Tajine express de poulet au butternut, semoule complète",
+    eat:"Mercredi 4 nov., midi (réchauffé 2 min)", prep:"Mardi 3 nov., soir", time:"40 min",
+    ingredients:["450 g de hauts de cuisse de poulet sans peau ni os","500 g de butternut","3 carottes, 1 courgette, 1 oignon, 2 gousses d'ail","1 boîte de tomates concassées (400 g)","2 c. à c. de ras-el-hanout (sinon 1/2 c. à c. de cumin, cannelle, curcuma, paprika et gingembre)","50 g d'olives vertes","1 citron confit (ou le zeste d'1 citron)","1/2 bouquet de coriandre","1 cube de bouillon de volaille","180 g de semoule complète"],
+    steps:["Cocotte, 1 c. à s. d'huile : poulet en gros morceaux doré 4 min, retiré.",
+           "Oignon émincé 3 min, ail et ras-el-hanout 1 min. Butternut en cubes de 2 cm, carottes en rondelles épaisses, courgette en gros tronçons.",
+           "Poulet remis, tomates, cube émietté, 200 ml d'eau. Couvert, 25 min à feu doux. Olives et citron confit haché les 5 dernières minutes. Coriandre à la fin.",
+           "Semoule : même volume d'eau bouillante salée, couvert 5 min, égrainée à la fourchette.",
+           "Boîtes : semoule d'un côté, tajine de l'autre. Le lendemain, 2 min au micro-ondes."],
+    art:{layers:[
+      {s:"grain",c:"#efe3bf",n:170,size:.024,ox:-.45,oy:.05,spread:.32},
+      {s:"cube",c:"#f0a040",n:9,size:.09,ox:.25,oy:-.05,spread:.45,edge:"#d4832b"},
+      {s:"disc",c:"#f08a24",n:8,size:.06,ox:.25,oy:0,spread:.45,inner:"#f7b56b",innerF:.5},
+      {s:"cube",c:"#9fd36b",n:7,size:.08,ox:.25,oy:.1,spread:.45,edge:"#4f8f3a"},
+      {s:"slab",c:"#c99466",n:4,size:.13,ox:.2,oy:-.1,spread:.4,lines:"#dcb48f"},
+      {s:"disc",c:"#8aa64f",n:6,size:.04,ox:.3,oy:0,spread:.45},
+      {s:"disc",c:"#b5412f",n:30,size:.012,ox:.25,oy:0,spread:.5,alpha:.7},
+      {s:"leaf",c:"#5aa348",n:6,size:.045,ox:.25,oy:0,spread:.5}]}
+  }]
+},
+{ id:"mercredi", num:4, short:"Mer.", day:"Mercredi 4 novembre", time:"55 min",
+  lead:"Spaghetti aux crevettes ce soir, tortilla espagnole pour jeudi midi. Le matin : sortir les crevettes du congélateur, au frigo.",
+  plan:["Tortilla en premier : pommes de terre et courgette 8 min à la vapeur, oignon 5 min à la poêle, œufs battus, cuisson 8 min couverte puis 4 min retournée. À refroidir sur une assiette.",
+        "Salade tomates-concombre dans un bol, vinaigrette, frigo.",
+        "Dîner : eau des spaghetti. Poêle : ail, piment, tomates cerises 3 min, crevettes 2 min par face, citron. Spaghetti égouttés dans la poêle, eau de cuisson, roquette, persil.",
+        "Après dîner : tortilla coupée en 3, boîtes avec la salade."],
+  note:"Pense le matin à sortir les crevettes du congélateur.",
+  recipes:[
+  { id:"spaghetti", kind:"Dîner", persons:"4 personnes", origin:"Italie", color:"#6e9a3b",
+    title:"Spaghetti complets aux crevettes, ail, citron, roquette et tomates cerises",
+    eat:"Mercredi 4 nov., soir", prep:"Mercredi 4 nov., juste avant", time:"25 min",
+    ingredients:["280 g de spaghetti complets","500 g de crevettes crues décortiquées (décongelées au frigo le matin)","3 gousses d'ail, flocons de piment","300 g de tomates cerises","100 g de roquette","1 citron (zeste et jus)","1/2 bouquet de persil plat","2 c. à s. d'huile d'olive","30 g de parmesan râpé (facultatif)"],
+    steps:["Spaghetti dans une grande casserole d'eau salée, 1 min de moins que le paquet. Garder un verre d'eau de cuisson.",
+           "Grande poêle, huile d'olive : ail émincé et piment 1 min à feu doux, tomates cerises coupées en deux 3 min.",
+           "Crevettes épongées, feu vif, 2 min par face jusqu'à ce qu'elles soient roses. Zeste et jus de citron.",
+           "Spaghetti égouttés dans la poêle, un demi-verre d'eau de cuisson, 1 min en mélangeant. Hors du feu : roquette, persil, poivre.",
+           "Parmesan au moment de servir, pour ceux qui en veulent."],
+    art:{layers:[
+      {s:"noodle",c:"#d9c08a",n:90,size:.03,len:5,spread:.66},
+      {s:"crescent",c:"#f08c7d",n:7,size:.09,spread:.55},
+      {s:"disc",c:"#d8392f",n:9,size:.055,spread:.6,inner:"#ef9a8c",innerF:.45},
+      {s:"leaf",c:"#3f7f3a",n:12,size:.07,spread:.66},
+      {s:"disc",c:"#f2d04a",n:20,size:.012,spread:.6},
+      {s:"disc",c:"#fff9e6",n:30,size:.013,spread:.6},
+      {s:"disc",c:"#c62f24",n:12,size:.01,spread:.6}]}
+  },
+  { id:"tortilla", kind:"Midi de demain", persons:"3 personnes", origin:"Espagne", color:"#8b2635",
+    title:"Tortilla légère courgette-pomme de terre, salade tomates-concombre",
+    eat:"Jeudi 5 nov., midi (froid)", prep:"Mercredi 4 nov., soir", time:"35 min",
+    ingredients:["8 œufs","400 g de pommes de terre","1 courgette, 1 oignon","2 c. à s. d'huile d'olive","Salade : 3 tomates, 1 concombre, 1/2 oignon rouge, 1 c. à s. de vinaigre de xérès (ou de vin), 1 c. à s. d'huile d'olive, persil"],
+    steps:["Pommes de terre en dés de 1 cm et courgette en demi-rondelles, 8 min à la vapeur (ou 6 min au micro-ondes, couvert). Ça remplace les 15 cl d'huile de la vraie tortilla.",
+           "Poêle anti-adhésive de 24 cm, 1 c. à s. d'huile : oignon émincé 5 min à feu doux.",
+           "Œufs battus avec sel et poivre, mélangés aux pommes de terre, à la courgette et à l'oignon.",
+           "Même poêle, 1 c. à s. d'huile, feu doux : verser, cuire 8 min couvert. Retourner à l'aide d'une assiette, 4 min de l'autre côté. Laisser refroidir, filmer, frigo.",
+           "Salade : tomates et concombre en morceaux, oignon rouge, vinaigrette, persil. Boîtes : un tiers de tortilla + salade. Se mange froid."],
+    art:{layers:[
+      {s:"tri",c:"#f2c75c",n:4,size:.3,pos:[[-.35,-.22],[.12,-.36],[-.3,.3],[.18,.22]],edge:"#d9a43c"},
+      {s:"disc",c:"#f7ecc4",n:20,size:.018,ox:-.1,oy:0,spread:.35},
+      {s:"disc",c:"#9fd36b",n:8,size:.035,ox:-.1,oy:0,spread:.35,edge:"#4f8f3a"},
+      {s:"disc",c:"#d8392f",n:6,size:.06,ox:.55,oy:.35,spread:.18},
+      {s:"disc",c:"#cfe8a0",n:6,size:.055,ox:.5,oy:.4,spread:.2,edge:"#6fa84f"},
+      {s:"oval",c:"#a04a8a",n:4,size:.04,ox:.55,oy:.4,spread:.2},
+      {s:"leaf",c:"#3e7d3a",n:4,size:.04,ox:.5,oy:.35,spread:.25}]}
+  }]
+},
+{ id:"jeudi", num:5, short:"Jeu.", day:"Jeudi 5 novembre", time:"55 min",
+  lead:"Keftas et taboulé ce soir, salade niçoise pour vendredi midi. Une seule grande casserole d'eau sert trois fois.",
+  plan:["Four à 200 °C. Boulgour sous l'eau bouillante, 15 min.",
+        "Keftas façonnés, au four 15 min.",
+        "Grande casserole d'eau salée : œufs 9 min (sortis, refroidis), puis haricots verts 6 min (sortis), puis pâtes al dente (rincées à l'eau froide).",
+        "Taboulé : herbes ciselées, tomates, oignons nouveaux, boulgour, citron, huile.",
+        "Crudités en bâtonnets, pitas au grille-pain, houmous sorti du frigo. À table.",
+        "Après dîner : niçoise assemblée, œufs en quartiers dessus, boîtes au frigo."],
+  recipes:[
+  { id:"keftas", kind:"Dîner", persons:"4 personnes", origin:"Liban", color:"#6b5b95",
+    title:"Keftas au four, taboulé libanais, houmous, crudités, pita",
+    eat:"Jeudi 5 nov., soir", prep:"Jeudi 5 nov., juste avant", time:"40 min",
+    ingredients:["Keftas : 500 g de bœuf haché 5 %, 1 oignon râpé, 1/2 bouquet de persil, 10 feuilles de menthe, 1 c. à c. de cumin, 1 c. à c. de paprika, 1 pincée de cannelle","Taboulé : 2 bouquets de persil plat, 1 bouquet de menthe, 3 tomates, 2 oignons nouveaux, 80 g de boulgour fin, 2 citrons, 2 c. à s. d'huile d'olive","Houmous de dimanche","Crudités : 1 concombre, 2 carottes, 1 botte de radis","4 pitas complets"],
+    steps:["Boulgour recouvert d'eau bouillante 15 min, puis égoutté et pressé.",
+           "Taboulé : persil et menthe ciselés fin, tomates en petits dés, oignons nouveaux émincés, boulgour, jus de 2 citrons, huile, sel. Mélanger.",
+           "Keftas : tout mélanger à la main, former 12 boudins ou boulettes. Four à 200 °C, 15 min sur plaque avec papier cuisson.",
+           "Crudités en bâtonnets, pitas passés 1 min au grille-pain, coupés en deux.",
+           "Chacun compose : keftas, taboulé en grande quantité, 2 c. à s. de houmous, crudités, un demi à un pita."],
+    art:{layers:[
+      {s:"strip",c:"#8a4b32",n:5,size:.08,len:2.4,ox:-.3,oy:-.32,spread:.22,edge:"#6b3522"},
+      {s:"grain",c:"#3e7d3a",n:120,size:.022,ox:.36,oy:.05,spread:.35},
+      {s:"disc",c:"#d8392f",n:30,size:.018,ox:.36,oy:.05,spread:.35},
+      {s:"grain",c:"#e8dcb0",n:60,size:.018,ox:.36,oy:.05,spread:.35},
+      {s:"disc",c:"#e8d8ad",n:1,size:.2,ox:-.45,oy:.35},
+      {s:"disc",c:"#b5412f",n:8,size:.01,ox:-.45,oy:.35,spread:.12},
+      {s:"halfdisc",c:"#f0d68f",n:1,size:.22,ox:.1,oy:.64,edge:"#d9b66a"},
+      {s:"strip",c:"#f08a24",n:4,size:.04,len:3,ox:-.1,oy:.42,spread:.14},
+      {s:"strip",c:"#bfe39a",n:3,size:.04,len:3,ox:-.2,oy:.5,spread:.14},
+      {s:"disc",c:"#e24b6f",n:4,size:.04,ox:-.6,oy:-.02,spread:.12,inner:"#ffffff",innerF:.5}]}
+  },
+  { id:"nicoise", kind:"Midi de demain", persons:"3 personnes", origin:"France", color:"#23407a",
+    title:"Salade de pâtes niçoise au thon",
+    eat:"Vendredi 6 nov., midi (froid)", prep:"Jeudi 5 nov., soir", time:"25 min",
+    ingredients:["180 g de pâtes complètes courtes (penne ou fusilli)","2 boîtes de thon au naturel","250 g de haricots verts (surgelés)","3 œufs","250 g de tomates cerises","1/2 oignon rouge","50 g d'olives noires","Vinaigrette : 2 c. à s. d'huile d'olive, 1 c. à s. de vinaigre, 1 c. à c. de moutarde, poivre","Quelques feuilles de basilic"],
+    steps:["Pâtes cuites al dente, rincées à l'eau froide pour stopper la cuisson.",
+           "Haricots verts 6 min dans la même eau avant les pâtes, ou à la vapeur. Œufs durs 9 min, écalés, coupés en quartiers.",
+           "Thon égoutté et émietté, tomates cerises en deux, oignon émincé, olives.",
+           "Tout mélanger à la vinaigrette sauf les œufs, posés dessus. Basilic ciselé. Boîtes au frigo, se mange froid."],
+    art:{layers:[
+      {s:"strip",c:"#d9c08a",n:34,size:.045,len:2.2,wid:.6,spread:.64},
+      {s:"strip",c:"#4f9a3a",n:14,size:.035,len:3.2,spread:.64},
+      {s:"disc",c:"#d8392f",n:9,size:.055,spread:.62,inner:"#ef9a8c",innerF:.45},
+      {s:"disc",c:"#2c2a2e",n:9,size:.035,spread:.64},
+      {s:"disc",c:"#d6b494",n:16,size:.035,spread:.62},
+      {s:"disc",c:"#fbfaf5",n:6,size:.075,spread:.62,inner:"#f2c14e",innerF:.5,edge:"#e3ddcd"},
+      {s:"leaf",c:"#3e7d3a",n:6,size:.06,spread:.62},
+      {s:"oval",c:"#a04a8a",n:6,size:.04,spread:.6}]}
+  }]
+},
+{ id:"vendredi", num:6, short:"Ven.", day:"Vendredi 6 novembre", time:"30 min",
+  lead:"Curry vert thaï pour finir la semaine. Rien à préparer pour le lendemain.",
+  plan:["Riz jasmin 12 min.",
+        "Pâte de curry 1 min, poulet 2 min, oignon, poivron, courgette.",
+        "Lait de coco, eau, nuoc-mâm, sucre, 12 min. Haricots verts les 6 dernières minutes, bambou les 2 dernières.",
+        "Citron vert, basilic. À table."],
+  recipes:[
+  { id:"curry", kind:"Dîner", persons:"4 personnes", origin:"Thaïlande", color:"#2fa38a",
+    title:"Curry vert de poulet aux légumes, riz jasmin",
+    eat:"Vendredi 6 nov., soir", prep:"Vendredi 6 nov., juste avant", time:"30 min",
+    ingredients:["500 g de blancs de poulet","2 à 3 c. à s. de pâte de curry vert (selon la force du pot)","400 ml de lait de coco allégé","250 g de haricots verts (surgelés)","1 poivron rouge, 1 courgette, 1 oignon","1 petite boîte de pousses de bambou (facultatif)","1 c. à s. de nuoc-mâm, 1 c. à c. de sucre","1 citron vert","1 bouquet de basilic (thaï si possible)","240 g de riz jasmin (ou basmati)"],
+    steps:["Riz lancé : 12 min.",
+           "Grande sauteuse, 1 c. à c. d'huile : pâte de curry 1 min à feu moyen pour la réveiller.",
+           "Poulet en morceaux, enrobé 2 min. Ajouter oignon émincé, poivron en lanières, courgette en demi-rondelles.",
+           "Lait de coco, 150 ml d'eau, nuoc-mâm, sucre. Mijoter 12 min. Haricots verts les 6 dernières minutes, bambou les 2 dernières.",
+           "Hors du feu : jus de citron vert, basilic. Servir sur le riz."],
+    art:{layers:[
+      {s:"disc",c:"#a9c86a",n:1,size:.52,ox:-.2,oy:.03},
+      {s:"grain",c:"#8fb24e",n:50,size:.022,ox:-.2,oy:.03,spread:.42,alpha:.5},
+      {s:"slab",c:"#efe4cd",n:5,size:.1,ox:-.2,oy:0,spread:.38},
+      {s:"strip",c:"#4f9a3a",n:9,size:.035,len:3,ox:-.2,oy:0,spread:.4},
+      {s:"cube",c:"#d8392f",n:7,size:.07,ox:-.2,oy:0,spread:.4,edge:"#b22a21"},
+      {s:"disc",c:"#9fd36b",n:5,size:.055,ox:-.2,oy:.05,spread:.4,edge:"#4f8f3a"},
+      {s:"grain",c:"#f6f2e6",n:150,size:.022,ox:.55,oy:-.05,spread:.28},
+      {s:"leaf",c:"#2f6b3a",n:6,size:.05,ox:-.2,oy:0,spread:.42},
+      {s:"disc",c:"#a8d04a",n:2,size:.07,ox:.45,oy:.55,spread:.1,inner:"#dff0a0",innerF:.55,edge:"#6a9a2a"}]}
+  }]
+}];
+
+var SNACK_RECIPES = [
+  { id:"balls", kind:"Encas", persons:"Une quinzaine", origin:"Maison", color:"#6b4a3a",
+    title:"Energy balls dattes, avoine, cacao",
+    eat:"Toute la semaine, 2 par jour maximum", prep:"Dimanche soir, ou un soir plus calme", time:"15 min + 1 h au frigo",
+    ingredients:["150 g de dattes dénoyautées","80 g de flocons d'avoine","50 g d'amandes","2 c. à s. de cacao non sucré","1 pincée de sel"],
+    steps:["Dattes trempées 10 min dans l'eau chaude si elles sont sèches, puis égouttées.",
+           "Mixer dattes, flocons, amandes, cacao et sel jusqu'à une pâte qui se tient.",
+           "Rouler en boules de la taille d'une noix. Frigo 1 h. En boîte hermétique, elles se gardent une semaine. Environ 70 kcal pièce."],
+    art:{layers:[
+      {s:"disc",c:"#5a3a2a",n:9,size:.11,spread:.58,edge:"#3f2619"},
+      {s:"disc",c:"#9b7a5a",n:60,size:.011,spread:.62}]}
+  }
+];
+
+var COURSES = [
+ ["Viande, poisson, œufs",["Saumon : 4 pavés (env. 520 g)","Dinde émincé ou escalopes : 500 g","Bœuf à sauter (rumsteck, bavette) : 400 g","Bœuf haché 5 % : 500 g","Hauts de cuisse de poulet sans peau ni os : 450 g","Blancs de poulet : 500 g","Crevettes crues décortiquées : 500 g (surgelées ok)","Thon au naturel : 2 boîtes","Œufs : 18"]],
+ ["Légumes",["Brocoli : 1 grosse tête","Butternut : 1 (env. 600 g)","Carottes : 1 kg","Courgettes : 3","Pommes de terre : 400 g","Poivrons rouges : 2","Poivron jaune : 1 (facultatif)","Tomates : 10","Tomates cerises : 800 g","Concombres : 6","Oignons jaunes : 1 filet (7)","Oignons rouges : 3","Oignons nouveaux : 1 botte","Ail : 2 têtes","Gingembre frais : 1 morceau","Citronnelle : 1 tige (facultatif)","Laitue : 2","Roquette : 100 g","Épinards frais : 300 g","Radis : 1 botte","Avocats : 2","Germes de soja : 150 g (facultatif)","Citrons : 8","Citrons verts : 6"]],
+ ["Herbes fraîches",["Persil plat : 4 bouquets","Coriandre : 2 bouquets","Menthe : 2 bouquets","Basilic : 1 gros bouquet"]],
+ ["Fruits",["Pommes : 8","Poires : 4","Clémentines : 1 kg","Kiwis : 6","Bananes : 4","Dattes dénoyautées : 150 g"]],
+ ["Frais, crémerie",["Yaourt grec 0 % : 2 × 500 g","Fromage blanc 0 % : 1 kg (facultatif)","Feta : 150 g","Parmesan : petit morceau (facultatif)","Tortillas de maïs : 1 paquet","Pitas complets : 4"]],
+ ["Surgelés",["Edamame décortiqués : 400 g","Haricots verts : 500 g"]],
+ ["Épicerie",["Riz complet : 500 g","Riz basmati ou jasmin : 1 kg","Quinoa : 250 g","Vermicelles de riz : 1 paquet","Boulgour fin : 1 paquet","Semoule complète : 1 paquet","Spaghetti complets : 500 g","Pâtes complètes courtes : 500 g","Lentilles corail : 500 g","Pois chiches : 3 boîtes de 400 g","Haricots noirs : 1 boîte de 400 g","Tomates concassées : 2 boîtes de 400 g","Lait de coco allégé : 2 boîtes de 400 ml","Olives noires dénoyautées : 150 g","Olives vertes : 100 g","Pâte de curry vert : 1 pot","Tahini : 1 pot","Pousses de bambou : 1 petite boîte (facultatif)","Citron confit : 1 (facultatif)","Cacahuètes non salées : 100 g","Amandes nature : 250 g","Noix : 100 g (facultatif)","Flocons d'avoine : 250 g","Cacao non sucré : 1 paquet","Maïs à éclater : 1 paquet","Chocolat noir 85 % : 1 tablette","Compotes sans sucre ajouté : 6"]],
+ ["Placard : à vérifier, acheter si manque",["Sauce soja","Nuoc-mâm","Vinaigre de riz (ou cidre)","Vinaigre de xérès (ou vin)","Miel","Maïzena","Graines de sésame","Cubes de bouillon de volaille","Moutarde","Ras-el-hanout","Curcuma, coriandre moulue, garam masala ou curry","Paprika fumé, flocons de piment","Huile d'olive (grosse consommation cette semaine)","Sucre, fleur de sel"]]
+];
+
+/* ---------- Rendu ---------- */
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+
+function recipeHTML(r){
+  var ing = r.ingredients.map(function(t,i){
+    var id = "ing-"+r.id+"-"+i;
+    return '<li><input type="checkbox" id="'+id+'"><label for="'+id+'">'+esc(t)+'</label></li>';
+  }).join("");
+  var st = r.steps.map(function(t,i){
+    var id = "st-"+r.id+"-"+i;
+    return '<li class="step"><input type="checkbox" id="'+id+'"><label for="'+id+'"><span class="num">'+(i+1)+'</span><span class="txt">'+esc(t)+'</span></label></li>';
+  }).join("");
+  return '<article class="recipe" id="r-'+r.id+'" data-rid="'+r.id+'">'+
+    '<div class="art"><canvas data-art="'+r.id+'" aria-label="Illustration : '+esc(r.title)+'" role="img"></canvas><span class="origin">'+esc(r.origin)+'</span></div>'+
+    '<div class="rb">'+
+      '<p class="eyebrow">'+esc(r.kind)+' · '+esc(r.persons)+'</p>'+
+      '<h3>'+esc(r.title)+'</h3>'+
+      '<dl class="meta">'+
+        '<div><dt>Se mange</dt><dd>'+esc(r.eat)+'</dd></div>'+
+        '<div><dt>À préparer</dt><dd>'+esc(r.prep)+'</dd></div>'+
+        '<div><dt>Temps</dt><dd>'+esc(r.time)+'</dd></div>'+
+      '</dl>'+
+      '<div class="cols">'+
+        '<section><h4>Ingrédients</h4><ul class="ing">'+ing+'</ul></section>'+
+        '<section><h4>Préparation, dans l\'ordre</h4><ol class="steps">'+st+'</ol></section>'+
+      '</div>'+
+      '<button type="button" class="reset" data-reset="'+r.id+'">Décocher cette recette</button>'+
+    '</div></article>';
+}
+
+function sessionHTML(s){
+  var plan = s.plan.map(function(t){ return '<li>'+esc(t)+'</li>'; }).join("");
+  return '<section class="session" id="'+s.id+'">'+
+    '<div class="session-head"><p class="eyebrow">Soirée '+s.num+' · '+esc(s.time)+' en cuisine</p><h2>'+esc(s.day)+'</h2><p class="lead">'+esc(s.lead)+'</p></div>'+
+    '<div class="plan"><h3>L\'ordre de la soirée</h3><ol class="timeline">'+plan+'</ol>'+(s.note?'<p class="note">'+esc(s.note)+'</p>':'')+'</div>'+
+    s.recipes.map(recipeHTML).join("")+
+  '</section>';
+}
+
+var ALL = {};
+SESSIONS.forEach(function(s){ s.recipes.forEach(function(r){ ALL[r.id]=r; }); });
+SNACK_RECIPES.forEach(function(r){ ALL[r.id]=r; });
+
+document.getElementById("book").innerHTML = SESSIONS.map(sessionHTML).join("");
+document.getElementById("snackrecipes").innerHTML = SNACK_RECIPES.map(recipeHTML).join("");
+
+document.getElementById("toc").innerHTML = SESSIONS.map(function(s){
+  var d = s.recipes.filter(function(r){return r.kind==="Dîner";})[0];
+  var m = s.recipes.filter(function(r){return r.kind==="Midi de demain";})[0];
+  return '<li><a href="#'+s.id+'"><span class="d">'+esc(s.day.split(" ")[0])+'</span>'+
+    '<span class="m"><b>Soir</b> '+esc(d.origin)+'</span>'+
+    (m?'<span class="m"><b>Midi +1</b> '+esc(m.origin)+'</span>':'<span class="m">Rien à préparer</span>')+
+  '</a></li>';
+}).join("") + '<li><a href="#encas"><span class="d">Encas</span><span class="m">Grignotages sains</span></a></li>'+
+  '<li><a href="#courses"><span class="d">Courses</span><span class="m">Liste à cocher</span></a></li>';
+
+document.getElementById("navchips").innerHTML = SESSIONS.map(function(s){
+  return '<a class="chip" href="#'+s.id+'">'+esc(s.short)+'</a>';
+}).join("") + '<a class="chip" href="#encas">Encas</a><a class="chip" href="#courses">Courses</a>'+
+  '<button type="button" class="chip wake" id="wake" aria-pressed="false">Écran allumé</button>';
+
+document.getElementById("rayons").innerHTML = COURSES.map(function(c,ci){
+  var items = c[1].map(function(t,i){
+    var id = "c-"+ci+"-"+i;
+    return '<li><input type="checkbox" id="'+id+'"><label for="'+id+'">'+esc(t)+'</label></li>';
+  }).join("");
+  return '<div class="rayon"><h3>'+esc(c[0])+'</h3><ul class="ing">'+items+'</ul></div>';
+}).join("");
+
+/* ---------- Mémoire des cases (ce téléphone seulement) ---------- */
+var KEY = "carnet-semaine-1nov-2026";
+function load(){ try{ return JSON.parse(localStorage.getItem(KEY)||"{}")||{}; }catch(e){ return {}; } }
+function save(o){ try{ localStorage.setItem(KEY, JSON.stringify(o)); }catch(e){} }
+var state = load();
+Object.keys(state).forEach(function(id){ var el=document.getElementById(id); if(el && el.type==="checkbox") el.checked = !!state[id]; });
+document.addEventListener("change", function(e){
+  var t=e.target; if(!t || t.type!=="checkbox" || !t.id) return;
+  if(t.checked) state[t.id]=true; else delete state[t.id];
+  save(state);
+});
+document.addEventListener("click", function(e){
+  var b = e.target.closest && e.target.closest("[data-reset]"); if(!b) return;
+  var art = document.getElementById("r-"+b.getAttribute("data-reset")); if(!art) return;
+  art.querySelectorAll("input[type=checkbox]").forEach(function(cb){ cb.checked=false; delete state[cb.id]; });
+  save(state);
+});
+
+/* ---------- Écran allumé (wake lock) ---------- */
+var wakeBtn = document.getElementById("wake"), lock = null;
+function setWake(on){ wakeBtn.setAttribute("aria-pressed", on?"true":"false"); wakeBtn.textContent = on ? "Écran maintenu allumé" : "Écran allumé"; }
+async function requestLock(){
+  try{ lock = await navigator.wakeLock.request("screen"); setWake(true); lock.addEventListener("release", function(){ lock=null; setWake(false); }); }
+  catch(e){ lock=null; setWake(false); wakeBtn.textContent = "Écran : pas dispo ici"; wakeBtn.disabled = true; }
+}
+if(!("wakeLock" in navigator)){ wakeBtn.textContent = "Écran : pas dispo ici"; wakeBtn.disabled = true; }
+wakeBtn.addEventListener("click", function(){ if(lock){ lock.release(); } else { requestLock(); } });
+document.addEventListener("visibilitychange", function(){ if(document.visibilityState==="visible" && wakeBtn.getAttribute("aria-pressed")==="true" && !lock) requestLock(); });
+
+/* ---------- Illustrations : assiettes dessinées ---------- */
+function rng(seed){ var t = seed>>>0; return function(){ t += 0x6D2B79F5; var r = Math.imul(t ^ (t>>>15), 1|t); r ^= r + Math.imul(r ^ (r>>>7), 61|r); return ((r ^ (r>>>14))>>>0)/4294967296; }; }
+function hex(c){ var h=c.replace("#",""); if(h.length===3) h=h.split("").map(function(x){return x+x;}).join(""); var n=parseInt(h,16); return [(n>>16)&255,(n>>8)&255,n&255]; }
+function blend(a,b,t){ var A=hex(a),B=hex(b); var r=A.map(function(v,i){ return Math.round(v*t+B[i]*(1-t)); }); return "rgb("+r.join(",")+")"; }
+function isDark(){
+  var th = document.documentElement.getAttribute("data-theme");
+  if(th==="dark") return true; if(th==="light") return false;
+  return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+}
+function rrect(ctx,x,y,w,h,r){ r=Math.min(r,w/2,h/2); ctx.beginPath(); ctx.moveTo(x+r,y); ctx.lineTo(x+w-r,y); ctx.quadraticCurveTo(x+w,y,x+w,y+r); ctx.lineTo(x+w,y+h-r); ctx.quadraticCurveTo(x+w,y+h,x+w-r,y+h); ctx.lineTo(x+r,y+h); ctx.quadraticCurveTo(x,y+h,x,y+h-r); ctx.lineTo(x,y+r); ctx.quadraticCurveTo(x,y,x+r,y); ctx.closePath(); }
+
+function drawShape(ctx, L, s, rnd){
+  var c = L.c;
+  ctx.fillStyle = c; ctx.strokeStyle = L.edge || c;
+  switch(L.s){
+    case "disc":
+      ctx.beginPath(); ctx.arc(0,0,s,0,Math.PI*2); ctx.fill();
+      if(L.edge){ ctx.lineWidth=Math.max(1,s*.18); ctx.stroke(); }
+      if(L.inner){ ctx.fillStyle=L.inner; ctx.beginPath(); ctx.arc(0,0,s*(L.innerF||.5),0,Math.PI*2); ctx.fill(); }
+      break;
+    case "oval": ctx.beginPath(); ctx.ellipse(0,0,s,s*.62,0,0,Math.PI*2); ctx.fill(); break;
+    case "grain": ctx.beginPath(); ctx.ellipse(0,0,s,s*.55,0,0,Math.PI*2); ctx.fill(); break;
+    case "leaf":
+      ctx.beginPath(); ctx.ellipse(0,0,s,s*.42,0,0,Math.PI*2); ctx.fill();
+      ctx.strokeStyle = blend(c,"#ffffff",.6); ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(-s*.8,0); ctx.lineTo(s*.8,0); ctx.stroke(); break;
+    case "strip": case "noodle": {
+      var len = L.len || (L.s==="noodle"?4.5:2.6), wid = L.wid || (L.s==="noodle"?.3:.5);
+      rrect(ctx,-s*len/2,-s*wid/2,s*len,s*wid,s*wid/2); ctx.fill();
+      if(L.edge){ ctx.lineWidth=1; ctx.stroke(); } break; }
+    case "slab":
+      rrect(ctx,-s*.8,-s*.5,s*1.6,s,s*.18); ctx.fill();
+      if(L.lines){ ctx.strokeStyle=L.lines; ctx.lineWidth=Math.max(1.5,s*.07); for(var k=-1;k<=1;k++){ ctx.beginPath(); ctx.moveTo(-s*.55+k*s*.35,-s*.42); ctx.lineTo(-s*.25+k*s*.35,s*.42); ctx.stroke(); } }
+      break;
+    case "cube": ctx.fillRect(-s/2,-s/2,s,s); if(L.edge){ ctx.lineWidth=1.5; ctx.strokeRect(-s/2,-s/2,s,s); } break;
+    case "tri":
+      ctx.beginPath(); ctx.moveTo(0,-s); ctx.lineTo(s*.9,s*.6); ctx.lineTo(-s*.9,s*.6); ctx.closePath(); ctx.fill();
+      if(L.edge){ ctx.lineWidth=2; ctx.stroke(); } break;
+    case "crescent":
+      ctx.lineCap="round"; ctx.lineWidth=s*.75; ctx.strokeStyle=c; ctx.beginPath(); ctx.arc(0,0,s,Math.PI*.2,Math.PI*1.3); ctx.stroke();
+      ctx.lineWidth=s*.18; ctx.strokeStyle=blend(c,"#ffffff",.45); ctx.beginPath(); ctx.arc(0,0,s,Math.PI*.35,Math.PI*1.15); ctx.stroke(); break;
+    case "halfdisc":
+      ctx.beginPath(); ctx.arc(0,0,s,Math.PI,Math.PI*2); ctx.closePath(); ctx.fill(); if(L.edge){ ctx.lineWidth=2; ctx.stroke(); } break;
+    case "swirl":
+      ctx.strokeStyle=c; ctx.lineWidth=2.5; ctx.lineCap="round"; ctx.beginPath();
+      for(var t=0;t<=Math.PI*4.5;t+=.1){ var rr=s*t/(Math.PI*4.5); var x=Math.cos(t)*rr, y=Math.sin(t)*rr*.8; if(t===0) ctx.moveTo(x,y); else ctx.lineTo(x,y); }
+      ctx.stroke(); break;
+  }
+}
+
+function drawPlate(cv, art, seed){
+  var dpr = Math.min(window.devicePixelRatio||1, 2);
+  var w = cv.clientWidth, h = cv.clientHeight; if(!w||!h) return;
+  cv.width = Math.round(w*dpr); cv.height = Math.round(h*dpr);
+  var ctx = cv.getContext("2d"); ctx.setTransform(dpr,0,0,dpr,0,0);
+  var dark = isDark(), base = dark ? "#1b201c" : "#f4f5ef";
+  ctx.fillStyle = blend(art.color, base, dark?.32:.24); ctx.fillRect(0,0,w,h);
+  ctx.save(); ctx.globalAlpha = dark?.12:.09; ctx.strokeStyle = art.color; ctx.lineWidth = 1;
+  for(var x=-h; x<w+h; x+=14){ ctx.beginPath(); ctx.moveTo(x,0); ctx.lineTo(x+h,h); ctx.stroke(); }
+  ctx.restore();
+  var cx=w/2, cy=h/2+h*.02, R=Math.min(w,h)*.44;
+  ctx.save(); ctx.shadowColor="rgba(0,0,0,"+(dark?.55:.18)+")"; ctx.shadowBlur=28; ctx.shadowOffsetY=10;
+  ctx.fillStyle = dark?"#e6e2d6":"#fcfbf7"; ctx.beginPath(); ctx.arc(cx,cy,R,0,Math.PI*2); ctx.fill(); ctx.restore();
+  ctx.strokeStyle="rgba(0,0,0,0.07)"; ctx.lineWidth=2; ctx.beginPath(); ctx.arc(cx,cy,R*.86,0,Math.PI*2); ctx.stroke();
+  var rnd = rng(seed*7919+13);
+  art.layers.forEach(function(L){
+    var n = L.pos ? L.pos.length : (L.n||1), s = (L.size||.05)*R, ox=(L.ox||0)*R, oy=(L.oy||0)*R, sp=(L.spread||0)*R;
+    for(var i=0;i<n;i++){
+      var px, py;
+      if(L.pos){ px = cx+L.pos[i][0]*R; py = cy+L.pos[i][1]*R; }
+      else {
+        var tries=0;
+        do { var a=rnd()*Math.PI*2, rad=Math.sqrt(rnd())*sp; px=cx+ox+Math.cos(a)*rad; py=cy+oy+Math.sin(a)*rad; tries++; }
+        while(Math.hypot(px-cx,py-cy) > R*.8 && tries<30);
+      }
+      var rot = 0;
+      if(typeof L.rot==="number") rot = L.rot;
+      else if(L.s==="slab") rot = (rnd()-.5)*.8;
+      else if(L.s!=="disc" && L.s!=="swirl" && L.s!=="halfdisc") rot = rnd()*Math.PI*2;
+      ctx.save(); ctx.translate(px,py); ctx.rotate(rot); ctx.globalAlpha = L.alpha==null?1:L.alpha;
+      drawShape(ctx, L, s, rnd); ctx.restore();
+    }
+  });
+}
+
+var canvases = Array.prototype.slice.call(document.querySelectorAll("canvas[data-art]"));
+function drawAll(){ canvases.forEach(function(cv,i){ var r = ALL[cv.getAttribute("data-art")]; if(r) drawPlate(cv, {color:r.color, layers:r.art.layers}, i+1); }); }
+drawAll();
+if(window.ResizeObserver){ var ro = new ResizeObserver(function(){ drawAll(); }); canvases.forEach(function(cv){ ro.observe(cv); }); }
+else window.addEventListener("resize", drawAll);
+if(window.matchMedia){ window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", drawAll); }
+new MutationObserver(drawAll).observe(document.documentElement, {attributes:true, attributeFilter:["data-theme"]});
+})();
+</script>
+
+</body></html>
