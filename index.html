@@ -313,7 +313,8 @@ body.has-timers .wrap{padding-bottom:calc(var(--tabh) + 180px)}
 .mesrec li:first-child{border-top:0}
 
 /* ---------- v8 : épuration ---------- */
-.hero2{margin-top:14px;padding:16px;display:grid;gap:12px}
+.hero2{margin-top:14px;padding:16px;display:grid;gap:12px;overflow:hidden}
+.hero2>*,.hero2 .bx,.hero2 .btn{box-sizing:border-box;max-width:100%;min-width:0}
 .hero2 .tp{display:flex;gap:14px;align-items:center}
 .hero2 .tp img{width:96px;height:96px;object-fit:contain;flex:0 0 auto}
 .hero2 h2{font-size:24px;line-height:1.1}
@@ -875,7 +876,7 @@ function pageReglages(){ var c=draft(); var h=['<div class="wrap">','<div class=
   h.push('<div class="stack" style="margin-top:16px"><section>'+stepMembres(c).replace('<h1 class="h1">Qui est à table ?</h1>','<h2 style="font-size:20px">Qui est à table</h2>')+'</section><section style="margin-top:8px">'+stepRepas(c).replace('<h1 class="h1">Quels repas on cuisine ?</h1>','<h2 style="font-size:20px">Les repas</h2>')+'</section><section style="margin-top:8px">'+stepObjectif(c).replace('<h1 class="h1">Quel objectif ?</h1>','<h2 style="font-size:20px">Objectif et cuisines</h2>')+'</section></div>');
   h.push(sectionMesRecettes());
   h.push(sectionPartage());
-  h.push('<p class="muted" style="margin-top:20px;font-size:13px">'+(S.db?"Les données sont partagées avec le foyer.":"Les données restent sur cet appareil.")+' · Tablée 2.1 (143b313b)</p></div>'+tabs("")); return h.join(""); }
+  h.push('<p class="muted" style="margin-top:20px;font-size:13px">'+(S.db?"Les données sont partagées avec le foyer.":"Les données restent sur cet appareil.")+' · Tablée 2.1 (9eb5a534)</p></div>'+tabs("")); return h.join(""); }
 function lireDraft(){ var c=S.ui.draft; if(!c) return; document.querySelectorAll('input[data-mem]').forEach(function(inp){ c.membres[+inp.dataset.mem].nom=inp.value.trim(); }); document.querySelectorAll('input[data-memex]').forEach(function(inp){ c.membres[+inp.dataset.memex].exclu=inp.value.trim(); });
   document.querySelectorAll('.days input[type=checkbox]').forEach(function(cb){ c.jours[+cb.dataset.jour][cb.dataset.k]=cb.checked; });
   var g=function(id){ return document.getElementById(id); }; if(g("cMidi")) c.convivesMidi=+g("cMidi").value||4; if(g("cSoir")) c.convivesSoir=+g("cSoir").value||4; if(g("tempsMax")) c.tempsMax=+g("tempsMax").value||50; if(g("debut")) c.debut=+g("debut").value; if(g("exclusions")) c.exclusions=g("exclusions").value; }
