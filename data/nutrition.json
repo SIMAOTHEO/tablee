@@ -1,0 +1,2273 @@
+{
+ "source": "Estimations d'après la table Ciqual (ANSES) et valeurs usuelles",
+ "ingredients": {
+  "ail": {
+   "kcal": 131,
+   "prot": 5.8,
+   "glu": 21.2,
+   "lip": 0.5,
+   "g_unite": 5
+  },
+  "aubergine": {
+   "kcal": 21,
+   "prot": 1.0,
+   "glu": 2.6,
+   "lip": 0.2,
+   "g_unite": 300
+  },
+  "asperge-verte": {
+   "kcal": 23,
+   "prot": 2.2,
+   "glu": 1.9,
+   "lip": 0.2,
+   "g_unite": 1
+  },
+  "avocat": {
+   "kcal": 205,
+   "prot": 1.6,
+   "glu": 0.8,
+   "lip": 20.6,
+   "g_unite": 140
+  },
+  "betterave-cuite": {
+   "kcal": 41,
+   "prot": 1.8,
+   "glu": 7.6,
+   "lip": 0.2,
+   "g_unite": 1
+  },
+  "blette": {
+   "kcal": 18,
+   "prot": 1.8,
+   "glu": 2.1,
+   "lip": 0.2,
+   "g_unite": 600
+  },
+  "brocoli": {
+   "kcal": 29,
+   "prot": 2.8,
+   "glu": 2.7,
+   "lip": 0.4,
+   "g_unite": 1
+  },
+  "butternut": {
+   "kcal": 40,
+   "prot": 1.0,
+   "glu": 8.3,
+   "lip": 0.1,
+   "g_unite": 1
+  },
+  "potimarron": {
+   "kcal": 39,
+   "prot": 1.2,
+   "glu": 7.5,
+   "lip": 0.2,
+   "g_unite": 1
+  },
+  "carotte": {
+   "kcal": 36,
+   "prot": 0.8,
+   "glu": 6.6,
+   "lip": 0.3,
+   "g_unite": 1
+  },
+  "celeri-branche": {
+   "kcal": 17,
+   "prot": 0.8,
+   "glu": 1.9,
+   "lip": 0.2,
+   "g_unite": 40
+  },
+  "celeri-rave": {
+   "kcal": 30,
+   "prot": 1.2,
+   "glu": 4.0,
+   "lip": 0.3,
+   "g_unite": 1
+  },
+  "champignon-paris": {
+   "kcal": 23,
+   "prot": 3.1,
+   "glu": 0.8,
+   "lip": 0.3,
+   "g_unite": 1
+  },
+  "chou-blanc": {
+   "kcal": 28,
+   "prot": 1.2,
+   "glu": 4.3,
+   "lip": 0.2,
+   "g_unite": 1
+  },
+  "chou-rouge": {
+   "kcal": 29,
+   "prot": 1.4,
+   "glu": 4.6,
+   "lip": 0.2,
+   "g_unite": 1
+  },
+  "chou-fleur": {
+   "kcal": 25,
+   "prot": 2.0,
+   "glu": 2.4,
+   "lip": 0.3,
+   "g_unite": 1
+  },
+  "chou-kale": {
+   "kcal": 42,
+   "prot": 3.6,
+   "glu": 4.3,
+   "lip": 0.9,
+   "g_unite": 1
+  },
+  "chou-bruxelles": {
+   "kcal": 43,
+   "prot": 3.4,
+   "glu": 4.6,
+   "lip": 0.3,
+   "g_unite": 1
+  },
+  "chou-chinois": {
+   "kcal": 13,
+   "prot": 1.2,
+   "glu": 1.3,
+   "lip": 0.2,
+   "g_unite": 1
+  },
+  "concombre": {
+   "kcal": 12,
+   "prot": 0.6,
+   "glu": 1.8,
+   "lip": 0.1,
+   "g_unite": 350
+  },
+  "courgette": {
+   "kcal": 16,
+   "prot": 1.2,
+   "glu": 1.6,
+   "lip": 0.4,
+   "g_unite": 250
+  },
+  "echalote": {
+   "kcal": 72,
+   "prot": 2.5,
+   "glu": 13.6,
+   "lip": 0.1,
+   "g_unite": 30
+  },
+  "endive": {
+   "kcal": 17,
+   "prot": 1.0,
+   "glu": 2.5,
+   "lip": 0.1,
+   "g_unite": 120
+  },
+  "epinard-frais": {
+   "kcal": 25,
+   "prot": 2.9,
+   "glu": 1.4,
+   "lip": 0.4,
+   "g_unite": 1
+  },
+  "fenouil": {
+   "kcal": 21,
+   "prot": 1.2,
+   "glu": 3.0,
+   "lip": 0.2,
+   "g_unite": 250
+  },
+  "haricot-vert-frais": {
+   "kcal": 30,
+   "prot": 1.8,
+   "glu": 4.3,
+   "lip": 0.2,
+   "g_unite": 1
+  },
+  "laitue": {
+   "kcal": 15,
+   "prot": 1.2,
+   "glu": 1.4,
+   "lip": 0.2,
+   "g_unite": 300
+  },
+  "sucrine": {
+   "kcal": 15,
+   "prot": 1.2,
+   "glu": 1.7,
+   "lip": 0.3,
+   "g_unite": 130
+  },
+  "mache": {
+   "kcal": 21,
+   "prot": 2.0,
+   "glu": 0.8,
+   "lip": 0.4,
+   "g_unite": 1
+  },
+  "roquette": {
+   "kcal": 25,
+   "prot": 2.6,
+   "glu": 2.1,
+   "lip": 0.7,
+   "g_unite": 1
+  },
+  "mesclun": {
+   "kcal": 18,
+   "prot": 1.5,
+   "glu": 1.8,
+   "lip": 0.3,
+   "g_unite": 1
+  },
+  "mais-epi": {
+   "kcal": 86,
+   "prot": 3.3,
+   "glu": 16.7,
+   "lip": 1.2,
+   "g_unite": 150
+  },
+  "navet": {
+   "kcal": 21,
+   "prot": 0.9,
+   "glu": 3.4,
+   "lip": 0.2,
+   "g_unite": 150
+  },
+  "panais": {
+   "kcal": 68,
+   "prot": 1.4,
+   "glu": 12.5,
+   "lip": 0.3,
+   "g_unite": 200
+  },
+  "patate-douce": {
+   "kcal": 82,
+   "prot": 1.5,
+   "glu": 17.0,
+   "lip": 0.1,
+   "g_unite": 1
+  },
+  "pomme-de-terre": {
+   "kcal": 80,
+   "prot": 2.1,
+   "glu": 16.7,
+   "lip": 0.1,
+   "g_unite": 1
+  },
+  "petit-pois-frais": {
+   "kcal": 81,
+   "prot": 5.4,
+   "glu": 10.5,
+   "lip": 0.4,
+   "g_unite": 1
+  },
+  "poireau": {
+   "kcal": 27,
+   "prot": 1.5,
+   "glu": 3.8,
+   "lip": 0.3,
+   "g_unite": 180
+  },
+  "poivron-rouge": {
+   "kcal": 30,
+   "prot": 0.9,
+   "glu": 5.2,
+   "lip": 0.3,
+   "g_unite": 160
+  },
+  "poivron-jaune": {
+   "kcal": 28,
+   "prot": 0.9,
+   "glu": 5.0,
+   "lip": 0.2,
+   "g_unite": 160
+  },
+  "poivron-vert": {
+   "kcal": 21,
+   "prot": 0.9,
+   "glu": 2.9,
+   "lip": 0.2,
+   "g_unite": 160
+  },
+  "piment-frais": {
+   "kcal": 40,
+   "prot": 1.9,
+   "glu": 7.3,
+   "lip": 0.4,
+   "g_unite": 10
+  },
+  "radis": {
+   "kcal": 13,
+   "prot": 0.8,
+   "glu": 1.9,
+   "lip": 0.1,
+   "g_unite": 250
+  },
+  "tomate": {
+   "kcal": 19,
+   "prot": 0.9,
+   "glu": 2.5,
+   "lip": 0.3,
+   "g_unite": 125
+  },
+  "tomate-cerise": {
+   "kcal": 23,
+   "prot": 1.0,
+   "glu": 3.5,
+   "lip": 0.3,
+   "g_unite": 1
+  },
+  "oignon-jaune": {
+   "kcal": 35,
+   "prot": 1.2,
+   "glu": 6.5,
+   "lip": 0.2,
+   "g_unite": 125
+  },
+  "oignon-rouge": {
+   "kcal": 38,
+   "prot": 1.1,
+   "glu": 7.2,
+   "lip": 0.1,
+   "g_unite": 120
+  },
+  "oignon-nouveau": {
+   "kcal": 30,
+   "prot": 1.8,
+   "glu": 4.7,
+   "lip": 0.2,
+   "g_unite": 120
+  },
+  "germes-soja": {
+   "kcal": 31,
+   "prot": 3.0,
+   "glu": 4.1,
+   "lip": 0.2,
+   "g_unite": 1
+  },
+  "gingembre-frais": {
+   "kcal": 70,
+   "prot": 1.8,
+   "glu": 15.0,
+   "lip": 0.8,
+   "g_unite": 1
+  },
+  "citronnelle": {
+   "kcal": 99,
+   "prot": 1.8,
+   "glu": 25.3,
+   "lip": 0.5,
+   "g_unite": 20
+  },
+  "citron": {
+   "kcal": 29,
+   "prot": 1.1,
+   "glu": 6.5,
+   "lip": 0.3,
+   "g_unite": 120
+  },
+  "citron-vert": {
+   "kcal": 30,
+   "prot": 0.7,
+   "glu": 7.7,
+   "lip": 0.2,
+   "g_unite": 70
+  },
+  "persil-plat": {
+   "kcal": 36,
+   "prot": 3.0,
+   "glu": 3.0,
+   "lip": 0.8,
+   "g_unite": 50
+  },
+  "coriandre-fraiche": {
+   "kcal": 23,
+   "prot": 2.1,
+   "glu": 0.9,
+   "lip": 0.5,
+   "g_unite": 50
+  },
+  "menthe-fraiche": {
+   "kcal": 49,
+   "prot": 3.3,
+   "glu": 5.3,
+   "lip": 0.7,
+   "g_unite": 40
+  },
+  "basilic-frais": {
+   "kcal": 23,
+   "prot": 3.2,
+   "glu": 1.1,
+   "lip": 0.6,
+   "g_unite": 30
+  },
+  "ciboulette": {
+   "kcal": 30,
+   "prot": 3.3,
+   "glu": 1.9,
+   "lip": 0.7,
+   "g_unite": 25
+  },
+  "aneth-frais": {
+   "kcal": 43,
+   "prot": 3.5,
+   "glu": 4.9,
+   "lip": 1.1,
+   "g_unite": 30
+  },
+  "thym-frais": {
+   "kcal": 101,
+   "prot": 5.6,
+   "glu": 10.5,
+   "lip": 1.7,
+   "g_unite": 20
+  },
+  "romarin-frais": {
+   "kcal": 120,
+   "prot": 3.3,
+   "glu": 10.0,
+   "lip": 5.9,
+   "g_unite": 20
+  },
+  "estragon": {
+   "kcal": 50,
+   "prot": 3.4,
+   "glu": 6.3,
+   "lip": 1.1,
+   "g_unite": 25
+  },
+  "sauge-fraiche": {
+   "kcal": 60,
+   "prot": 2.5,
+   "glu": 7.5,
+   "lip": 2.0,
+   "g_unite": 20
+  },
+  "pomme": {
+   "kcal": 54,
+   "prot": 0.3,
+   "glu": 11.6,
+   "lip": 0.2,
+   "g_unite": 150
+  },
+  "poire": {
+   "kcal": 55,
+   "prot": 0.4,
+   "glu": 12.0,
+   "lip": 0.2,
+   "g_unite": 160
+  },
+  "clementine": {
+   "kcal": 47,
+   "prot": 0.8,
+   "glu": 9.4,
+   "lip": 0.2,
+   "g_unite": 65
+  },
+  "orange": {
+   "kcal": 45,
+   "prot": 0.9,
+   "glu": 8.6,
+   "lip": 0.2,
+   "g_unite": 150
+  },
+  "pamplemousse": {
+   "kcal": 36,
+   "prot": 0.6,
+   "glu": 7.0,
+   "lip": 0.1,
+   "g_unite": 250
+  },
+  "kiwi": {
+   "kcal": 58,
+   "prot": 1.0,
+   "glu": 10.4,
+   "lip": 0.6,
+   "g_unite": 75
+  },
+  "banane": {
+   "kcal": 90,
+   "prot": 1.1,
+   "glu": 19.7,
+   "lip": 0.3,
+   "g_unite": 120
+  },
+  "fraise": {
+   "kcal": 33,
+   "prot": 0.7,
+   "glu": 6.0,
+   "lip": 0.3,
+   "g_unite": 1
+  },
+  "framboise": {
+   "kcal": 43,
+   "prot": 1.2,
+   "glu": 5.0,
+   "lip": 0.3,
+   "g_unite": 1
+  },
+  "myrtille": {
+   "kcal": 57,
+   "prot": 0.7,
+   "glu": 12.1,
+   "lip": 0.3,
+   "g_unite": 1
+  },
+  "abricot": {
+   "kcal": 48,
+   "prot": 0.8,
+   "glu": 9.0,
+   "lip": 0.1,
+   "g_unite": 40
+  },
+  "peche": {
+   "kcal": 39,
+   "prot": 0.8,
+   "glu": 8.5,
+   "lip": 0.2,
+   "g_unite": 140
+  },
+  "nectarine": {
+   "kcal": 44,
+   "prot": 1.1,
+   "glu": 9.0,
+   "lip": 0.3,
+   "g_unite": 140
+  },
+  "prune": {
+   "kcal": 46,
+   "prot": 0.6,
+   "glu": 10.0,
+   "lip": 0.3,
+   "g_unite": 1
+  },
+  "raisin": {
+   "kcal": 69,
+   "prot": 0.7,
+   "glu": 16.1,
+   "lip": 0.2,
+   "g_unite": 1
+  },
+  "melon": {
+   "kcal": 34,
+   "prot": 0.8,
+   "glu": 7.0,
+   "lip": 0.2,
+   "g_unite": 600
+  },
+  "pasteque": {
+   "kcal": 30,
+   "prot": 0.6,
+   "glu": 7.0,
+   "lip": 0.2,
+   "g_unite": 1
+  },
+  "cerise": {
+   "kcal": 56,
+   "prot": 1.0,
+   "glu": 12.0,
+   "lip": 0.2,
+   "g_unite": 1
+  },
+  "figue": {
+   "kcal": 74,
+   "prot": 0.8,
+   "glu": 16.3,
+   "lip": 0.3,
+   "g_unite": 50
+  },
+  "ananas": {
+   "kcal": 50,
+   "prot": 0.5,
+   "glu": 11.0,
+   "lip": 0.2,
+   "g_unite": 900
+  },
+  "mangue": {
+   "kcal": 60,
+   "prot": 0.8,
+   "glu": 13.7,
+   "lip": 0.4,
+   "g_unite": 300
+  },
+  "grenade": {
+   "kcal": 83,
+   "prot": 1.7,
+   "glu": 14.7,
+   "lip": 1.2,
+   "g_unite": 150
+  },
+  "blanc-poulet": {
+   "kcal": 115,
+   "prot": 23.5,
+   "glu": 0.0,
+   "lip": 2.0,
+   "g_unite": 1
+  },
+  "haut-cuisse-poulet": {
+   "kcal": 125,
+   "prot": 19.5,
+   "glu": 0.0,
+   "lip": 5.0,
+   "g_unite": 1
+  },
+  "cuisse-poulet": {
+   "kcal": 180,
+   "prot": 18.0,
+   "glu": 0.0,
+   "lip": 12.0,
+   "g_unite": 200
+  },
+  "pilon-poulet": {
+   "kcal": 160,
+   "prot": 18.5,
+   "glu": 0.0,
+   "lip": 9.5,
+   "g_unite": 80
+  },
+  "poulet-entier": {
+   "kcal": 190,
+   "prot": 19.0,
+   "glu": 0.0,
+   "lip": 12.5,
+   "g_unite": 900
+  },
+  "escalope-dinde": {
+   "kcal": 105,
+   "prot": 23.5,
+   "glu": 0.0,
+   "lip": 1.2,
+   "g_unite": 1
+  },
+  "emince-dinde": {
+   "kcal": 108,
+   "prot": 23.0,
+   "glu": 0.0,
+   "lip": 1.8,
+   "g_unite": 1
+  },
+  "boeuf-hache-5": {
+   "kcal": 127,
+   "prot": 21.0,
+   "glu": 0.0,
+   "lip": 5.0,
+   "g_unite": 1
+  },
+  "boeuf-a-sauter": {
+   "kcal": 128,
+   "prot": 22.0,
+   "glu": 0.0,
+   "lip": 4.5,
+   "g_unite": 1
+  },
+  "boeuf-a-mijoter": {
+   "kcal": 155,
+   "prot": 20.5,
+   "glu": 0.0,
+   "lip": 8.0,
+   "g_unite": 1
+  },
+  "steak-boeuf": {
+   "kcal": 128,
+   "prot": 22.0,
+   "glu": 0.0,
+   "lip": 4.5,
+   "g_unite": 150
+  },
+  "filet-mignon-porc": {
+   "kcal": 117,
+   "prot": 21.5,
+   "glu": 0.0,
+   "lip": 3.4,
+   "g_unite": 1
+  },
+  "echine-porc": {
+   "kcal": 203,
+   "prot": 18.0,
+   "glu": 0.0,
+   "lip": 14.5,
+   "g_unite": 1
+  },
+  "cote-porc": {
+   "kcal": 175,
+   "prot": 20.0,
+   "glu": 0.0,
+   "lip": 10.5,
+   "g_unite": 160
+  },
+  "porc-hache": {
+   "kcal": 219,
+   "prot": 17.5,
+   "glu": 0.0,
+   "lip": 16.5,
+   "g_unite": 1
+  },
+  "agneau-epaule": {
+   "kcal": 200,
+   "prot": 17.5,
+   "glu": 0.0,
+   "lip": 14.5,
+   "g_unite": 1
+  },
+  "cotelette-agneau": {
+   "kcal": 250,
+   "prot": 16.5,
+   "glu": 0.0,
+   "lip": 20.5,
+   "g_unite": 55
+  },
+  "agneau-hache": {
+   "kcal": 230,
+   "prot": 17.0,
+   "glu": 0.0,
+   "lip": 18.0,
+   "g_unite": 1
+  },
+  "escalope-veau": {
+   "kcal": 106,
+   "prot": 22.0,
+   "glu": 0.0,
+   "lip": 2.0,
+   "g_unite": 1
+  },
+  "magret-canard": {
+   "kcal": 200,
+   "prot": 19.5,
+   "glu": 0.0,
+   "lip": 13.5,
+   "g_unite": 350
+  },
+  "merguez": {
+   "kcal": 261,
+   "prot": 15.5,
+   "glu": 1.5,
+   "lip": 21.5,
+   "g_unite": 50
+  },
+  "chipolata": {
+   "kcal": 251,
+   "prot": 14.5,
+   "glu": 1.0,
+   "lip": 21.0,
+   "g_unite": 50
+  },
+  "saucisse-toulouse": {
+   "kcal": 260,
+   "prot": 15.0,
+   "glu": 0.5,
+   "lip": 22.0,
+   "g_unite": 1
+  },
+  "saumon-pave": {
+   "kcal": 195,
+   "prot": 20.4,
+   "glu": 0.0,
+   "lip": 12.6,
+   "g_unite": 130
+  },
+  "cabillaud-filet": {
+   "kcal": 75,
+   "prot": 17.5,
+   "glu": 0.0,
+   "lip": 0.6,
+   "g_unite": 1
+  },
+  "lieu-noir-filet": {
+   "kcal": 81,
+   "prot": 18.5,
+   "glu": 0.0,
+   "lip": 0.8,
+   "g_unite": 1
+  },
+  "merlu-filet": {
+   "kcal": 84,
+   "prot": 17.5,
+   "glu": 0.0,
+   "lip": 1.6,
+   "g_unite": 1
+  },
+  "dorade-filet": {
+   "kcal": 105,
+   "prot": 19.5,
+   "glu": 0.0,
+   "lip": 3.0,
+   "g_unite": 100
+  },
+  "truite-filet": {
+   "kcal": 135,
+   "prot": 20.0,
+   "glu": 0.0,
+   "lip": 6.1,
+   "g_unite": 130
+  },
+  "maquereau-filet": {
+   "kcal": 191,
+   "prot": 18.5,
+   "glu": 0.0,
+   "lip": 13.0,
+   "g_unite": 100
+  },
+  "sardine-fraiche": {
+   "kcal": 136,
+   "prot": 20.0,
+   "glu": 0.0,
+   "lip": 6.2,
+   "g_unite": 1
+  },
+  "thon-frais": {
+   "kcal": 119,
+   "prot": 24.0,
+   "glu": 0.0,
+   "lip": 2.5,
+   "g_unite": 1
+  },
+  "crevette-crue-fraiche": {
+   "kcal": 81,
+   "prot": 18.0,
+   "glu": 0.5,
+   "lip": 0.8,
+   "g_unite": 1
+  },
+  "moule": {
+   "kcal": 23,
+   "prot": 3.3,
+   "glu": 1.0,
+   "lip": 0.6,
+   "g_unite": 1
+  },
+  "calamar": {
+   "kcal": 83,
+   "prot": 15.6,
+   "glu": 2.0,
+   "lip": 1.4,
+   "g_unite": 1
+  },
+  "saint-jacques": {
+   "kcal": 78,
+   "prot": 16.5,
+   "glu": 1.5,
+   "lip": 0.6,
+   "g_unite": 1
+  },
+  "jambon-blanc": {
+   "kcal": 113,
+   "prot": 20.0,
+   "glu": 1.0,
+   "lip": 3.2,
+   "g_unite": 45
+  },
+  "jambon-bayonne": {
+   "kcal": 245,
+   "prot": 27.0,
+   "glu": 0.5,
+   "lip": 15.0,
+   "g_unite": 15
+  },
+  "lardons": {
+   "kcal": 263,
+   "prot": 16.0,
+   "glu": 0.5,
+   "lip": 22.0,
+   "g_unite": 1
+  },
+  "chorizo": {
+   "kcal": 419,
+   "prot": 24.0,
+   "glu": 2.0,
+   "lip": 35.0,
+   "g_unite": 1
+  },
+  "saumon-fume": {
+   "kcal": 180,
+   "prot": 22.0,
+   "glu": 0.5,
+   "lip": 10.0,
+   "g_unite": 28
+  },
+  "houmous-achete": {
+   "kcal": 295,
+   "prot": 7.5,
+   "glu": 13.0,
+   "lip": 23.5,
+   "g_unite": 1
+  },
+  "feuille-brick": {
+   "kcal": 296,
+   "prot": 7.5,
+   "glu": 63.0,
+   "lip": 1.5,
+   "g_unite": 17
+  },
+  "galette-sarrasin": {
+   "kcal": 181,
+   "prot": 6.5,
+   "glu": 36.0,
+   "lip": 1.2,
+   "g_unite": 42
+  },
+  "oeuf": {
+   "kcal": 140,
+   "prot": 12.7,
+   "glu": 0.3,
+   "lip": 9.8,
+   "g_unite": 55
+  },
+  "yaourt-grec-0": {
+   "kcal": 57,
+   "prot": 10.0,
+   "glu": 3.8,
+   "lip": 0.2,
+   "g_unite": 1
+  },
+  "yaourt-nature": {
+   "kcal": 57,
+   "prot": 4.3,
+   "glu": 5.4,
+   "lip": 1.6,
+   "g_unite": 125
+  },
+  "fromage-blanc-0": {
+   "kcal": 46,
+   "prot": 7.5,
+   "glu": 4.0,
+   "lip": 0.2,
+   "g_unite": 1
+  },
+  "skyr": {
+   "kcal": 60,
+   "prot": 10.5,
+   "glu": 4.0,
+   "lip": 0.2,
+   "g_unite": 1
+  },
+  "lait-demi-ecreme": {
+   "kcal": 46,
+   "prot": 3.3,
+   "glu": 4.8,
+   "lip": 1.6,
+   "g_unite": 1.03
+  },
+  "beurre": {
+   "kcal": 743,
+   "prot": 0.7,
+   "glu": 0.6,
+   "lip": 82.0,
+   "g_unite": 1
+  },
+  "creme-fraiche-legere": {
+   "kcal": 162,
+   "prot": 2.8,
+   "glu": 4.0,
+   "lip": 15.0,
+   "g_unite": 1
+  },
+  "feta": {
+   "kcal": 266,
+   "prot": 16.0,
+   "glu": 1.0,
+   "lip": 22.0,
+   "g_unite": 1
+  },
+  "mozzarella": {
+   "kcal": 252,
+   "prot": 18.0,
+   "glu": 1.0,
+   "lip": 19.5,
+   "g_unite": 125
+  },
+  "parmesan": {
+   "kcal": 393,
+   "prot": 33.0,
+   "glu": 0.0,
+   "lip": 29.0,
+   "g_unite": 1
+  },
+  "emmental-rape": {
+   "kcal": 381,
+   "prot": 28.5,
+   "glu": 0.5,
+   "lip": 29.5,
+   "g_unite": 1
+  },
+  "chevre-frais": {
+   "kcal": 210,
+   "prot": 10.0,
+   "glu": 3.0,
+   "lip": 17.5,
+   "g_unite": 1
+  },
+  "comte": {
+   "kcal": 409,
+   "prot": 27.5,
+   "glu": 0.5,
+   "lip": 33.0,
+   "g_unite": 1
+  },
+  "fromage-frais": {
+   "kcal": 229,
+   "prot": 6.0,
+   "glu": 4.0,
+   "lip": 21.0,
+   "g_unite": 1
+  },
+  "ricotta": {
+   "kcal": 146,
+   "prot": 9.5,
+   "glu": 3.5,
+   "lip": 10.5,
+   "g_unite": 1
+  },
+  "halloumi": {
+   "kcal": 321,
+   "prot": 22.0,
+   "glu": 2.0,
+   "lip": 25.0,
+   "g_unite": 1
+  },
+  "tofu-ferme": {
+   "kcal": 128,
+   "prot": 13.5,
+   "glu": 1.5,
+   "lip": 7.5,
+   "g_unite": 1
+  },
+  "lait-coco-allege": {
+   "kcal": 83,
+   "prot": 0.8,
+   "glu": 2.0,
+   "lip": 8.0,
+   "g_unite": 1
+  },
+  "edamame-surgele": {
+   "kcal": 122,
+   "prot": 11.5,
+   "glu": 6.5,
+   "lip": 5.5,
+   "g_unite": 1
+  },
+  "haricot-vert-surgele": {
+   "kcal": 28,
+   "prot": 1.8,
+   "glu": 3.5,
+   "lip": 0.2,
+   "g_unite": 1
+  },
+  "epinard-surgele": {
+   "kcal": 22,
+   "prot": 2.6,
+   "glu": 1.0,
+   "lip": 0.4,
+   "g_unite": 1
+  },
+  "petit-pois-surgele": {
+   "kcal": 72,
+   "prot": 5.4,
+   "glu": 9.6,
+   "lip": 0.4,
+   "g_unite": 1
+  },
+  "brocoli-surgele": {
+   "kcal": 28,
+   "prot": 2.8,
+   "glu": 2.3,
+   "lip": 0.3,
+   "g_unite": 1
+  },
+  "poelee-asiatique-surgele": {
+   "kcal": 35,
+   "prot": 1.8,
+   "glu": 5.0,
+   "lip": 0.6,
+   "g_unite": 1
+  },
+  "oignon-emince-surgele": {
+   "kcal": 32,
+   "prot": 1.1,
+   "glu": 6.0,
+   "lip": 0.2,
+   "g_unite": 1
+  },
+  "crevette-crue-surgele": {
+   "kcal": 79,
+   "prot": 17.5,
+   "glu": 0.5,
+   "lip": 0.8,
+   "g_unite": 1
+  },
+  "poisson-blanc-surgele": {
+   "kcal": 77,
+   "prot": 17.5,
+   "glu": 0.0,
+   "lip": 0.8,
+   "g_unite": 1
+  },
+  "fruits-rouges-surgele": {
+   "kcal": 40,
+   "prot": 1.0,
+   "glu": 7.0,
+   "lip": 0.3,
+   "g_unite": 1
+  },
+  "mangue-surgele": {
+   "kcal": 62,
+   "prot": 0.7,
+   "glu": 14.0,
+   "lip": 0.3,
+   "g_unite": 1
+  },
+  "riz-basmati": {
+   "kcal": 352,
+   "prot": 8.0,
+   "glu": 78.0,
+   "lip": 0.8,
+   "g_unite": 1
+  },
+  "riz-complet": {
+   "kcal": 355,
+   "prot": 7.9,
+   "glu": 74.0,
+   "lip": 2.5,
+   "g_unite": 1
+  },
+  "riz-jasmin": {
+   "kcal": 352,
+   "prot": 7.0,
+   "glu": 79.0,
+   "lip": 0.6,
+   "g_unite": 1
+  },
+  "riz-arborio": {
+   "kcal": 350,
+   "prot": 7.0,
+   "glu": 79.0,
+   "lip": 0.6,
+   "g_unite": 1
+  },
+  "riz-sushi": {
+   "kcal": 351,
+   "prot": 6.5,
+   "glu": 79.5,
+   "lip": 0.6,
+   "g_unite": 1
+  },
+  "quinoa": {
+   "kcal": 365,
+   "prot": 14.1,
+   "glu": 57.2,
+   "lip": 6.1,
+   "g_unite": 1
+  },
+  "boulgour-fin": {
+   "kcal": 345,
+   "prot": 12.3,
+   "glu": 69.0,
+   "lip": 1.3,
+   "g_unite": 1
+  },
+  "semoule-complete": {
+   "kcal": 340,
+   "prot": 12.5,
+   "glu": 66.0,
+   "lip": 2.0,
+   "g_unite": 1
+  },
+  "semoule-fine": {
+   "kcal": 355,
+   "prot": 12.0,
+   "glu": 73.0,
+   "lip": 1.2,
+   "g_unite": 1
+  },
+  "orge-perle": {
+   "kcal": 340,
+   "prot": 9.9,
+   "glu": 68.0,
+   "lip": 1.2,
+   "g_unite": 1
+  },
+  "sarrasin": {
+   "kcal": 340,
+   "prot": 13.3,
+   "glu": 61.5,
+   "lip": 3.4,
+   "g_unite": 1
+  },
+  "polenta": {
+   "kcal": 355,
+   "prot": 8.0,
+   "glu": 77.0,
+   "lip": 1.5,
+   "g_unite": 1
+  },
+  "lentille-corail": {
+   "kcal": 335,
+   "prot": 24.0,
+   "glu": 52.0,
+   "lip": 1.5,
+   "g_unite": 1
+  },
+  "lentille-verte": {
+   "kcal": 325,
+   "prot": 24.0,
+   "glu": 48.0,
+   "lip": 1.2,
+   "g_unite": 1
+  },
+  "pois-chiche-sec": {
+   "kcal": 350,
+   "prot": 20.5,
+   "glu": 48.0,
+   "lip": 6.0,
+   "g_unite": 1
+  },
+  "pois-chiche-boite": {
+   "kcal": 115,
+   "prot": 7.0,
+   "glu": 14.0,
+   "lip": 2.5,
+   "g_unite": 1
+  },
+  "haricot-rouge-boite": {
+   "kcal": 98,
+   "prot": 7.0,
+   "glu": 13.5,
+   "lip": 0.5,
+   "g_unite": 1
+  },
+  "haricot-noir-boite": {
+   "kcal": 100,
+   "prot": 7.0,
+   "glu": 15.0,
+   "lip": 0.5,
+   "g_unite": 1
+  },
+  "haricot-blanc-boite": {
+   "kcal": 98,
+   "prot": 6.7,
+   "glu": 13.5,
+   "lip": 0.5,
+   "g_unite": 1
+  },
+  "mais-boite": {
+   "kcal": 88,
+   "prot": 2.9,
+   "glu": 15.5,
+   "lip": 1.3,
+   "g_unite": 1
+  },
+  "pates-completes-courtes": {
+   "kcal": 345,
+   "prot": 13.0,
+   "glu": 64.0,
+   "lip": 2.5,
+   "g_unite": 1
+  },
+  "spaghetti-complets": {
+   "kcal": 345,
+   "prot": 13.0,
+   "glu": 64.0,
+   "lip": 2.5,
+   "g_unite": 1
+  },
+  "pates-blanches": {
+   "kcal": 355,
+   "prot": 12.5,
+   "glu": 71.0,
+   "lip": 1.5,
+   "g_unite": 1
+  },
+  "lasagnes-plaques": {
+   "kcal": 355,
+   "prot": 12.5,
+   "glu": 71.0,
+   "lip": 1.5,
+   "g_unite": 1
+  },
+  "tomate-concassee": {
+   "kcal": 25,
+   "prot": 1.2,
+   "glu": 4.0,
+   "lip": 0.2,
+   "g_unite": 1
+  },
+  "tomate-pelee": {
+   "kcal": 21,
+   "prot": 1.0,
+   "glu": 3.3,
+   "lip": 0.2,
+   "g_unite": 1
+  },
+  "coulis-tomate": {
+   "kcal": 35,
+   "prot": 1.4,
+   "glu": 5.5,
+   "lip": 0.3,
+   "g_unite": 1.03
+  },
+  "thon-naturel": {
+   "kcal": 113,
+   "prot": 26.0,
+   "glu": 0.0,
+   "lip": 1.0,
+   "g_unite": 1
+  },
+  "sardine-boite": {
+   "kcal": 222,
+   "prot": 24.0,
+   "glu": 0.0,
+   "lip": 14.0,
+   "g_unite": 85
+  },
+  "maquereau-boite": {
+   "kcal": 200,
+   "prot": 19.0,
+   "glu": 0.5,
+   "lip": 13.5,
+   "g_unite": 110
+  },
+  "olive-noire": {
+   "kcal": 180,
+   "prot": 1.5,
+   "glu": 2.0,
+   "lip": 18.5,
+   "g_unite": 1
+  },
+  "olive-verte": {
+   "kcal": 144,
+   "prot": 1.2,
+   "glu": 1.0,
+   "lip": 15.0,
+   "g_unite": 1
+  },
+  "capre": {
+   "kcal": 23,
+   "prot": 2.4,
+   "glu": 1.7,
+   "lip": 0.9,
+   "g_unite": 1
+  },
+  "cornichon": {
+   "kcal": 15,
+   "prot": 0.6,
+   "glu": 2.2,
+   "lip": 0.2,
+   "g_unite": 1
+  },
+  "anchois": {
+   "kcal": 211,
+   "prot": 28.0,
+   "glu": 0.0,
+   "lip": 11.0,
+   "g_unite": 1
+  },
+  "poivron-grille-bocal": {
+   "kcal": 37,
+   "prot": 1.0,
+   "glu": 5.0,
+   "lip": 1.0,
+   "g_unite": 1
+  },
+  "pesto": {
+   "kcal": 449,
+   "prot": 5.0,
+   "glu": 6.0,
+   "lip": 45.0,
+   "g_unite": 1
+  },
+  "farine-t55": {
+   "kcal": 345,
+   "prot": 10.0,
+   "glu": 72.0,
+   "lip": 1.2,
+   "g_unite": 1
+  },
+  "farine-complete": {
+   "kcal": 330,
+   "prot": 12.5,
+   "glu": 63.0,
+   "lip": 2.0,
+   "g_unite": 1
+  },
+  "chapelure": {
+   "kcal": 380,
+   "prot": 12.5,
+   "glu": 73.0,
+   "lip": 4.5,
+   "g_unite": 1
+  },
+  "pain-complet-tranche": {
+   "kcal": 248,
+   "prot": 9.5,
+   "glu": 42.0,
+   "lip": 4.0,
+   "g_unite": 35
+  },
+  "pita-complet": {
+   "kcal": 250,
+   "prot": 9.5,
+   "glu": 48.0,
+   "lip": 1.5,
+   "g_unite": 70
+  },
+  "wrap-complet": {
+   "kcal": 295,
+   "prot": 8.5,
+   "glu": 48.0,
+   "lip": 7.0,
+   "g_unite": 62
+  },
+  "naan": {
+   "kcal": 290,
+   "prot": 8.5,
+   "glu": 48.0,
+   "lip": 7.0,
+   "g_unite": 130
+  },
+  "cacahuete-non-salee": {
+   "kcal": 590,
+   "prot": 25.0,
+   "glu": 11.0,
+   "lip": 49.0,
+   "g_unite": 1
+  },
+  "amande": {
+   "kcal": 600,
+   "prot": 21.0,
+   "glu": 8.0,
+   "lip": 52.0,
+   "g_unite": 1
+  },
+  "noix": {
+   "kcal": 690,
+   "prot": 15.0,
+   "glu": 7.0,
+   "lip": 65.0,
+   "g_unite": 1
+  },
+  "noix-cajou": {
+   "kcal": 590,
+   "prot": 18.0,
+   "glu": 27.0,
+   "lip": 46.0,
+   "g_unite": 1
+  },
+  "noisette": {
+   "kcal": 650,
+   "prot": 15.0,
+   "glu": 7.0,
+   "lip": 61.0,
+   "g_unite": 1
+  },
+  "pistache": {
+   "kcal": 590,
+   "prot": 20.5,
+   "glu": 18.0,
+   "lip": 46.0,
+   "g_unite": 1
+  },
+  "pignon": {
+   "kcal": 690,
+   "prot": 14.0,
+   "glu": 4.0,
+   "lip": 68.0,
+   "g_unite": 1
+  },
+  "graine-courge": {
+   "kcal": 580,
+   "prot": 30.0,
+   "glu": 6.0,
+   "lip": 49.0,
+   "g_unite": 1
+  },
+  "graine-tournesol": {
+   "kcal": 600,
+   "prot": 21.0,
+   "glu": 12.0,
+   "lip": 51.0,
+   "g_unite": 1
+  },
+  "graine-chia": {
+   "kcal": 470,
+   "prot": 16.5,
+   "glu": 7.7,
+   "lip": 30.7,
+   "g_unite": 1
+  },
+  "graine-lin": {
+   "kcal": 505,
+   "prot": 18.3,
+   "glu": 1.6,
+   "lip": 42.2,
+   "g_unite": 1
+  },
+  "flocon-avoine": {
+   "kcal": 370,
+   "prot": 13.5,
+   "glu": 58.7,
+   "lip": 7.0,
+   "g_unite": 1
+  },
+  "muesli-sans-sucre": {
+   "kcal": 365,
+   "prot": 11.0,
+   "glu": 58.0,
+   "lip": 8.0,
+   "g_unite": 1
+  },
+  "datte": {
+   "kcal": 285,
+   "prot": 2.0,
+   "glu": 67.0,
+   "lip": 0.3,
+   "g_unite": 1
+  },
+  "raisin-sec": {
+   "kcal": 300,
+   "prot": 3.0,
+   "glu": 69.0,
+   "lip": 0.5,
+   "g_unite": 1
+  },
+  "abricot-sec": {
+   "kcal": 250,
+   "prot": 3.4,
+   "glu": 56.0,
+   "lip": 0.5,
+   "g_unite": 1
+  },
+  "figue-seche": {
+   "kcal": 252,
+   "prot": 3.3,
+   "glu": 54.0,
+   "lip": 1.0,
+   "g_unite": 1
+  },
+  "chocolat-noir-85": {
+   "kcal": 590,
+   "prot": 11.0,
+   "glu": 15.0,
+   "lip": 50.0,
+   "g_unite": 1
+  },
+  "cacao-non-sucre": {
+   "kcal": 380,
+   "prot": 20.0,
+   "glu": 12.0,
+   "lip": 21.5,
+   "g_unite": 1
+  },
+  "compote-sans-sucre": {
+   "kcal": 50,
+   "prot": 0.3,
+   "glu": 11.5,
+   "lip": 0.2,
+   "g_unite": 100
+  },
+  "beurre-cacahuete": {
+   "kcal": 610,
+   "prot": 25.0,
+   "glu": 15.0,
+   "lip": 50.0,
+   "g_unite": 1
+  },
+  "puree-amande": {
+   "kcal": 625,
+   "prot": 22.0,
+   "glu": 6.0,
+   "lip": 56.0,
+   "g_unite": 1
+  },
+  "mais-a-eclater": {
+   "kcal": 370,
+   "prot": 11.0,
+   "glu": 65.0,
+   "lip": 4.5,
+   "g_unite": 1
+  },
+  "noix-coco-rapee": {
+   "kcal": 660,
+   "prot": 6.5,
+   "glu": 7.0,
+   "lip": 64.0,
+   "g_unite": 1
+  },
+  "poudre-amande": {
+   "kcal": 620,
+   "prot": 21.0,
+   "glu": 6.0,
+   "lip": 54.0,
+   "g_unite": 1
+  },
+  "galette-riz": {
+   "kcal": 380,
+   "prot": 8.0,
+   "glu": 80.0,
+   "lip": 3.0,
+   "g_unite": 8
+  },
+  "eau-gazeuse": {
+   "kcal": 0,
+   "prot": 0.0,
+   "glu": 0.0,
+   "lip": 0.0,
+   "g_unite": 1
+  },
+  "lait-amande": {
+   "kcal": 20,
+   "prot": 0.5,
+   "glu": 2.0,
+   "lip": 1.1,
+   "g_unite": 1
+  },
+  "lait-avoine": {
+   "kcal": 45,
+   "prot": 0.8,
+   "glu": 7.0,
+   "lip": 1.5,
+   "g_unite": 1.03
+  },
+  "the-vert": {
+   "kcal": 40,
+   "prot": 2.0,
+   "glu": 8.0,
+   "lip": 0.0,
+   "g_unite": 2
+  },
+  "cafe": {
+   "kcal": 20,
+   "prot": 1.5,
+   "glu": 3.0,
+   "lip": 0.1,
+   "g_unite": 1
+  },
+  "vermicelle-riz": {
+   "kcal": 355,
+   "prot": 6.0,
+   "glu": 81.0,
+   "lip": 0.6,
+   "g_unite": 1
+  },
+  "nouille-riz-plate": {
+   "kcal": 355,
+   "prot": 6.0,
+   "glu": 81.0,
+   "lip": 0.6,
+   "g_unite": 1
+  },
+  "nouille-soba": {
+   "kcal": 336,
+   "prot": 14.4,
+   "glu": 68.0,
+   "lip": 0.7,
+   "g_unite": 1
+  },
+  "nouille-udon": {
+   "kcal": 340,
+   "prot": 10.0,
+   "glu": 72.0,
+   "lip": 1.0,
+   "g_unite": 1
+  },
+  "nouille-ramen": {
+   "kcal": 355,
+   "prot": 12.0,
+   "glu": 72.0,
+   "lip": 1.5,
+   "g_unite": 1
+  },
+  "feuille-riz": {
+   "kcal": 340,
+   "prot": 6.0,
+   "glu": 78.0,
+   "lip": 0.5,
+   "g_unite": 10
+  },
+  "tortilla-mais": {
+   "kcal": 222,
+   "prot": 5.7,
+   "glu": 44.0,
+   "lip": 2.8,
+   "g_unite": 30
+  },
+  "pate-curry-vert": {
+   "kcal": 115,
+   "prot": 2.5,
+   "glu": 10.0,
+   "lip": 7.0,
+   "g_unite": 1
+  },
+  "pate-curry-rouge": {
+   "kcal": 120,
+   "prot": 2.5,
+   "glu": 11.0,
+   "lip": 7.0,
+   "g_unite": 1
+  },
+  "pousse-bambou": {
+   "kcal": 20,
+   "prot": 1.7,
+   "glu": 2.0,
+   "lip": 0.4,
+   "g_unite": 1
+  },
+  "chataigne-eau": {
+   "kcal": 50,
+   "prot": 0.9,
+   "glu": 11.0,
+   "lip": 0.1,
+   "g_unite": 1
+  },
+  "tahini": {
+   "kcal": 600,
+   "prot": 18.0,
+   "glu": 10.0,
+   "lip": 54.0,
+   "g_unite": 1
+  },
+  "citron-confit": {
+   "kcal": 30,
+   "prot": 0.8,
+   "glu": 4.0,
+   "lip": 0.5,
+   "g_unite": 70
+  },
+  "chipotle-adobo": {
+   "kcal": 80,
+   "prot": 1.5,
+   "glu": 12.0,
+   "lip": 2.5,
+   "g_unite": 1
+  },
+  "jalapeno-bocal": {
+   "kcal": 25,
+   "prot": 0.8,
+   "glu": 3.5,
+   "lip": 0.5,
+   "g_unite": 1
+  },
+  "algue-nori": {
+   "kcal": 260,
+   "prot": 32.0,
+   "glu": 20.0,
+   "lip": 3.0,
+   "g_unite": 2.5
+  },
+  "miso-blanc": {
+   "kcal": 200,
+   "prot": 11.7,
+   "glu": 26.0,
+   "lip": 6.0,
+   "g_unite": 1
+  },
+  "gochujang": {
+   "kcal": 230,
+   "prot": 5.0,
+   "glu": 48.0,
+   "lip": 1.5,
+   "g_unite": 1
+  },
+  "kimchi": {
+   "kcal": 20,
+   "prot": 1.5,
+   "glu": 2.5,
+   "lip": 0.5,
+   "g_unite": 1
+  },
+  "sauce-soja": {
+   "kcal": 55,
+   "prot": 8.0,
+   "glu": 5.0,
+   "lip": 0.1,
+   "g_unite": 1.15
+  },
+  "nuoc-mam": {
+   "kcal": 35,
+   "prot": 5.1,
+   "glu": 3.6,
+   "lip": 0.0,
+   "g_unite": 1.2
+  },
+  "sauce-huitre": {
+   "kcal": 105,
+   "prot": 2.0,
+   "glu": 24.0,
+   "lip": 0.1,
+   "g_unite": 1.25
+  },
+  "sauce-hoisin": {
+   "kcal": 220,
+   "prot": 3.3,
+   "glu": 44.0,
+   "lip": 3.4,
+   "g_unite": 1.25
+  },
+  "mirin": {
+   "kcal": 220,
+   "prot": 0.2,
+   "glu": 52.0,
+   "lip": 0.0,
+   "g_unite": 1.15
+  },
+  "vinaigre-riz": {
+   "kcal": 20,
+   "prot": 0.3,
+   "glu": 1.0,
+   "lip": 0.0,
+   "g_unite": 1.01
+  },
+  "huile-sesame": {
+   "kcal": 900,
+   "prot": 0.0,
+   "glu": 0.0,
+   "lip": 100.0,
+   "g_unite": 0.92
+  },
+  "sriracha": {
+   "kcal": 93,
+   "prot": 1.9,
+   "glu": 19.0,
+   "lip": 0.9,
+   "g_unite": 1.1
+  },
+  "harissa": {
+   "kcal": 70,
+   "prot": 2.5,
+   "glu": 7.0,
+   "lip": 3.5,
+   "g_unite": 1
+  },
+  "graine-sesame": {
+   "kcal": 615,
+   "prot": 18.5,
+   "glu": 11.0,
+   "lip": 54.0,
+   "g_unite": 1
+  },
+  "wasabi": {
+   "kcal": 268,
+   "prot": 2.5,
+   "glu": 42.0,
+   "lip": 10.0,
+   "g_unite": 1
+  },
+  "huile-olive": {
+   "kcal": 900,
+   "prot": 0.0,
+   "glu": 0.0,
+   "lip": 100.0,
+   "g_unite": 0.92
+  },
+  "huile-neutre": {
+   "kcal": 900,
+   "prot": 0.0,
+   "glu": 0.0,
+   "lip": 100.0,
+   "g_unite": 0.92
+  },
+  "vinaigre-vin": {
+   "kcal": 20,
+   "prot": 0.1,
+   "glu": 0.3,
+   "lip": 0.0,
+   "g_unite": 1.01
+  },
+  "vinaigre-cidre": {
+   "kcal": 21,
+   "prot": 0.0,
+   "glu": 0.9,
+   "lip": 0.0,
+   "g_unite": 1.01
+  },
+  "vinaigre-balsamique": {
+   "kcal": 88,
+   "prot": 0.5,
+   "glu": 17.0,
+   "lip": 0.0,
+   "g_unite": 1.06
+  },
+  "vinaigre-xeres": {
+   "kcal": 20,
+   "prot": 0.0,
+   "glu": 0.5,
+   "lip": 0.0,
+   "g_unite": 1.01
+  },
+  "moutarde": {
+   "kcal": 150,
+   "prot": 7.0,
+   "glu": 4.0,
+   "lip": 11.5,
+   "g_unite": 1
+  },
+  "moutarde-ancienne": {
+   "kcal": 145,
+   "prot": 7.5,
+   "glu": 5.0,
+   "lip": 10.0,
+   "g_unite": 1
+  },
+  "concentre-tomate": {
+   "kcal": 85,
+   "prot": 4.0,
+   "glu": 14.5,
+   "lip": 0.5,
+   "g_unite": 1
+  },
+  "bouillon-volaille-cube": {
+   "kcal": 245,
+   "prot": 10.0,
+   "glu": 20.0,
+   "lip": 14.0,
+   "g_unite": 10
+  },
+  "bouillon-legumes-cube": {
+   "kcal": 230,
+   "prot": 6.0,
+   "glu": 22.0,
+   "lip": 13.0,
+   "g_unite": 10
+  },
+  "maizena": {
+   "kcal": 350,
+   "prot": 0.3,
+   "glu": 86.0,
+   "lip": 0.1,
+   "g_unite": 1
+  },
+  "sel": {
+   "kcal": 0,
+   "prot": 0.0,
+   "glu": 0.0,
+   "lip": 0.0,
+   "g_unite": 1
+  },
+  "fleur-de-sel": {
+   "kcal": 0,
+   "prot": 0.0,
+   "glu": 0.0,
+   "lip": 0.0,
+   "g_unite": 1
+  },
+  "poivre-noir": {
+   "kcal": 251,
+   "prot": 10.4,
+   "glu": 38.7,
+   "lip": 3.3,
+   "g_unite": 1
+  },
+  "sauce-worcestershire": {
+   "kcal": 78,
+   "prot": 0.0,
+   "glu": 19.5,
+   "lip": 0.0,
+   "g_unite": 1.1
+  },
+  "tabasco": {
+   "kcal": 12,
+   "prot": 1.3,
+   "glu": 0.8,
+   "lip": 0.8,
+   "g_unite": 1
+  },
+  "paprika": {
+   "kcal": 282,
+   "prot": 14.1,
+   "glu": 19.1,
+   "lip": 12.9,
+   "g_unite": 1
+  },
+  "paprika-fume": {
+   "kcal": 282,
+   "prot": 14.1,
+   "glu": 19.1,
+   "lip": 12.9,
+   "g_unite": 1
+  },
+  "cumin-moulu": {
+   "kcal": 375,
+   "prot": 17.8,
+   "glu": 33.7,
+   "lip": 22.3,
+   "g_unite": 1
+  },
+  "cumin-graines": {
+   "kcal": 375,
+   "prot": 17.8,
+   "glu": 33.7,
+   "lip": 22.3,
+   "g_unite": 1
+  },
+  "curcuma": {
+   "kcal": 312,
+   "prot": 9.7,
+   "glu": 44.4,
+   "lip": 3.3,
+   "g_unite": 1
+  },
+  "coriandre-moulue": {
+   "kcal": 298,
+   "prot": 12.4,
+   "glu": 13.1,
+   "lip": 17.8,
+   "g_unite": 1
+  },
+  "garam-masala": {
+   "kcal": 380,
+   "prot": 14.0,
+   "glu": 40.0,
+   "lip": 15.0,
+   "g_unite": 1
+  },
+  "curry-poudre": {
+   "kcal": 325,
+   "prot": 12.7,
+   "glu": 25.2,
+   "lip": 13.8,
+   "g_unite": 1
+  },
+  "ras-el-hanout": {
+   "kcal": 320,
+   "prot": 11.0,
+   "glu": 30.0,
+   "lip": 13.0,
+   "g_unite": 1
+  },
+  "cannelle": {
+   "kcal": 250,
+   "prot": 4.0,
+   "glu": 50.0,
+   "lip": 1.2,
+   "g_unite": 1
+  },
+  "piment-flocons": {
+   "kcal": 318,
+   "prot": 12.0,
+   "glu": 29.4,
+   "lip": 17.3,
+   "g_unite": 1
+  },
+  "piment-espelette": {
+   "kcal": 300,
+   "prot": 12.0,
+   "glu": 28.0,
+   "lip": 14.0,
+   "g_unite": 1
+  },
+  "piment-cayenne": {
+   "kcal": 318,
+   "prot": 12.0,
+   "glu": 29.4,
+   "lip": 17.3,
+   "g_unite": 1
+  },
+  "chili-poudre": {
+   "kcal": 282,
+   "prot": 13.5,
+   "glu": 15.3,
+   "lip": 14.3,
+   "g_unite": 1
+  },
+  "origan-seche": {
+   "kcal": 265,
+   "prot": 9.0,
+   "glu": 26.0,
+   "lip": 4.3,
+   "g_unite": 1
+  },
+  "thym-seche": {
+   "kcal": 276,
+   "prot": 9.1,
+   "glu": 26.9,
+   "lip": 7.4,
+   "g_unite": 1
+  },
+  "herbes-provence": {
+   "kcal": 270,
+   "prot": 9.0,
+   "glu": 27.0,
+   "lip": 6.0,
+   "g_unite": 1
+  },
+  "laurier": {
+   "kcal": 313,
+   "prot": 7.6,
+   "glu": 48.7,
+   "lip": 8.4,
+   "g_unite": 0.2
+  },
+  "gingembre-moulu": {
+   "kcal": 335,
+   "prot": 9.0,
+   "glu": 57.5,
+   "lip": 4.2,
+   "g_unite": 1
+  },
+  "cardamome": {
+   "kcal": 311,
+   "prot": 10.8,
+   "glu": 40.5,
+   "lip": 6.7,
+   "g_unite": 1
+  },
+  "muscade": {
+   "kcal": 525,
+   "prot": 5.8,
+   "glu": 28.5,
+   "lip": 36.3,
+   "g_unite": 1
+  },
+  "clou-girofle": {
+   "kcal": 274,
+   "prot": 6.0,
+   "glu": 31.6,
+   "lip": 13.0,
+   "g_unite": 1
+  },
+  "anis-etoile": {
+   "kcal": 337,
+   "prot": 17.6,
+   "glu": 35.4,
+   "lip": 15.9,
+   "g_unite": 1
+  },
+  "graine-fenouil": {
+   "kcal": 345,
+   "prot": 15.8,
+   "glu": 12.5,
+   "lip": 14.9,
+   "g_unite": 1
+  },
+  "graine-moutarde": {
+   "kcal": 508,
+   "prot": 26.1,
+   "glu": 16.1,
+   "lip": 36.2,
+   "g_unite": 1
+  },
+  "quatre-epices": {
+   "kcal": 330,
+   "prot": 7.0,
+   "glu": 40.0,
+   "lip": 12.0,
+   "g_unite": 1
+  },
+  "ail-poudre": {
+   "kcal": 331,
+   "prot": 16.6,
+   "glu": 63.7,
+   "lip": 0.7,
+   "g_unite": 1
+  },
+  "oignon-poudre": {
+   "kcal": 341,
+   "prot": 10.4,
+   "glu": 63.9,
+   "lip": 1.0,
+   "g_unite": 1
+  },
+  "zaatar": {
+   "kcal": 330,
+   "prot": 10.0,
+   "glu": 25.0,
+   "lip": 20.0,
+   "g_unite": 1
+  },
+  "sumac": {
+   "kcal": 255,
+   "prot": 4.0,
+   "glu": 30.0,
+   "lip": 14.0,
+   "g_unite": 1
+  },
+  "melange-cajun": {
+   "kcal": 280,
+   "prot": 11.0,
+   "glu": 35.0,
+   "lip": 8.0,
+   "g_unite": 1
+  },
+  "epices-tacos": {
+   "kcal": 285,
+   "prot": 9.0,
+   "glu": 40.0,
+   "lip": 7.0,
+   "g_unite": 1
+  },
+  "miel": {
+   "kcal": 327,
+   "prot": 0.4,
+   "glu": 81.0,
+   "lip": 0.0,
+   "g_unite": 1
+  },
+  "sirop-erable": {
+   "kcal": 265,
+   "prot": 0.0,
+   "glu": 67.0,
+   "lip": 0.1,
+   "g_unite": 1.32
+  },
+  "sucre": {
+   "kcal": 400,
+   "prot": 0.0,
+   "glu": 99.8,
+   "lip": 0.0,
+   "g_unite": 1
+  },
+  "cassonade": {
+   "kcal": 390,
+   "prot": 0.1,
+   "glu": 97.0,
+   "lip": 0.0,
+   "g_unite": 1
+  },
+  "levure-chimique": {
+   "kcal": 100,
+   "prot": 0.0,
+   "glu": 25.0,
+   "lip": 0.0,
+   "g_unite": 11
+  },
+  "bicarbonate": {
+   "kcal": 0,
+   "prot": 0.0,
+   "glu": 0.0,
+   "lip": 0.0,
+   "g_unite": 1
+  },
+  "extrait-vanille": {
+   "kcal": 288,
+   "prot": 0.1,
+   "glu": 12.7,
+   "lip": 0.1,
+   "g_unite": 0.95
+  },
+  "safran": {
+   "kcal": 310,
+   "prot": 11.4,
+   "glu": 61.5,
+   "lip": 5.9,
+   "g_unite": 1
+  },
+  "doubanjiang": {
+   "kcal": 178,
+   "prot": 8.0,
+   "glu": 18.0,
+   "lip": 8.0,
+   "g_unite": 1
+  },
+  "poivre-sichuan": {
+   "kcal": 290,
+   "prot": 10.0,
+   "glu": 35.0,
+   "lip": 8.0,
+   "g_unite": 1
+  },
+  "gigot-agneau": {
+   "kcal": 156,
+   "prot": 20.0,
+   "glu": 0.0,
+   "lip": 8.5,
+   "g_unite": 1
+  }
+ }
+}
