@@ -416,7 +416,7 @@ function fmtQty(q,unite,ing){
   if(unite==="ml") return (q<=60||placard)?spoon(q):Math.round(q/10)*10+" ml";
   if(unite==="g"){ if(placard&&q<30) return spoon(q); return Math.max(5,Math.round(q/5)*5)+" g"; }
   return frac(q)+" "+unite; }
-function plur(nom,n){ if(n<=1) return nom; var w=nom.split(" "); if(w.length===1&&/^[a-zéèêôûî]+$/i.test(nom)) return nom+"s"; if(w.length>1&&/^[a-zéèêôûî]+$/i.test(w[0])&&(w[1]==="de"||w[1]==="ou"||w[1][0]==="(")) { w[0]=w[0]+"s"; return w.join(" "); } return nom; }
+function plur(nom,n){ if(n<=1) return nom; var w=nom.split(" "); if(w.length===1&&/^[a-zéèêôûî]+$/i.test(nom)) return nom+(/(au|eu)$/.test(nom)?"x":"s"); if(w.length>1&&/^[a-zéèêôûî]+$/i.test(w[0])&&(w[1]==="de"||w[1]==="ou"||w[1][0]==="(")) { w[0]=w[0]+(/(au|eu)$/.test(w[0])?"x":"s"); return w.join(" "); } return nom; }
 function achatLabel(ing,total){ var a=ing.achat; var n=Math.ceil(total/a.taille-1e-9); if(n<1) n=1; var sub=(ing.note||"").replace("unité = ","");
   var tr=Math.round(total); var det=(ing.unite==="g"||ing.unite==="ml")?tr+" "+ing.unite: ing.unite==="piece"?(sub?tr+" "+sub+(tr>1?"s":""):""): tr+" "+ing.unite+(tr>1?"s":"");
   if(a.nom==="au poids") return {main:(n*a.taille)+" g",det:""};
@@ -463,7 +463,7 @@ function dbSupabase(cfg){
 async function connecterPartage(){
   if(window.claude&&window.claude.use){ try{ var r2=await Promise.all([claude.use("db"),claude.use("user")]); if(r2[1]){ try{ S.user=await r2[1].me(); var can=await r2[1].can("data.write"); if(can===false) S.ro=true; }catch(e){} } return r2[0]; }catch(e){} }
   var cfg=partageCfg(); if(!cfg) return null;
-  try{ await chargerScript("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.1/dist/umd/supabase.min.js"); return dbSupabase(cfg); }
+  try{ try{ await chargerScript("supabase.min.js"); }catch(e0){ await chargerScript("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.1/dist/umd/supabase.min.js"); } return dbSupabase(cfg); }
   catch(e){ setSync("erreur"); toast("Partage indisponible pour l'instant (hors ligne ?). Les données restent sur cet appareil."); return null; }
 }
 function lienInvitation(cfg){ return location.origin+location.pathname+"#rejoindre="+codePartage(cfg); }
@@ -583,11 +583,11 @@ function sessionDuJour(w){ var ss=sessions(w); var td=iso(today()); var cur=ss.f
 function pageDepart(){ var w=S.semaine, c=S.courses; if(!w||w.statut!=="validee"||!c||c.semaine!==w.id) return "cesoir"; var now=new Date(); var all=c.items.concat(c.extra||[]); var reste=all.filter(function(i){return !(c.coches||{})[i.id];}).length;
   if(reste&&(now.getDay()===6||now.getDay()===0)&&now.getHours()<14) return "courses"; return "cesoir"; }
 function pageHome(){ var w=S.semaine, h=['<div class="wrap">',topbar()];
-  if(!w||!w.repas.length){ h.push('<p class="eyebrow">'+cap(fmtDateLong(today()))+'</p><h1 class="h1">Rien de prévu</h1><p class="muted" style="margin-top:8px">Génère la semaine en un bouton. Tu pourras remplacer les plats qui ne te plaisent pas.</p><div class="stack" style="margin-top:16px"><button class="btn big green" data-action="generer">Générer la semaine</button><button class="btn" data-action="charger-carnet">Charger la semaine du carnet</button></div></div>'+tabs("cesoir")); return h.join(""); }
+  if(!w||!w.repas.length){ h.push('<p class="eyebrow">'+cap(fmtDateLong(today()))+'</p><h1 class="h1">Rien de prévu</h1>'+bandeauNonRelie()+'<p class="muted" style="margin-top:8px">Génère la semaine en un bouton. Tu pourras remplacer les plats qui ne te plaisent pas.</p><div class="stack" style="margin-top:16px"><button class="btn big green" data-action="generer">Générer la semaine</button><button class="btn" data-action="charger-carnet">Charger la semaine du carnet</button></div></div>'+tabs("cesoir")); return h.join(""); }
   var s=sessionDuJour(w); var td=iso(today());
   if(!s){ h.push('<p class="eyebrow">'+cap(fmtDateLong(today()))+'</p><h1 class="h1">Semaine finie</h1><p class="muted" style="margin-top:8px">Tous les repas sont passés. Passe à la semaine suivante.</p><div class="stack" style="margin-top:16px"><button class="btn big green" data-action="nouvelle-semaine">Semaine suivante</button></div></div>'+tabs("cesoir")); return h.join(""); }
   var quand= s.date===td?(s.titre==="Midi"?"Ce midi":"Ce soir"): s.date===iso(addDays(today(),1))?"Demain "+(s.titre==="Midi"?"midi":"soir"): cap(JOURS[fromIso(s.date).getDay()])+" "+(s.titre==="Midi"?"midi":"soir");
-  h.push('<p class="eyebrow">'+cap(fmtDateLong(fromIso(s.date)))+'</p><h1 class="h1">'+quand+'</h1>'); if(!S.db) h.push('<section class="clay sm" style="margin-top:12px;padding:10px 14px;font-size:14px;line-height:1.4;border:2px dashed var(--line)">📱 Cette semaine est <b>seulement sur cet appareil</b>. Pour retrouver celle de la famille, ouvre le lien d\'invitation reçu (ou Réglages › Partage entre appareils).</section>'); h.push(aPrevoir(w));
+  h.push('<p class="eyebrow">'+cap(fmtDateLong(fromIso(s.date)))+'</p><h1 class="h1">'+quand+'</h1>'); h.push(bandeauNonRelie()); h.push(aPrevoir(w));
   var din=s.repas.filter(function(m){return m.creneau==="soir";})[0]||s.repas[0], box=s.repas.filter(function(m){return m!==din;})[0]; var rd=S.RECBY[din.recipe];
   var tout=s.repas.every(function(m){return m.cuisine;}), phd=photoPlat(rd), ck=cuisinierDe(s.id);
   var hh='<section class="clay hero2"><div class="tp">'+(phd?'<img src="'+phd.u+'" alt="">':'')+'<div style="flex:1;min-width:0;display:grid;gap:4px"><p class="eyebrow red">'+(din.creneau==="soir"?"Dîner":"Midi")+' · '+din.convives+' pers.'+(ck?' · 👩‍🍳 '+esc(ck):'')+'</p><h2 class="clamp2">'+esc(rd.nom.split(",")[0])+'</h2><p class="meta clamp1">'+esc(rd.cuisine)+' · '+rd.temps_total+' min'+(rd.nom.split(",").length>1?' · '+esc(rd.nom.split(",").slice(1).join(",").trim()):'')+'</p></div></div>';
@@ -784,8 +784,8 @@ function sectionMesRecettes(){ var L=(S.mesRec.liste||[]).filter(function(r){ re
 /* nombre de jours qu'un produit frais tient au frigo après les courses (ordre de grandeur prudent) */
 function tenue(id){ var g=S.ING[id]; if(!g) return 99; if(g.rayon==="surgeles"||g.placard) return 99;
   if(g.rayon==="poissonnerie") return 2; if(g.rayon==="boucherie-volaille") return /hache/.test(id)?2:3;
-  if(g.rayon==="charcuterie-traiteur") return g.perissable?5:10; if(g.rayon==="cremerie") return g.perissable?6:14;
-  if(g.rayon==="fruits-legumes") return g.perissable?(g.cat==="herbe"||/frais|fraiche|salade|laitue|roquette|mache|mesclun|sucrine|epinard|germes/.test(id)?4:6):10; return g.perissable?5:99; }
+  if(g.rayon==="charcuterie-traiteur") return g.perissable?5:10; if(g.rayon==="cremerie") return g.perissable?8:14;
+  if(g.rayon==="fruits-legumes") return 99; return g.perissable?5:99; }
 function fraicheur(r){ var best={jours:99,ing:null}; if(!r) return best; r.ingredients.forEach(function(l){ if(l.facultatif) return; var t=tenue(l.ing); if(t<best.jours) best={jours:t,ing:l.ing}; }); return best; }
 function jourCuisson(m){ return m.creneau==="midi"&&m.veille?addDays(fromIso(m.date),-1):fromIso(m.date); }
 function joursApresCourses(m,w){ w=w||S.semaine; if(!w) return 0; return Math.round((jourCuisson(m)-fromIso(w.debut))/864e5); }
@@ -810,6 +810,13 @@ function sheetEchange(sh){ var w=S.semaine, m=mealById(sh.id); if(!m) return "";
     return {x:x,score:(k1||k2?2:0)+(boite?1:0),html:'<button class="swp" data-action="swap" data-a="'+m.id+'" data-b="'+x.id+'">'+(ph?'<img src="'+ph.u+'" alt="">':'')+'<span class="t"><small>'+esc(libSlot(x))+'</small><b>'+esc(rx.nom.split(",")[0])+'</b>'+(k1?'<span class="ko">⚠️ '+esc(nomIng(k1.ing))+' trop vieux ce jour-là</span>':k2?'<span class="ko">⚠️ '+esc(nomIng(k2.ing))+' de l\'autre plat trop vieux</span>':'<span class="ok">✓ fraîcheur OK</span>')+(boite?'<small>Pas idéal en boîte</small>':'')+'</span><span style="font-size:20px">⇄</span></button>'}; });
   items.sort(function(a,b){ return a.score-b.score||jourCuisson(a.x)-jourCuisson(b.x); });
   return '<div class="sheetbg" data-action="sheet-close"><div class="sheet" data-stop="1" style="max-height:90vh"><span class="handle"></span><div class="row"><h2 style="font-size:20px;flex:1">Échanger « '+esc(r.nom.split(",")[0])+' »</h2><button class="btn round" data-action="sheet-close" aria-label="Fermer">'+ic("x")+'</button></div><p class="muted" style="font-size:14px">Prévu '+esc(libSlot(m).toLowerCase())+'. Avec quel repas l\'échanger ? Les deux plats changent simplement de jour, la liste de courses ne bouge pas.</p>'+(items.length?items.map(function(i){return i.html;}).join(""):'<p class="muted">Aucun autre repas à venir cette semaine.</p>')+'</div></div>'; }
+
+/* ====================== v10 : relier l'appareil au foyer ====================== */
+function estAppInstallee(){ try{ return !!(navigator.standalone||matchMedia("(display-mode: standalone)").matches); }catch(e){ return false; } }
+function bandeauNonRelie(){ if(S.db) return ""; return '<section class="clay sm" style="margin-top:12px;padding:12px 14px;font-size:14px;line-height:1.4;border:2px dashed var(--saffron);display:grid;gap:10px"><span>📱 Ce que tu vois est <b>seulement sur cet appareil</b>, pas la semaine de la famille.'+(estAppInstallee()?' L\'app de l\'écran d\'accueil a sa propre mémoire, séparée du navigateur : il faut la relier une fois ici.':'')+'</span><button class="btn green" data-action="rejoindre-ouvrir">🔗 Relier au foyer avec le lien d\'invitation</button></section>'; }
+function codeDepuisTexte(t){ t=String(t||"").trim(); var m=/rejoindre=([A-Za-z0-9+\/_=%-]+)/.exec(t); if(m) return decodeURIComponent(m[1]); return t.replace(/\s+/g,""); }
+function relierAvec(texte){ var P=window.__partage; if(!P){ toast("Le partage n'est pas disponible dans cette version."); return; } var cfg=P.lireCodePartage(codeDepuisTexte(texte)); if(!cfg){ toast("Lien d'invitation illisible. Copie-le en entier."); return; } lsSet("partage",cfg); toast("Appareil relié au foyer. Rechargement…"); setTimeout(function(){ location.replace(location.pathname+"?v="+Date.now()+"#cesoir"); },700); }
+function sheetRejoindre(){ return '<div class="sheetbg" data-action="sheet-close"><div class="sheet" data-stop="1"><span class="handle"></span><div class="row"><h2 style="font-size:21px;flex:1">Relier au foyer</h2><button class="btn round" data-action="sheet-close" aria-label="Fermer">'+ic("x")+'</button></div><p class="muted" style="font-size:14px;line-height:1.4">Copie le lien d\'invitation reçu (il contient « rejoindre= »), puis touche « Coller ». Une seule fois par appareil.</p><button class="btn big" data-action="rejoindre-coller">📋 Coller le lien</button><textarea id="jLien" rows="3" placeholder="…ou colle-le ici à la main" style="width:100%;font-size:13px;border-radius:12px;padding:10px;border:0;background:var(--soft)"></textarea><button class="btn big green" data-action="rejoindre-ok">Relier cet appareil</button></div></div>'; }
 
 function pageCuisine(){ var w=S.semaine; var s=w&&sessions(w).filter(function(x){return x.id===S.ui.session;})[0]; if(!s){ S.ui.page="cesoir"; return pageHome(); }
   var st=czState(s), coches=st.coches, enc=st.enc, items=st.items; var doneN=items.filter(function(it){return coches[it.key];}).length, encN=items.filter(function(it){return !coches[it.key]&&enc[it.key];}).length;
@@ -932,7 +939,8 @@ function pageReglages(){ var c=draft(); var h=['<div class="wrap">','<div class=
   h.push('<details class="acc" open><summary>👥 Qui est à table</summary><section>'+stepMembres(c).replace('<h1 class="h1">Qui est à table ?</h1>','')+'</section></details><details class="acc"><summary>🍽️ Les repas de la semaine</summary><section>'+stepRepas(c).replace('<h1 class="h1">Quels repas on cuisine ?</h1>','')+'</section></details><details class="acc"><summary>🎯 Objectif, cuisines, exclusions</summary><section>'+stepObjectif(c).replace('<h1 class="h1">Quel objectif ?</h1>','')+'</section></details>');
   h.push('<details class="acc"><summary>📖 Mes recettes</summary><div>'+sectionMesRecettes().replace('<section class="clay" style="margin-top:18px;padding:14px 16px">','<section>').replace('<h2 style="font-size:18px">Mes recettes</h2>','<span></span>')+'</div></details>');
   h.push(sectionPartage());
-  h.push('<p class="muted" style="margin-top:20px;font-size:13px">'+(S.db?"Les données sont partagées avec le foyer.":"Les données restent sur cet appareil.")+' · Tablée 2.1 (28e90e17)</p></div>'+tabs("")); return h.join(""); }
+  h.push('<button class="btn" style="margin-top:16px;width:100%" data-action="maj-forcee">🔄 Forcer la mise à jour de l\'app</button>');
+  h.push('<p class="muted" style="margin-top:20px;font-size:13px">'+(S.db?"Les données sont partagées avec le foyer.":"Les données restent sur cet appareil.")+' · Tablée 2.1 (dd29787a)</p></div>'+tabs("")); return h.join(""); }
 function lireDraft(){ var c=S.ui.draft; if(!c) return; document.querySelectorAll('input[data-mem]').forEach(function(inp){ c.membres[+inp.dataset.mem].nom=inp.value.trim(); }); document.querySelectorAll('input[data-memex]').forEach(function(inp){ c.membres[+inp.dataset.memex].exclu=inp.value.trim(); });
   document.querySelectorAll('.days input[type=checkbox]').forEach(function(cb){ c.jours[+cb.dataset.jour][cb.dataset.k]=cb.checked; });
   var g=function(id){ return document.getElementById(id); }; if(g("cMidi")) c.convivesMidi=+g("cMidi").value||4; if(g("cSoir")) c.convivesSoir=+g("cSoir").value||4; if(g("tempsMax")) c.tempsMax=+g("tempsMax").value||50; if(g("debut")) c.debut=+g("debut").value; if(g("exclusions")) c.exclusions=g("exclusions").value; }
@@ -949,6 +957,7 @@ function renderOverlay(){ var o=document.getElementById("overlay"); var sh=S.ui.
   if(sh.type==="confirm"){ o.innerHTML='<div class="sheetbg" data-action="sheet-close"><div class="sheet" data-stop="1"><span class="handle"></span><h2 style="font-size:22px">Il reste '+sh.reste+' repas cette semaine</h2><p class="muted" style="font-size:15px">Passer à la semaine suivante archive cette semaine : les repas non cuisinés comptent comme non tenus, et la liste de courses actuelle disparaît.</p><div class="actions"><button class="btn" data-action="sheet-close">Rester</button><button class="btn green" data-action="nouvelle-semaine" data-force="1">Passer quand même</button></div></div></div>'; return; }
   if(sh.type==="recette"){ o.innerHTML=sheetRecette(sh); return; }
   if(sh.type==="echange"){ o.innerHTML=sheetEchange(sh); return; }
+  if(sh.type==="rejoindre"){ o.innerHTML=sheetRejoindre(); return; }
   if(sh.type==="avis"){ var ms=(sh.mids||[]).map(mealById).filter(Boolean); var TAGS=["⏱ trop long","🌶️ trop épicé","🍽️ pas assez copieux","🔁 à refaire"]; var tdv=iso(today());
     var kR=function(x){ return x.date+(x.creneau==="midi"?"0":"1"); }, kMax=ms.map(kR).sort().pop()||"";
     var futurs=S.semaine.repas.filter(function(x){ return x.date>=tdv&&kR(x)>kMax&&!x.cuisine&&!x.reste&&ms.indexOf(x)<0; }).sort(function(a,b){ return kR(a)<kR(b)?-1:1; }).slice(0,4);
@@ -1004,8 +1013,8 @@ function archiver(w){ var st=statsSemaine(w.repas); var hist=S.hist||{entrees:[]
   w.repas.forEach(function(m){ if(m.recipe&&!m.skip&&!m.reste) hist.entrees.push({semaine:w.id,date:m.date,recipe:m.recipe,creneau:m.creneau,convives:m.convives,veille:!!m.veille,cuisine:!!m.cuisine}); });
   hist.semaines.push({id:w.id,prevus:st.prevus,cuits:st.cuits,score:st.score}); hist.semaines.sort(function(a,b){return a.id<b.id?-1:1;}); hist.entrees=hist.entrees.filter(function(e){ return e.date>=iso(addDays(today(),-180)); }); S.hist=hist; save("foyer/historique",hist); }
 function promouvoir(force){ if(!S.next) return false; if(!force&&iso(today())<S.next.debut) return false; var nx=S.next;
-  if(S.cur&&S.cur.id!==nx.id) archiver(S.cur); S.next=null; S.cur=nx; save("foyer/semaine",nx); save("foyer/prochaine",null);
-  if(S.coursesNextDoc){ var cn=S.coursesNextDoc; S.coursesNextDoc=null; S.coursesCur=cn; save("foyer/courses",cn); save("foyer/courses-prochaine",null); }
+  if(S.cur&&S.cur.id!==nx.id) archiver(S.cur); S.next=null; S.cur=nx; save("foyer/semaine",nx); save("foyer/prochaine",{vide:true});
+  if(S.coursesNextDoc){ var cn=S.coursesNextDoc; S.coursesNextDoc=null; S.coursesCur=cn; save("foyer/courses",cn); save("foyer/courses-prochaine",{vide:true}); }
   S.cuisine={semaine:nx.id,coches:{},pos:{}}; save("foyer/cuisine",S.cuisine); S.ui.weekView=null; S.ui.coursesNext=false; return true; }
 function verifierPromotion(){ if(S._promo||!S.next||!S._ld["foyer/semaine"]||!S._ld["foyer/prochaine"]||!S._ld["foyer/historique"]||!S._ld["foyer/courses"]) return; if(iso(today())<S.next.debut) return; S._promo=true; promouvoir(false); setTimeout(function(){ S._promo=false; },3000); }
 function preparerSuivante(){ var c=S.cur; if(!c){ actionGenerer(); return; } var debut=addDays(fromIso(c.debut),7); if(debut<=today()&&iso(addDays(fromIso(c.debut),6))<iso(today())){ nouvelleSemaine(); return; }
@@ -1068,6 +1077,9 @@ document.addEventListener("click",function(e){ var el=e.target.closest("[data-ac
     case "ma-recette": S.ui.sheet={type:"recette",meal:el.dataset.meal||null}; renderOverlay(); setTimeout(function(){ var x=document.getElementById("rNom"); x&&x.focus(); },60); break;
     case "recette-ok": if(enregistrerRecette(S.ui.sheet)){ S.ui.sheet=null; renderOverlay(); render(); } break;
     case "recette-suppr": { var dl={liste:(S.mesRec.liste||[]).map(function(r){ return r.id===el.dataset.id?Object.assign({},r,{supprime:true}):r; }),ingredients:S.mesRec.ingredients||[]}; integrerPerso(dl); save("foyer/recettes",dl); render(); toast("Recette retirée du choix des plats."); break; }
+    case "rejoindre-ouvrir": S.ui.sheet={type:"rejoindre"}; renderOverlay(); break;
+    case "rejoindre-coller": { if(navigator.clipboard&&navigator.clipboard.readText){ navigator.clipboard.readText().then(function(t){ var ta=document.getElementById("jLien"); if(ta) ta.value=t; if(/rejoindre=/.test(t)) relierAvec(t); else toast("Le presse-papiers ne contient pas de lien d'invitation."); }).catch(function(){ toast("Colle le lien à la main dans le champ."); }); } else toast("Colle le lien à la main dans le champ."); break; }
+    case "rejoindre-ok": relierAvec((document.getElementById("jLien")||{}).value); break;
     case "echange": S.ui.sheet={type:"echange",id:el.dataset.id}; renderOverlay(); break;
     case "swap": { var sa=mealById(el.dataset.a), sb=mealById(el.dataset.b); if(!sa||!sb) break; echanger(sa,sb); S.ui.sheet=null; renderOverlay(); render(); toast("⇄ "+S.RECBY[sb.recipe].nom.split(",")[0]+" passe à "+libSlot(sb).toLowerCase()+"."); break; }
     case "cz-meal": S.ui.czMeal=el.dataset.mid||null; S.ui.open=null; S.ui.showIng=false; render(); break;
@@ -1103,6 +1115,7 @@ document.addEventListener("click",function(e){ var el=e.target.closest("[data-ac
     case "onb-prev": lireDraft(); S.ui.onb--; render(); window.scrollTo(0,0); break;
     case "onb-finish": { commitDraft(); if(!S.semaine||!S.semaine.repas.length){ var w2=semaineVide(); w2.repas=generer(S.cfg,S.hist,fromIso(w2.debut),w2.graine,[],null); S.semaine=w2; S.ui.weekView=w2.id; save("foyer/semaine",w2); } location.hash="#semaine"; render(); toast("Ta première semaine est prête. Remplace ce qui ne te plaît pas, puis valide."); break; }
     case "partage-creer": case "partage-rejoindre": case "partage-copier": case "partage-quitter": case "partage-inviter": actionPartage(a); break;
+    case "maj-forcee": (async function(){ toast("Mise à jour…"); try{ if(navigator.serviceWorker){ var regs=await navigator.serviceWorker.getRegistrations(); for(var i=0;i<regs.length;i++) await regs[i].unregister(); } if(window.caches){ var ks=await caches.keys(); for(var j=0;j<ks.length;j++) await caches.delete(ks[j]); } }catch(e){} location.replace(location.pathname+"?v="+Date.now()+"#cesoir"); })(); break;
     case "save-settings": commitDraft(); location.hash="#cesoir"; toast("Réglages enregistrés."); break;
   } });
 document.addEventListener("input",function(e){ if(e.target.id==="pickQ"&&S.ui.sheet&&S.ui.sheet.type==="picker"){ S.ui.sheet.q=e.target.value; var pos=e.target.selectionStart; renderOverlay(); var q=document.getElementById("pickQ"); if(q){ q.focus(); q.setSelectionRange(pos,pos); } }
