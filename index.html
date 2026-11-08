@@ -456,9 +456,11 @@ function dbSupabase(cfg){
   return { doc:function(path){ return {
     onSnapshot:function(cb,onErr){ (subs[path]=subs[path]||[]).push(cb); abonner();
       client.from(T).select("data").eq("foyer",cfg.foyer).eq("path",path).maybeSingle().then(function(r){ if(r.error){ onErr&&onErr({code:r.error.code||"erreur"}); return; } var d=r.data?r.data.data:null; cb({exists:!!d,data:function(){return d;},metadata:{fromCache:false}}); },function(e){ onErr&&onErr({code:"erreur"}); }); },
+    get:function(){ return client.from(T).select("data").eq("foyer",cfg.foyer).eq("path",path).maybeSingle().then(function(r){ if(r.error) throw r.error; return r.data?r.data.data:null; }); },
     set:function(data){ return client.from(T).upsert({foyer:cfg.foyer,path:path,data:data,updated_at:new Date().toISOString()},{onConflict:"foyer,path"}).then(function(r){ if(r.error) throw {code:r.error.code||"erreur"}; }); },
     update:function(patch){ var self=this; return client.from(T).select("data").eq("foyer",cfg.foyer).eq("path",path).maybeSingle().then(function(r){ var cur=r.data?r.data.data:{}; return self.set(deepMerge(cur||{},patch)); }); }
-  }; } };
+  }; },
+  tout:function(){ return client.from(T).select("path,data").eq("foyer",cfg.foyer).then(function(r){ if(r.error) throw r.error; return r.data||[]; }); } };
 }
 async function connecterPartage(){
   if(window.claude&&window.claude.use){ try{ var r2=await Promise.all([claude.use("db"),claude.use("user")]); if(r2[1]){ try{ S.user=await r2[1].me(); var can=await r2[1].can("data.write"); if(can===false) S.ro=true; }catch(e){} } return r2[0]; }catch(e){} }
@@ -570,7 +572,7 @@ function moi(){ var id=lsGet("moi"); var m=(S.cfg&&S.cfg.membres||[]).filter(fun
 /* ====================== rendu ====================== */
 function render(){ var app=document.getElementById("app"); if(!S.cfg){ app.innerHTML='<div class="wrap"><p class="muted">Chargement…</p></div>'; return; }
   var p=S.ui.page; var html;
-  if(!S.cfg.onboarded) html=pageOnboarding();
+  if(!S.cfg.onboarded) html=(S.db&&!S._ld["foyer/reglages"])?'<div class="wrap"><p class="muted" style="margin-top:40px;text-align:center">Chargement du foyer…</p></div>':pageOnboarding();
   else if(p==="courses") html=pageCourses(); else if(p==="semaine") html=pageSemaine(); else if(p==="progres") html=pageProgres(); else if(p==="cuisine") html=pageCuisine(); else if(p==="reglages") html=pageReglages(); else html=pageHome();
   app.innerHTML=html; renderOverlay(); renderTimers(); setSync(syncState); }
 function tabs(cur){ var t=[["cesoir","Ce soir","home",""],["courses","Courses","cart","c-saffron"],["semaine","Semaine","cal",""],["progres","Progrès","chart","c-blue"]];
@@ -587,7 +589,7 @@ function pageHome(){ var w=S.semaine, h=['<div class="wrap">',topbar()];
   var s=sessionDuJour(w); var td=iso(today());
   if(!s){ h.push('<p class="eyebrow">'+cap(fmtDateLong(today()))+'</p><h1 class="h1">Semaine finie</h1><p class="muted" style="margin-top:8px">Tous les repas sont passés. Passe à la semaine suivante.</p><div class="stack" style="margin-top:16px"><button class="btn big green" data-action="nouvelle-semaine">Semaine suivante</button></div></div>'+tabs("cesoir")); return h.join(""); }
   var quand= s.date===td?(s.titre==="Midi"?"Ce midi":"Ce soir"): s.date===iso(addDays(today(),1))?"Demain "+(s.titre==="Midi"?"midi":"soir"): cap(JOURS[fromIso(s.date).getDay()])+" "+(s.titre==="Midi"?"midi":"soir");
-  h.push('<p class="eyebrow">'+cap(fmtDateLong(fromIso(s.date)))+'</p><h1 class="h1">'+quand+'</h1>'); h.push(bandeauNonRelie()); h.push(aPrevoir(w));
+  h.push('<p class="eyebrow">'+cap(fmtDateLong(fromIso(s.date)))+'</p><h1 class="h1">'+quand+'</h1>'); h.push(bandeauNonRelie()); h.push(bandeauQui()); h.push(aPrevoir(w));
   var din=s.repas.filter(function(m){return m.creneau==="soir";})[0]||s.repas[0], box=s.repas.filter(function(m){return m!==din;})[0]; var rd=S.RECBY[din.recipe];
   var tout=s.repas.every(function(m){return m.cuisine;}), phd=photoPlat(rd), ck=cuisinierDe(s.id);
   var hh='<section class="clay hero2"><div class="tp">'+(phd?'<img src="'+phd.u+'" alt="">':'')+'<div style="flex:1;min-width:0;display:grid;gap:4px"><p class="eyebrow red">'+(din.creneau==="soir"?"Dîner":"Midi")+' · '+din.convives+' pers.'+(ck?' · 👩‍🍳 '+esc(ck):'')+'</p><h2 class="clamp2">'+esc(rd.nom.split(",")[0])+'</h2><p class="meta clamp1">'+esc(rd.cuisine)+' · '+rd.temps_total+' min'+(rd.nom.split(",").length>1?' · '+esc(rd.nom.split(",").slice(1).join(",").trim()):'')+'</p></div></div>';
@@ -819,6 +821,23 @@ function viderFoyerLocal(){ try{ Object.keys(localStorage).forEach(function(k){ 
 function relierAvec(texte){ var P=window.__partage; if(!P){ toast("Le partage n'est pas disponible dans cette version."); return; } var cfg=P.lireCodePartage(codeDepuisTexte(texte)); if(!cfg){ toast("Lien d'invitation illisible. Copie-le en entier."); return; } viderFoyerLocal(); lsSet("partage",cfg); toast("Appareil relié au foyer. Rechargement…"); setTimeout(function(){ location.replace(location.pathname+"?v="+Date.now()+"#cesoir"); },700); }
 function sheetRejoindre(){ return '<div class="sheetbg" data-action="sheet-close"><div class="sheet" data-stop="1"><span class="handle"></span><div class="row"><h2 style="font-size:21px;flex:1">Relier au foyer</h2><button class="btn round" data-action="sheet-close" aria-label="Fermer">'+ic("x")+'</button></div><p class="muted" style="font-size:14px;line-height:1.4">Copie le lien d\'invitation reçu (il contient « rejoindre= »), puis touche « Coller ». Une seule fois par appareil.</p><button class="btn big" data-action="rejoindre-coller">📋 Coller le lien</button><textarea id="jLien" rows="3" placeholder="…ou colle-le ici à la main" style="width:100%;font-size:13px;border-radius:12px;padding:10px;border:0;background:var(--soft)"></textarea><button class="btn big green" data-action="rejoindre-ok">Relier cet appareil</button></div></div>'; }
 
+/* ====================== v12 : synchro famille ====================== */
+function sauverReglages(c){ var ret=S.ui.membresRetires||[]; S.ui.membresRetires=[]; var doc=S.db&&S.db.doc("foyer/reglages");
+  if(!doc||!doc.get){ save("foyer/reglages",c); return; }
+  lsSet("foyer/reglages",c);
+  doc.get().then(function(remote){ var ids={}; c.membres.forEach(function(m){ ids[m.id]=1; });
+    var ajout=((remote&&remote.membres)||[]).filter(function(m){ return m&&m.nom&&!ids[m.id]&&ret.indexOf(m.id)<0; });
+    if(ajout.length){ c.membres=c.membres.concat(ajout); toast(ajout.map(function(m){return m.nom;}).join(", ")+" déjà dans le foyer : gardé"+(ajout.length>1?"s":"")+"."); }
+    S.cfg=c; save("foyer/reglages",c); render(); }).catch(function(){ save("foyer/reglages",c); }); }
+function rafraichir(){ if(!S.db||!S.db.tout||S._rafr) return; S._rafr=true;
+  S.db.tout().then(function(rows){ S._rafr=false; setSync(S.ro?"ro":"on"); rows.forEach(function(row){ var l=listeners[row.path]; if(!l||row.data==null) return; if(JSON.stringify(lsGet(row.path))===JSON.stringify(row.data)) return; lsSet(row.path,row.data); l(row.data); }); })
+    .catch(function(){ S._rafr=false; }); }
+document.addEventListener("visibilitychange",function(){ if(document.visibilityState==="visible") rafraichir(); });
+window.addEventListener("focus",rafraichir); window.addEventListener("online",rafraichir); window.addEventListener("pageshow",rafraichir);
+setInterval(function(){ if(document.visibilityState==="visible") rafraichir(); },45000);
+function bandeauQui(){ var mem=((S.cfg&&S.cfg.membres)||[]).filter(function(m){return m.nom;}); var me=lsGet("moi"); if(!S.db||!mem.length||mem.some(function(m){return m.id===me;})) return "";
+  return '<section class="clay sm" style="margin-top:12px;padding:12px 14px;display:grid;gap:10px"><b style="font-size:16px">👋 Qui es-tu ?</b><div class="chips" style="flex-wrap:wrap">'+mem.map(function(m){ return '<button class="chip" data-action="qui-moi" data-id="'+m.id+'"><span class="dot" style="background:'+m.couleur+'"></span> '+esc(m.nom)+'</button>'; }).join("")+'<button class="chip" data-action="go" data-to="reglages">＋ Je ne suis pas dans la liste</button></div></section>'; }
+
 function pageCuisine(){ var w=S.semaine; var s=w&&sessions(w).filter(function(x){return x.id===S.ui.session;})[0]; if(!s){ S.ui.page="cesoir"; return pageHome(); }
   var st=czState(s), coches=st.coches, enc=st.enc, items=st.items; var doneN=items.filter(function(it){return coches[it.key];}).length, encN=items.filter(function(it){return !coches[it.key]&&enc[it.key];}).length;
   var fini=doneN>=items.length; var me=moi(); var mine=maTache(st);
@@ -941,12 +960,12 @@ function pageReglages(){ var c=draft(); var h=['<div class="wrap">','<div class=
   h.push('<details class="acc"><summary>📖 Mes recettes</summary><div>'+sectionMesRecettes().replace('<section class="clay" style="margin-top:18px;padding:14px 16px">','<section>').replace('<h2 style="font-size:18px">Mes recettes</h2>','<span></span>')+'</div></details>');
   h.push(sectionPartage());
   h.push('<button class="btn" style="margin-top:16px;width:100%" data-action="maj-forcee">🔄 Forcer la mise à jour de l\'app</button>');
-  h.push('<p class="muted" style="margin-top:20px;font-size:13px">'+(S.db?"Les données sont partagées avec le foyer.":"Les données restent sur cet appareil.")+' · Tablée 2.1 (b62257fc)</p></div>'+tabs("")); return h.join(""); }
+  h.push('<p class="muted" style="margin-top:20px;font-size:13px">'+(S.db?"Les données sont partagées avec le foyer.":"Les données restent sur cet appareil.")+' · Tablée 2.1 (c936f239)</p></div>'+tabs("")); return h.join(""); }
 function lireDraft(){ var c=S.ui.draft; if(!c) return; document.querySelectorAll('input[data-mem]').forEach(function(inp){ c.membres[+inp.dataset.mem].nom=inp.value.trim(); }); document.querySelectorAll('input[data-memex]').forEach(function(inp){ c.membres[+inp.dataset.memex].exclu=inp.value.trim(); });
   document.querySelectorAll('.days input[type=checkbox]').forEach(function(cb){ c.jours[+cb.dataset.jour][cb.dataset.k]=cb.checked; });
   var g=function(id){ return document.getElementById(id); }; if(g("cMidi")) c.convivesMidi=+g("cMidi").value||4; if(g("cSoir")) c.convivesSoir=+g("cSoir").value||4; if(g("tempsMax")) c.tempsMax=+g("tempsMax").value||50; if(g("debut")) c.debut=+g("debut").value; if(g("exclusions")) c.exclusions=g("exclusions").value; }
 function commitDraft(){ lireDraft(); var c=S.ui.draft; c.membres=c.membres.filter(function(m){return m.nom;}); c.membres.forEach(function(m,i){ if(!m.couleur) m.couleur=COULEURS[i%COULEURS.length]; });
-  if(!lsGet("moi")&&c.membres[0]) lsSet("moi",c.membres[0].id); c.onboarded=true; S.cfg=c; S.ui.draft=null; save("foyer/reglages",c); }
+  if(!lsGet("moi")&&c.membres[0]) lsSet("moi",c.membres[0].id); c.onboarded=true; S.cfg=c; S.ui.draft=null; sauverReglages(c); }
 
 /* ---------- feuilles ---------- */
 function renderOverlay(){ var o=document.getElementById("overlay"); var sh=S.ui.sheet; if(!sh){ o.innerHTML=""; return; }
@@ -1107,7 +1126,8 @@ document.addEventListener("click",function(e){ var el=e.target.closest("[data-ac
     case "poids-toggle": S.ui.poidsOpen=!S.ui.poidsOpen; render(); if(S.ui.poidsOpen){ var pi=document.getElementById("poids"); pi&&pi.focus(); } break;
     case "poids-ok": { var pi2=document.getElementById("poids"); var kg=pi2?parseFloat(String(pi2.value).replace(",",".")):NaN; if(!kg||kg<20||kg>300){ toast("Un poids en kilos, par exemple 72,4."); return; } var pd=(lsGet("poids")||[]).filter(function(x){return x.date!==iso(today());}); pd.push({date:iso(today()),kg:Math.round(kg*10)/10}); pd.sort(function(a,b){return a.date<b.date?-1:1;}); lsSet("poids",pd); S.ui.poidsOpen=false; render(); break; }
     case "mem-add": lireDraft(); S.ui.draft.membres.push({id:uid(),nom:"",couleur:COULEURS[S.ui.draft.membres.length%COULEURS.length],soirSeulement:false}); render(); break;
-    case "mem-del": lireDraft(); S.ui.draft.membres.splice(+el.dataset.i,1); render(); break;
+    case "mem-del": { lireDraft(); var md=S.ui.draft.membres[+el.dataset.i]; if(md){ S.ui.membresRetires=(S.ui.membresRetires||[]).concat([md.id]); } S.ui.draft.membres.splice(+el.dataset.i,1); render(); break; }
+    case "qui-moi": lsSet("moi",el.dataset.id); render(); toast("Noté, merci !"); break;
     case "mem-moi": lireDraft(); lsSet("moi",S.ui.draft.membres[+el.dataset.i].id); render(); break;
     case "mem-soir": lireDraft(); S.ui.draft.membres[+el.dataset.i].soirSeulement=!S.ui.draft.membres[+el.dataset.i].soirSeulement; render(); break;
     case "obj": lireDraft(); S.ui.draft.objectif=el.dataset.k; render(); break;
@@ -1130,7 +1150,7 @@ async function boot(){
   try{ var res=await Promise.all([loadJSON("data/ingredients.json"),loadJSON("data/aisles.json"),loadJSON("data/recipes.json")]); res[0].ingredients.forEach(function(i){ S.ING[i.id]=i; }); S.AISLES=res[1].rayons; S.REC=res[2].recettes; S.REC.forEach(function(r){ S.RECBY[r.id]=r; }); }
   catch(err){ document.getElementById("app").innerHTML='<div class="wrap"><p>Les recettes n\'ont pas pu être chargées. Vérifie la connexion et recharge.</p></div>'; return; }
   S.timers=(lsGet("timers")||[]).filter(function(t){return !t.done;}); S.ui.session=lsGet("session"); chargerMedias(); chargerNutrition();
-  listeners["foyer/reglages"]=function(d){ S.cfg=d?deepMerge(defaultCfg(),d):(S.cfg||defaultCfg()); if(!S.cfg.cuisines) S.cfg.cuisines={}; if(d&&d.membres&&d.membres.length&&d.onboarded==null) S.cfg.onboarded=true; render(); };
+  listeners["foyer/reglages"]=function(d){ if(!S._localInit) S._ld["foyer/reglages"]=true; S.cfg=d?deepMerge(defaultCfg(),d):(S.cfg||defaultCfg()); if(!S.cfg.cuisines) S.cfg.cuisines={}; if(d&&d.membres&&d.membres.length&&d.onboarded==null) S.cfg.onboarded=true; render(); };
   listeners["foyer/semaine"]=function(d){ if(!S._localInit) S._ld["foyer/semaine"]=true; if(d&&d.id){ S.cur=d; if(S.next&&S.next.id===d.id&&!S._localInit) S.next=null; } verifierPromotion(); render(); };
   listeners["foyer/prochaine"]=function(d){ if(!S._localInit) S._ld["foyer/prochaine"]=true; S.next=d&&d.id?d:null; verifierPromotion(); render(); };
   listeners["foyer/courses"]=function(d){ if(!S._localInit) S._ld["foyer/courses"]=true; if(d&&d.items) S.coursesCur=d; verifierPromotion(); render(); };
@@ -1142,6 +1162,7 @@ async function boot(){
   try{ S.db=await connecterPartage(); }catch(e){ S.db=null; }
   syncState=S.db?(S.ro?"ro":"on"):"off";
   Object.keys(listeners).forEach(function(p){ subscribe(p,listeners[p]); });
+  setTimeout(function(){ if(!S._ld["foyer/reglages"]){ S._ld["foyer/reglages"]=true; render(); } },8000);
   if(!location.hash&&S.cfg&&S.cfg.onboarded){ var dep=pageDepart(); if(dep!=="cesoir"){ S.ui.page=dep; history.replaceState(null,"","#"+dep); } }
   render();
 }
