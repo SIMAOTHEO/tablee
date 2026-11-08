@@ -429,7 +429,7 @@ var LS="tablee:";
 function lsGet(k){ try{ return JSON.parse(localStorage.getItem(LS+k)); }catch(e){ return null; } }
 function lsSet(k,v){ try{ localStorage.setItem(LS+k,JSON.stringify(v)); }catch(e){} }
 var listeners={};
-function subscribe(path,cb){ cb(lsGet(path)); if(!S.db) return; var timer=setTimeout(function(){ setSync("lent"); },10000);
+/* v11 : bascule sûre */ function subscribe(path,cb){ S._localInit=!!S.db; try{ cb(lsGet(path)); } finally { S._localInit=false; } if(!S.db) return; var timer=setTimeout(function(){ setSync("lent"); },10000);
   S.db.doc(path).onSnapshot(function(snap){ clearTimeout(timer); var d=snap.exists?snap.data():null; if(!snap.metadata.fromCache) setSync(S.ro?"ro":"on"); if(d) lsSet(path,d); cb(d); },
     function(err){ clearTimeout(timer); setSync(err.code==="revoked"?"off":"erreur"); }); }
 function save(path,data){ lsSet(path,data); listeners[path]&&listeners[path](data); if(!S.db) return Promise.resolve();
@@ -485,12 +485,12 @@ function actionPartage(a){
     if(navigator.share){ navigator.share({title:"Tablée",text:txt,url:url}).catch(function(){}); } else { try{ navigator.clipboard.writeText(txt+" "+url); }catch(e){} toast("Lien d'invitation copié : envoie-le par message."); } }
   if(a==="partage-creer"){ var u=(document.getElementById("pUrl").value||"").trim().replace(/\/+$/,""), k=(document.getElementById("pKey").value||"").trim(); if(!/^https:\/\/.+supabase\.co$/.test(u)||k.length<20){ toast("Vérifie l'URL et la clé Supabase."); return; }
     var f="foyer-"+Math.random().toString(36).slice(2,8)+Math.random().toString(36).slice(2,6); lsSet("partage",{url:u,key:k,foyer:f}); toast("Foyer créé. Rechargement…"); setTimeout(function(){ location.reload(); },800); }
-  if(a==="partage-rejoindre"){ var cfg=lireCodePartage(document.getElementById("pCode").value||""); if(!cfg){ toast("Code de partage illisible."); return; } lsSet("partage",cfg); toast("Appareil relié. Rechargement…"); setTimeout(function(){ location.reload(); },800); }
+  if(a==="partage-rejoindre"){ var cfg=lireCodePartage(document.getElementById("pCode").value||""); if(!cfg){ toast("Code de partage illisible."); return; } try{ Object.keys(localStorage).forEach(function(k){ if(k.indexOf("tablee:foyer/")===0) localStorage.removeItem(k); }); }catch(e){} lsSet("partage",cfg); toast("Appareil relié. Rechargement…"); setTimeout(function(){ location.reload(); },800); }
   if(a==="partage-copier"){ var ta=document.getElementById("codePartage"); ta.select(); try{ navigator.clipboard.writeText(ta.value); }catch(e){ document.execCommand("copy"); } toast("Code copié. Colle-le sur l'autre appareil."); }
   if(a==="partage-quitter"){ localStorage.removeItem(LS+"partage"); toast("Cet appareil ne partage plus. Rechargement…"); setTimeout(function(){ location.reload(); },800); }
 }
 /* lien d'invitation : https://…/tablee/#rejoindre=CODE relie l'appareil au foyer en un clic */
-(function(){ var m=/^#rejoindre=([A-Za-z0-9+\/_=-]+)/.exec(location.hash||""); if(!m) return; var cfg=lireCodePartage(decodeURIComponent(m[1])); try{ history.replaceState(null,"",location.pathname+location.search); }catch(e){} if(cfg){ lsSet("partage",cfg); window.__rejoint=true; } })();
+(function(){ var m=/^#rejoindre=([A-Za-z0-9+\/_=-]+)/.exec(location.hash||""); if(!m) return; var cfg=lireCodePartage(decodeURIComponent(m[1])); try{ history.replaceState(null,"",location.pathname+location.search); }catch(e){} if(cfg){ try{ Object.keys(localStorage).forEach(function(k){ if(k.indexOf("tablee:foyer/")===0) localStorage.removeItem(k); }); }catch(e){} lsSet("partage",cfg); window.__rejoint=true; } })();
 window.__partage={codePartage:codePartage,lireCodePartage:lireCodePartage};
 /* ====================== mise à jour de l'application ====================== */
 if("serviceWorker" in navigator && location.protocol!=="file:"){ window.addEventListener("load",function(){ navigator.serviceWorker.register("sw.js").then(function(reg){
@@ -815,7 +815,8 @@ function sheetEchange(sh){ var w=S.semaine, m=mealById(sh.id); if(!m) return "";
 function estAppInstallee(){ try{ return !!(navigator.standalone||matchMedia("(display-mode: standalone)").matches); }catch(e){ return false; } }
 function bandeauNonRelie(){ if(S.db) return ""; return '<section class="clay sm" style="margin-top:12px;padding:12px 14px;font-size:14px;line-height:1.4;border:2px dashed var(--saffron);display:grid;gap:10px"><span>📱 Ce que tu vois est <b>seulement sur cet appareil</b>, pas la semaine de la famille.'+(estAppInstallee()?' L\'app de l\'écran d\'accueil a sa propre mémoire, séparée du navigateur : il faut la relier une fois ici.':'')+'</span><button class="btn green" data-action="rejoindre-ouvrir">🔗 Relier au foyer avec le lien d\'invitation</button></section>'; }
 function codeDepuisTexte(t){ t=String(t||"").trim(); var m=/rejoindre=([A-Za-z0-9+\/_=%-]+)/.exec(t); if(m) return decodeURIComponent(m[1]); return t.replace(/\s+/g,""); }
-function relierAvec(texte){ var P=window.__partage; if(!P){ toast("Le partage n'est pas disponible dans cette version."); return; } var cfg=P.lireCodePartage(codeDepuisTexte(texte)); if(!cfg){ toast("Lien d'invitation illisible. Copie-le en entier."); return; } lsSet("partage",cfg); toast("Appareil relié au foyer. Rechargement…"); setTimeout(function(){ location.replace(location.pathname+"?v="+Date.now()+"#cesoir"); },700); }
+function viderFoyerLocal(){ try{ Object.keys(localStorage).forEach(function(k){ if(k.indexOf("tablee:foyer/")===0) localStorage.removeItem(k); }); }catch(e){} }
+function relierAvec(texte){ var P=window.__partage; if(!P){ toast("Le partage n'est pas disponible dans cette version."); return; } var cfg=P.lireCodePartage(codeDepuisTexte(texte)); if(!cfg){ toast("Lien d'invitation illisible. Copie-le en entier."); return; } viderFoyerLocal(); lsSet("partage",cfg); toast("Appareil relié au foyer. Rechargement…"); setTimeout(function(){ location.replace(location.pathname+"?v="+Date.now()+"#cesoir"); },700); }
 function sheetRejoindre(){ return '<div class="sheetbg" data-action="sheet-close"><div class="sheet" data-stop="1"><span class="handle"></span><div class="row"><h2 style="font-size:21px;flex:1">Relier au foyer</h2><button class="btn round" data-action="sheet-close" aria-label="Fermer">'+ic("x")+'</button></div><p class="muted" style="font-size:14px;line-height:1.4">Copie le lien d\'invitation reçu (il contient « rejoindre= »), puis touche « Coller ». Une seule fois par appareil.</p><button class="btn big" data-action="rejoindre-coller">📋 Coller le lien</button><textarea id="jLien" rows="3" placeholder="…ou colle-le ici à la main" style="width:100%;font-size:13px;border-radius:12px;padding:10px;border:0;background:var(--soft)"></textarea><button class="btn big green" data-action="rejoindre-ok">Relier cet appareil</button></div></div>'; }
 
 function pageCuisine(){ var w=S.semaine; var s=w&&sessions(w).filter(function(x){return x.id===S.ui.session;})[0]; if(!s){ S.ui.page="cesoir"; return pageHome(); }
@@ -940,7 +941,7 @@ function pageReglages(){ var c=draft(); var h=['<div class="wrap">','<div class=
   h.push('<details class="acc"><summary>📖 Mes recettes</summary><div>'+sectionMesRecettes().replace('<section class="clay" style="margin-top:18px;padding:14px 16px">','<section>').replace('<h2 style="font-size:18px">Mes recettes</h2>','<span></span>')+'</div></details>');
   h.push(sectionPartage());
   h.push('<button class="btn" style="margin-top:16px;width:100%" data-action="maj-forcee">🔄 Forcer la mise à jour de l\'app</button>');
-  h.push('<p class="muted" style="margin-top:20px;font-size:13px">'+(S.db?"Les données sont partagées avec le foyer.":"Les données restent sur cet appareil.")+' · Tablée 2.1 (94236ec2)</p></div>'+tabs("")); return h.join(""); }
+  h.push('<p class="muted" style="margin-top:20px;font-size:13px">'+(S.db?"Les données sont partagées avec le foyer.":"Les données restent sur cet appareil.")+' · Tablée 2.1 (b62257fc)</p></div>'+tabs("")); return h.join(""); }
 function lireDraft(){ var c=S.ui.draft; if(!c) return; document.querySelectorAll('input[data-mem]').forEach(function(inp){ c.membres[+inp.dataset.mem].nom=inp.value.trim(); }); document.querySelectorAll('input[data-memex]').forEach(function(inp){ c.membres[+inp.dataset.memex].exclu=inp.value.trim(); });
   document.querySelectorAll('.days input[type=checkbox]').forEach(function(cb){ c.jours[+cb.dataset.jour][cb.dataset.k]=cb.checked; });
   var g=function(id){ return document.getElementById(id); }; if(g("cMidi")) c.convivesMidi=+g("cMidi").value||4; if(g("cSoir")) c.convivesSoir=+g("cSoir").value||4; if(g("tempsMax")) c.tempsMax=+g("tempsMax").value||50; if(g("debut")) c.debut=+g("debut").value; if(g("exclusions")) c.exclusions=g("exclusions").value; }
@@ -1016,7 +1017,7 @@ function promouvoir(force){ if(!S.next) return false; if(!force&&iso(today())<S.
   if(S.cur&&S.cur.id!==nx.id) archiver(S.cur); S.next=null; S.cur=nx; save("foyer/semaine",nx); save("foyer/prochaine",{vide:true});
   if(S.coursesNextDoc){ var cn=S.coursesNextDoc; S.coursesNextDoc=null; S.coursesCur=cn; save("foyer/courses",cn); save("foyer/courses-prochaine",{vide:true}); }
   S.cuisine={semaine:nx.id,coches:{},pos:{}}; save("foyer/cuisine",S.cuisine); S.ui.weekView=null; S.ui.coursesNext=false; return true; }
-function verifierPromotion(){ if(S._promo||!S.next||!S._ld["foyer/semaine"]||!S._ld["foyer/prochaine"]||!S._ld["foyer/historique"]||!S._ld["foyer/courses"]) return; if(iso(today())<S.next.debut) return; S._promo=true; promouvoir(false); setTimeout(function(){ S._promo=false; },3000); }
+function verifierPromotion(){ if(S._promo||!S.next||!S._ld["foyer/semaine"]||!S._ld["foyer/prochaine"]||!S._ld["foyer/historique"]||!S._ld["foyer/courses"]) return; if(iso(today())<S.next.debut) return; if(S.cur&&S.cur.debut>=S.next.debut) return; S._promo=true; promouvoir(false); setTimeout(function(){ S._promo=false; },3000); }
 function preparerSuivante(){ var c=S.cur; if(!c){ actionGenerer(); return; } var debut=addDays(fromIso(c.debut),7); if(debut<=today()&&iso(addDays(fromIso(c.debut),6))<iso(today())){ nouvelleSemaine(); return; }
   if(S.next){ S.ui.weekView=S.next.id; render(); return; }
   var h2={entrees:((S.hist&&S.hist.entrees)||[]).concat(c.repas.filter(function(m){return m.recipe&&!m.skip;}).map(function(m){ return {semaine:c.id,date:m.date,recipe:m.recipe,creneau:m.creneau,convives:m.convives}; })),semaines:(S.hist&&S.hist.semaines)||[]};
@@ -1130,12 +1131,12 @@ async function boot(){
   catch(err){ document.getElementById("app").innerHTML='<div class="wrap"><p>Les recettes n\'ont pas pu être chargées. Vérifie la connexion et recharge.</p></div>'; return; }
   S.timers=(lsGet("timers")||[]).filter(function(t){return !t.done;}); S.ui.session=lsGet("session"); chargerMedias(); chargerNutrition();
   listeners["foyer/reglages"]=function(d){ S.cfg=d?deepMerge(defaultCfg(),d):(S.cfg||defaultCfg()); if(!S.cfg.cuisines) S.cfg.cuisines={}; if(d&&d.membres&&d.membres.length&&d.onboarded==null) S.cfg.onboarded=true; render(); };
-  listeners["foyer/semaine"]=function(d){ S._ld["foyer/semaine"]=true; if(d) S.semaine=d; verifierPromotion(); render(); };
-  listeners["foyer/prochaine"]=function(d){ S._ld["foyer/prochaine"]=true; S.next=d&&d.id?d:null; verifierPromotion(); render(); };
-  listeners["foyer/courses"]=function(d){ S._ld["foyer/courses"]=true; if(d) S.courses=d; verifierPromotion(); render(); };
+  listeners["foyer/semaine"]=function(d){ if(!S._localInit) S._ld["foyer/semaine"]=true; if(d&&d.id){ S.cur=d; if(S.next&&S.next.id===d.id&&!S._localInit) S.next=null; } verifierPromotion(); render(); };
+  listeners["foyer/prochaine"]=function(d){ if(!S._localInit) S._ld["foyer/prochaine"]=true; S.next=d&&d.id?d:null; verifierPromotion(); render(); };
+  listeners["foyer/courses"]=function(d){ if(!S._localInit) S._ld["foyer/courses"]=true; if(d&&d.items) S.coursesCur=d; verifierPromotion(); render(); };
   listeners["foyer/courses-prochaine"]=function(d){ S.coursesNextDoc=d&&d.items?d:null; render(); };
   listeners["foyer/cuisine"]=function(d){ if(d) S.cuisine=d; render(); };
-  listeners["foyer/historique"]=function(d){ S._ld["foyer/historique"]=true; if(d) S.hist=d; verifierPromotion(); render(); };
+  listeners["foyer/historique"]=function(d){ if(!S._localInit) S._ld["foyer/historique"]=true; if(d) S.hist=d; verifierPromotion(); render(); };
   listeners["foyer/avis"]=function(d){ if(d) S.avis=d; render(); };
   listeners["foyer/recettes"]=function(d){ if(d){ integrerPerso(d); render(); } };
   try{ S.db=await connecterPartage(); }catch(e){ S.db=null; }
