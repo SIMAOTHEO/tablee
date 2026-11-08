@@ -445,7 +445,7 @@ function setSync(st){ syncState=st; var el=document.getElementById("sync"); if(!
 /* Un "code de partage" = base64 de {u: url Supabase, k: clé anon, f: code du foyer}. Même code sur chaque appareil. */
 function partageCfg(){ return lsGet("partage")||null; }
 function codePartage(cfg){ try{ return btoa(unescape(encodeURIComponent(JSON.stringify({u:cfg.url,k:cfg.key,f:cfg.foyer})))).replace(/=+$/,""); }catch(e){ return ""; } }
-function lireCodePartage(code){ try{ var o=JSON.parse(decodeURIComponent(escape(atob(code.trim().replace(/\s+/g,""))))); if(o&&o.u&&o.k&&o.f) return {url:o.u,key:o.k,foyer:o.f}; }catch(e){} return null; }
+function lireCodePartage(code){ try{ code=String(code||"").trim(); var mm=/rejoindre=([A-Za-z0-9+\/_=%-]+)/.exec(code); if(mm) code=decodeURIComponent(mm[1]); var o=JSON.parse(decodeURIComponent(escape(atob(code.trim().replace(/\s+/g,""))))); if(o&&o.u&&o.k&&o.f) return {url:o.u,key:o.k,foyer:o.f}; }catch(e){} return null; }
 function chargerScript(src){ return new Promise(function(res,rej){ if(window.supabase) return res(); var s=document.createElement("script"); s.src=src; s.onload=res; s.onerror=rej; document.head.appendChild(s); }); }
 function dbSupabase(cfg){
   var client=window.supabase.createClient(cfg.url,cfg.key,{realtime:{params:{eventsPerSecond:5}}});
@@ -940,7 +940,7 @@ function pageReglages(){ var c=draft(); var h=['<div class="wrap">','<div class=
   h.push('<details class="acc"><summary>📖 Mes recettes</summary><div>'+sectionMesRecettes().replace('<section class="clay" style="margin-top:18px;padding:14px 16px">','<section>').replace('<h2 style="font-size:18px">Mes recettes</h2>','<span></span>')+'</div></details>');
   h.push(sectionPartage());
   h.push('<button class="btn" style="margin-top:16px;width:100%" data-action="maj-forcee">🔄 Forcer la mise à jour de l\'app</button>');
-  h.push('<p class="muted" style="margin-top:20px;font-size:13px">'+(S.db?"Les données sont partagées avec le foyer.":"Les données restent sur cet appareil.")+' · Tablée 2.1 (dd29787a)</p></div>'+tabs("")); return h.join(""); }
+  h.push('<p class="muted" style="margin-top:20px;font-size:13px">'+(S.db?"Les données sont partagées avec le foyer.":"Les données restent sur cet appareil.")+' · Tablée 2.1 (94236ec2)</p></div>'+tabs("")); return h.join(""); }
 function lireDraft(){ var c=S.ui.draft; if(!c) return; document.querySelectorAll('input[data-mem]').forEach(function(inp){ c.membres[+inp.dataset.mem].nom=inp.value.trim(); }); document.querySelectorAll('input[data-memex]').forEach(function(inp){ c.membres[+inp.dataset.memex].exclu=inp.value.trim(); });
   document.querySelectorAll('.days input[type=checkbox]').forEach(function(cb){ c.jours[+cb.dataset.jour][cb.dataset.k]=cb.checked; });
   var g=function(id){ return document.getElementById(id); }; if(g("cMidi")) c.convivesMidi=+g("cMidi").value||4; if(g("cSoir")) c.convivesSoir=+g("cSoir").value||4; if(g("tempsMax")) c.tempsMax=+g("tempsMax").value||50; if(g("debut")) c.debut=+g("debut").value; if(g("exclusions")) c.exclusions=g("exclusions").value; }
