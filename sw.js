@@ -1,5 +1,5 @@
 /* Tablée — service worker : l'appli marche hors ligne, les mises à jour arrivent au rechargement suivant. */
-const VERSION = "tablee-50245140";
+const VERSION = "tablee-f3eaa2ad";
 const COQUILLE = ["./", "./index.html", "./manifest.webmanifest", "./data/ingredients.json", "./data/aisles.json", "./data/recipes.json",
   "./icons/icon-192.png", "./icons/icon-512.png", "./icons/maskable-512.png", "./icons/apple-touch-icon.png"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(VERSION).then(c => c.addAll(COQUILLE))); });
