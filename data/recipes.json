@@ -11082,6 +11082,3836 @@
      "action": "dresser"
     }
    ]
+  },
+  {
+   "id": "jp-poulet-teriyaki-brocoli",
+   "nom": "Poulet teriyaki maison, riz et brocoli au sésame",
+   "cuisine": "Japon",
+   "continent": "Asie",
+   "creneau": [
+    "soir",
+    "midi"
+   ],
+   "profil": [
+    "sain",
+    "perte",
+    "muscle",
+    "famille"
+   ],
+   "temps_actif": 25,
+   "temps_total": 35,
+   "difficulte": 1,
+   "tags": [
+    "rechauffe",
+    "rapide"
+   ],
+   "proteine": "poulet",
+   "feculent": "riz",
+   "sante": 86,
+   "pourquoi": "La sauce teriyaki est faite maison avec peu de sucre (un peu de miel), le haut de cuisse reste moelleux et le brocoli apporte le légume vert.",
+   "ingredients": [
+    {
+     "ing": "haut-cuisse-poulet",
+     "qte": 140,
+     "unite": "g",
+     "prep": "en morceaux de 3 cm"
+    },
+    {
+     "ing": "riz-basmati",
+     "qte": 60,
+     "unite": "g"
+    },
+    {
+     "ing": "brocoli",
+     "qte": 150,
+     "unite": "g",
+     "prep": "en bouquets"
+    },
+    {
+     "ing": "huile-neutre",
+     "qte": 5,
+     "unite": "ml"
+    },
+    {
+     "ing": "graine-sesame",
+     "qte": 3,
+     "unite": "g"
+    },
+    {
+     "ing": "oignon-nouveau",
+     "qte": 0.1,
+     "unite": "botte",
+     "prep": "émincé"
+    },
+    {
+     "ing": "sauce-soja",
+     "qte": 15,
+     "unite": "ml",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "mirin",
+     "qte": 10,
+     "unite": "ml",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "miel",
+     "qte": 5,
+     "unite": "g",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "gingembre-frais",
+     "qte": 4,
+     "unite": "g",
+     "groupe": "sauce",
+     "prep": "râpé"
+    },
+    {
+     "ing": "ail",
+     "qte": 0.5,
+     "unite": "piece",
+     "groupe": "sauce",
+     "prep": "râpé"
+    },
+    {
+     "ing": "maizena",
+     "qte": 2,
+     "unite": "g",
+     "groupe": "sauce"
+    }
+   ],
+   "etapes": [
+    {
+     "texte": "Riz : mets le riz dans une passoire et rince-le sous l'eau froide en le remuant avec la main, jusqu'à ce que l'eau soit presque claire (3 rinçages, 1 minute).",
+     "type": "actif",
+     "action": "rincer"
+    },
+    {
+     "texte": "Mets le riz dans une casserole avec 1,5 fois son volume d'eau froide (1 verre de riz = 1 verre et demi d'eau) et une pincée de sel. Porte à ébullition à feu vif sans couvercle (3 à 4 minutes).",
+     "type": "actif",
+     "action": "cuire-eau",
+     "duree": 240
+    },
+    {
+     "texte": "Dès que ça bout, mets le couvercle et baisse le feu au minimum. Laisse cuire 12 minutes sans ouvrir. Puis éteins et laisse reposer 5 minutes, toujours couvert. Égraine à la fourchette avant de servir.",
+     "type": "attente",
+     "action": "cuire-eau",
+     "duree": 1020
+    },
+    {
+     "texte": "Sauce : dans un bol, mélange la sauce soja, le mirin, le miel, le gingembre et l'ail râpés, la maïzena et 2 cuillères à soupe d'eau par personne.",
+     "type": "actif",
+     "action": "melanger"
+    },
+    {
+     "texte": "Coupe le poulet en morceaux de 3 cm (retire les gros morceaux de gras blanc). Coupe le brocoli en petits bouquets.",
+     "type": "actif",
+     "action": "couper-des"
+    },
+    {
+     "texte": "Brocoli : fais-le cuire 5 minutes dans une casserole d'eau bouillante salée (ou au cuiseur vapeur). Il doit rester vert vif et un peu croquant. Égoutte.",
+     "type": "attente",
+     "action": "vapeur",
+     "duree": 300
+    },
+    {
+     "texte": "Dans une grande poêle à feu vif, chauffe l'huile. Mets le poulet en une couche et laisse dorer 4 minutes sans toucher, puis retourne et compte encore 4 minutes.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 480
+    },
+    {
+     "texte": "Remue la sauce (la maïzena tombe au fond) et verse-la sur le poulet. Laisse bouillonner 2 à 3 minutes en remuant : la sauce devient épaisse et brillante, elle enrobe les morceaux. Coupe un morceau : plus du tout rose au centre.",
+     "type": "actif",
+     "action": "mijoter",
+     "duree": 180
+    },
+    {
+     "texte": "Sers le poulet sur le riz avec le brocoli, et parsème de sésame et d'oignon nouveau.",
+     "type": "actif",
+     "action": "dresser"
+    },
+    {
+     "texte": "Boîtes du lendemain : refroidir 20 minutes, frigo. 2 minutes au micro-ondes.",
+     "type": "actif",
+     "action": "boites"
+    }
+   ]
+  },
+  {
+   "id": "jp-oyakodon-epinards",
+   "nom": "Oyakodon, bol de riz au poulet et œuf fondant, épinards sautés",
+   "cuisine": "Japon",
+   "continent": "Asie",
+   "creneau": [
+    "soir"
+   ],
+   "profil": [
+    "sain",
+    "perte",
+    "muscle",
+    "famille"
+   ],
+   "temps_actif": 25,
+   "temps_total": 30,
+   "difficulte": 1,
+   "tags": [
+    "rapide"
+   ],
+   "proteine": "poulet",
+   "feculent": "riz",
+   "sante": 84,
+   "pourquoi": "Un plat familial japonais tout simple : poulet et oignon mijotés dans un bouillon léger, puis liés à l'œuf. Pas de friture, beaucoup de protéines.",
+   "ingredients": [
+    {
+     "ing": "blanc-poulet",
+     "qte": 110,
+     "unite": "g",
+     "prep": "en lamelles"
+    },
+    {
+     "ing": "oeuf",
+     "qte": 1.5,
+     "unite": "piece"
+    },
+    {
+     "ing": "oignon-jaune",
+     "qte": 0.5,
+     "unite": "piece",
+     "prep": "en lamelles"
+    },
+    {
+     "ing": "riz-basmati",
+     "qte": 65,
+     "unite": "g"
+    },
+    {
+     "ing": "epinard-frais",
+     "qte": 80,
+     "unite": "g"
+    },
+    {
+     "ing": "huile-neutre",
+     "qte": 3,
+     "unite": "ml"
+    },
+    {
+     "ing": "oignon-nouveau",
+     "qte": 0.1,
+     "unite": "botte"
+    },
+    {
+     "ing": "sauce-soja",
+     "qte": 15,
+     "unite": "ml",
+     "groupe": "bouillon"
+    },
+    {
+     "ing": "mirin",
+     "qte": 10,
+     "unite": "ml",
+     "groupe": "bouillon"
+    },
+    {
+     "ing": "bouillon-volaille-cube",
+     "qte": 0.25,
+     "unite": "piece",
+     "groupe": "bouillon"
+    },
+    {
+     "ing": "miel",
+     "qte": 3,
+     "unite": "g",
+     "groupe": "bouillon"
+    }
+   ],
+   "etapes": [
+    {
+     "texte": "Riz : mets le riz dans une passoire et rince-le sous l'eau froide en le remuant avec la main, jusqu'à ce que l'eau soit presque claire (3 rinçages, 1 minute).",
+     "type": "actif",
+     "action": "rincer"
+    },
+    {
+     "texte": "Mets le riz dans une casserole avec 1,5 fois son volume d'eau froide (1 verre de riz = 1 verre et demi d'eau) et une pincée de sel. Porte à ébullition à feu vif sans couvercle (3 à 4 minutes).",
+     "type": "actif",
+     "action": "cuire-eau",
+     "duree": 240
+    },
+    {
+     "texte": "Dès que ça bout, mets le couvercle et baisse le feu au minimum. Laisse cuire 12 minutes sans ouvrir. Puis éteins et laisse reposer 5 minutes, toujours couvert. Égraine à la fourchette avant de servir.",
+     "type": "attente",
+     "action": "cuire-eau",
+     "duree": 1020
+    },
+    {
+     "texte": "Épluche l'oignon, coupe-le en deux puis en lamelles fines. Coupe le poulet en lamelles fines (1 cm). Émince l'oignon nouveau.",
+     "type": "actif",
+     "action": "emincer"
+    },
+    {
+     "texte": "Dans un verre, dissous le cube de bouillon dans de l'eau chaude (60 ml par personne), puis ajoute la sauce soja, le mirin et le miel.",
+     "type": "actif",
+     "action": "melanger"
+    },
+    {
+     "texte": "Dans une grande poêle (avec couvercle), verse le bouillon et l'oignon. Porte à petite ébullition et laisse 3 minutes : l'oignon devient tendre.",
+     "type": "actif",
+     "action": "mijoter",
+     "duree": 300
+    },
+    {
+     "texte": "Ajoute le poulet en une couche et laisse cuire 5 à 6 minutes en le retournant à la moitié. Coupe une lamelle : plus de rose.",
+     "type": "actif",
+     "action": "mijoter",
+     "duree": 360
+    },
+    {
+     "texte": "Casse les œufs dans un bol et bats-les juste un peu à la fourchette (10 secondes) : on veut encore voir du blanc et du jaune.",
+     "type": "actif",
+     "action": "battre-oeufs"
+    },
+    {
+     "texte": "Verse les œufs en filet sur tout le poulet, couvre et laisse 1 à 2 minutes à feu doux. Éteins quand les œufs sont pris sur les bords mais encore un peu crémeux au centre (ils finissent de cuire avec la chaleur).",
+     "type": "actif",
+     "action": "mijoter",
+     "duree": 120
+    },
+    {
+     "texte": "Épinards : dans une autre poêle avec l'huile, fais-les tomber 2 minutes à feu vif avec une pincée de sel.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 120
+    },
+    {
+     "texte": "Mets le riz dans des bols, fais glisser le poulet aux œufs dessus avec un peu de jus, parsème d'oignon nouveau. Épinards à côté.",
+     "type": "actif",
+     "action": "dresser"
+    }
+   ]
+  },
+  {
+   "id": "jp-udon-boeuf-legumes",
+   "nom": "Udon sautés au bœuf, chou chinois, carotte et champignons",
+   "cuisine": "Japon",
+   "continent": "Asie",
+   "creneau": [
+    "soir",
+    "midi"
+   ],
+   "profil": [
+    "sain",
+    "muscle",
+    "famille"
+   ],
+   "temps_actif": 25,
+   "temps_total": 25,
+   "difficulte": 1,
+   "tags": [
+    "rapide",
+    "rechauffe"
+   ],
+   "proteine": "boeuf",
+   "feculent": "nouilles",
+   "sante": 80,
+   "pourquoi": "Les grosses nouilles japonaises plaisent à tout le monde. Ici il y a autant de légumes que de nouilles, et un bœuf maigre coupé fin.",
+   "ingredients": [
+    {
+     "ing": "nouille-udon",
+     "qte": 85,
+     "unite": "g"
+    },
+    {
+     "ing": "boeuf-a-sauter",
+     "qte": 100,
+     "unite": "g",
+     "prep": "en lamelles fines"
+    },
+    {
+     "ing": "chou-chinois",
+     "qte": 100,
+     "unite": "g",
+     "prep": "en lanières"
+    },
+    {
+     "ing": "carotte",
+     "qte": 50,
+     "unite": "g",
+     "prep": "en bâtonnets"
+    },
+    {
+     "ing": "champignon-paris",
+     "qte": 50,
+     "unite": "g",
+     "prep": "en lamelles"
+    },
+    {
+     "ing": "oignon-nouveau",
+     "qte": 0.1,
+     "unite": "botte"
+    },
+    {
+     "ing": "huile-neutre",
+     "qte": 8,
+     "unite": "ml"
+    },
+    {
+     "ing": "sauce-soja",
+     "qte": 15,
+     "unite": "ml",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "mirin",
+     "qte": 8,
+     "unite": "ml",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "huile-sesame",
+     "qte": 3,
+     "unite": "ml",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "gingembre-frais",
+     "qte": 3,
+     "unite": "g",
+     "groupe": "sauce",
+     "prep": "râpé"
+    }
+   ],
+   "etapes": [
+    {
+     "texte": "Coupe le bœuf en lamelles très fines (c'est plus facile s'il sort du frigo). Épluche la carotte et coupe-la en bâtonnets fins. Coupe le chou chinois en lanières de 2 cm, les champignons en lamelles, l'oignon nouveau en tronçons.",
+     "type": "actif",
+     "action": "emincer"
+    },
+    {
+     "texte": "Sauce : mélange la sauce soja, le mirin, l'huile de sésame et le gingembre.",
+     "type": "actif",
+     "action": "melanger"
+    },
+    {
+     "texte": "Udon : fais-les cuire dans de l'eau bouillante le temps écrit sur le paquet (souvent 8 à 10 minutes pour des udon sèches, 2 à 3 minutes pour des udon fraîches) en les séparant avec des baguettes, puis égoutte et rince à l'eau froide pour qu'ils ne collent pas.",
+     "type": "actif",
+     "action": "cuire-eau",
+     "duree": 180
+    },
+    {
+     "texte": "Dans une grande poêle ou un wok à feu très vif, chauffe la moitié de l'huile. Saisis le bœuf 2 minutes en remuant : il doit juste changer de couleur. Retire-le dans une assiette.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 180
+    },
+    {
+     "texte": "Même poêle, reste d'huile : carotte et champignons 3 minutes, puis chou chinois 2 minutes. Les légumes doivent rester un peu croquants.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 300
+    },
+    {
+     "texte": "Ajoute les udon, le bœuf et la sauce. Mélange 2 minutes à feu vif pour que tout soit chaud et bien enrobé.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 120
+    },
+    {
+     "texte": "Sers tout de suite, oignon nouveau dessus.",
+     "type": "actif",
+     "action": "dresser"
+    },
+    {
+     "texte": "Boîtes du lendemain : refroidir 20 minutes, frigo. 2 minutes au micro-ondes avec 1 cuillère à soupe d'eau.",
+     "type": "actif",
+     "action": "boites"
+    }
+   ]
+  },
+  {
+   "id": "kr-dakgalbi-poulet",
+   "nom": "Dakgalbi, poulet sauté coréen au gochujang, chou et patate douce, riz",
+   "cuisine": "Corée",
+   "continent": "Asie",
+   "creneau": [
+    "soir",
+    "midi"
+   ],
+   "profil": [
+    "sain",
+    "muscle",
+    "famille"
+   ],
+   "temps_actif": 30,
+   "temps_total": 35,
+   "difficulte": 1,
+   "tags": [
+    "rechauffe",
+    "hiver"
+   ],
+   "proteine": "poulet",
+   "feculent": "riz",
+   "sante": 82,
+   "pourquoi": "Le poulet sauté coréen se fait avec beaucoup de chou et un peu de patate douce. Le gochujang donne du goût sans ajouter de gras.",
+   "ingredients": [
+    {
+     "ing": "haut-cuisse-poulet",
+     "qte": 140,
+     "unite": "g",
+     "prep": "en morceaux"
+    },
+    {
+     "ing": "chou-blanc",
+     "qte": 100,
+     "unite": "g",
+     "prep": "en morceaux"
+    },
+    {
+     "ing": "patate-douce",
+     "qte": 100,
+     "unite": "g",
+     "prep": "en dés de 1,5 cm"
+    },
+    {
+     "ing": "oignon-jaune",
+     "qte": 0.3,
+     "unite": "piece",
+     "prep": "en lamelles"
+    },
+    {
+     "ing": "riz-basmati",
+     "qte": 50,
+     "unite": "g"
+    },
+    {
+     "ing": "huile-neutre",
+     "qte": 8,
+     "unite": "ml"
+    },
+    {
+     "ing": "oignon-nouveau",
+     "qte": 0.1,
+     "unite": "botte"
+    },
+    {
+     "ing": "graine-sesame",
+     "qte": 2,
+     "unite": "g"
+    },
+    {
+     "ing": "gochujang",
+     "qte": 15,
+     "unite": "g",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "sauce-soja",
+     "qte": 10,
+     "unite": "ml",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "miel",
+     "qte": 5,
+     "unite": "g",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "ail",
+     "qte": 1,
+     "unite": "piece",
+     "groupe": "sauce",
+     "prep": "râpé"
+    },
+    {
+     "ing": "gingembre-frais",
+     "qte": 4,
+     "unite": "g",
+     "groupe": "sauce",
+     "prep": "râpé"
+    }
+   ],
+   "etapes": [
+    {
+     "texte": "Riz : mets le riz dans une passoire et rince-le sous l'eau froide en le remuant avec la main, jusqu'à ce que l'eau soit presque claire (3 rinçages, 1 minute).",
+     "type": "actif",
+     "action": "rincer"
+    },
+    {
+     "texte": "Mets le riz dans une casserole avec 1,5 fois son volume d'eau froide (1 verre de riz = 1 verre et demi d'eau) et une pincée de sel. Porte à ébullition à feu vif sans couvercle (3 à 4 minutes).",
+     "type": "actif",
+     "action": "cuire-eau",
+     "duree": 240
+    },
+    {
+     "texte": "Dès que ça bout, mets le couvercle et baisse le feu au minimum. Laisse cuire 12 minutes sans ouvrir. Puis éteins et laisse reposer 5 minutes, toujours couvert. Égraine à la fourchette avant de servir.",
+     "type": "attente",
+     "action": "cuire-eau",
+     "duree": 1020
+    },
+    {
+     "texte": "Sauce : mélange le gochujang, la sauce soja, le miel, l'ail et le gingembre râpés.",
+     "type": "actif",
+     "action": "melanger"
+    },
+    {
+     "texte": "Coupe le poulet en morceaux de 3 cm, mets-le dans un saladier avec la moitié de la sauce et mélange avec une cuillère. Laisse reposer pendant que tu coupes les légumes.",
+     "type": "actif",
+     "action": "couper-des"
+    },
+    {
+     "texte": "Épluche la patate douce et coupe-la en dés de 1,5 cm (pas plus gros, sinon elle ne cuit pas). Coupe le chou en carrés de 3 cm, l'oignon en lamelles.",
+     "type": "actif",
+     "action": "eplucher"
+    },
+    {
+     "texte": "Dans une grande sauteuse à feu moyen-vif, chauffe l'huile. Mets la patate douce et l'oignon, remue 5 à 6 minutes.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 360
+    },
+    {
+     "texte": "Ajoute le poulet et sa sauce, laisse dorer 4 minutes, puis ajoute le chou et le reste de sauce. Remue 4 minutes, en ajoutant 3 cuillères à soupe d'eau si ça accroche.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 480
+    },
+    {
+     "texte": "Couvre et laisse 4 minutes à feu moyen : la patate douce doit être tendre (teste avec un couteau) et le poulet plus du tout rose au centre.",
+     "type": "actif",
+     "action": "mijoter",
+     "duree": 240
+    },
+    {
+     "texte": "Sers sur le riz avec l'oignon nouveau et le sésame.",
+     "type": "actif",
+     "action": "dresser"
+    },
+    {
+     "texte": "Boîtes du lendemain : refroidir 20 minutes, frigo. 2 minutes au micro-ondes.",
+     "type": "actif",
+     "action": "boites"
+    }
+   ]
+  },
+  {
+   "id": "kr-japchae-boeuf",
+   "nom": "Japchae, vermicelles sautés au bœuf, épinards, carotte et champignons",
+   "cuisine": "Corée",
+   "continent": "Asie",
+   "creneau": [
+    "soir",
+    "midi"
+   ],
+   "profil": [
+    "sain",
+    "famille"
+   ],
+   "temps_actif": 30,
+   "temps_total": 30,
+   "difficulte": 2,
+   "tags": [
+    "rechauffe",
+    "froid"
+   ],
+   "proteine": "boeuf",
+   "feculent": "vermicelles",
+   "sante": 80,
+   "pourquoi": "Plein de légumes sautés séparément pour garder leur couleur, un peu de bœuf et des vermicelles. Ça se mange chaud ou froid, donc parfait en boîte.",
+   "ingredients": [
+    {
+     "ing": "vermicelle-riz",
+     "qte": 60,
+     "unite": "g"
+    },
+    {
+     "ing": "boeuf-a-sauter",
+     "qte": 90,
+     "unite": "g",
+     "prep": "en lamelles"
+    },
+    {
+     "ing": "epinard-frais",
+     "qte": 70,
+     "unite": "g"
+    },
+    {
+     "ing": "carotte",
+     "qte": 50,
+     "unite": "g",
+     "prep": "en bâtonnets"
+    },
+    {
+     "ing": "champignon-paris",
+     "qte": 60,
+     "unite": "g",
+     "prep": "en lamelles"
+    },
+    {
+     "ing": "oignon-jaune",
+     "qte": 0.25,
+     "unite": "piece",
+     "prep": "en lamelles"
+    },
+    {
+     "ing": "oeuf",
+     "qte": 0.5,
+     "unite": "piece"
+    },
+    {
+     "ing": "huile-neutre",
+     "qte": 8,
+     "unite": "ml"
+    },
+    {
+     "ing": "graine-sesame",
+     "qte": 2,
+     "unite": "g"
+    },
+    {
+     "ing": "sauce-soja",
+     "qte": 18,
+     "unite": "ml",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "huile-sesame",
+     "qte": 6,
+     "unite": "ml",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "miel",
+     "qte": 5,
+     "unite": "g",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "ail",
+     "qte": 1,
+     "unite": "piece",
+     "groupe": "sauce",
+     "prep": "râpé"
+    }
+   ],
+   "etapes": [
+    {
+     "texte": "Sauce : mélange la sauce soja, l'huile de sésame, le miel et l'ail râpé. Mets 1 cuillère à soupe de cette sauce sur le bœuf coupé en lamelles fines et mélange.",
+     "type": "actif",
+     "action": "melanger"
+    },
+    {
+     "texte": "Vermicelles : fais-les tremper ou cuire comme écrit sur le paquet (souvent 3 à 5 minutes dans l'eau bouillante), égoutte, rince à l'eau froide et coupe-les 2 ou 3 fois aux ciseaux pour qu'ils soient moins longs.",
+     "type": "actif",
+     "action": "cuire-eau",
+     "duree": 300
+    },
+    {
+     "texte": "Bats les œufs avec une pincée de sel. Dans une poêle huilée à feu moyen, verse-les en couche fine comme une crêpe, 1 minute de chaque côté. Roule-la et coupe en fines lanières.",
+     "type": "actif",
+     "action": "battre-oeufs"
+    },
+    {
+     "texte": "Épinards : fais-les tomber 1 à 2 minutes à la poêle. Presse-les dans une passoire pour enlever l'eau.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 120
+    },
+    {
+     "texte": "Dans la même poêle avec un filet d'huile : oignon, carotte et champignons 4 à 5 minutes, ils doivent rester un peu croquants. Mets-les dans un grand saladier.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 300
+    },
+    {
+     "texte": "Saisis le bœuf 2 à 3 minutes à feu vif. Ajoute-le au saladier.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 180
+    },
+    {
+     "texte": "Ajoute dans le saladier les vermicelles, les épinards, le reste de la sauce et mélange avec les mains ou des pinces. Goûte : ajoute un peu de sauce soja si c'est fade.",
+     "type": "actif",
+     "action": "melanger"
+    },
+    {
+     "texte": "Sers avec les lanières d'omelette et le sésame dessus.",
+     "type": "actif",
+     "action": "dresser"
+    },
+    {
+     "texte": "Boîtes du lendemain : se mange tel quel, froid ou à température ambiante (sors la boîte du frigo 20 minutes avant).",
+     "type": "actif",
+     "action": "boites"
+    }
+   ]
+  },
+  {
+   "id": "cn-boeuf-oignons-poivrons",
+   "nom": "Bœuf sauté aux oignons et poivrons, sauce huître, riz jasmin",
+   "cuisine": "Chine",
+   "continent": "Asie",
+   "creneau": [
+    "soir",
+    "midi"
+   ],
+   "profil": [
+    "sain",
+    "perte",
+    "muscle",
+    "famille"
+   ],
+   "temps_actif": 25,
+   "temps_total": 25,
+   "difficulte": 1,
+   "tags": [
+    "rapide",
+    "rechauffe"
+   ],
+   "proteine": "boeuf",
+   "feculent": "riz",
+   "sante": 84,
+   "pourquoi": "Un sauté rapide, très peu d'huile, du bœuf maigre et deux poivrons par personne pour trois. Le riz est mesuré.",
+   "ingredients": [
+    {
+     "ing": "boeuf-a-sauter",
+     "qte": 120,
+     "unite": "g",
+     "prep": "en lamelles"
+    },
+    {
+     "ing": "poivron-rouge",
+     "qte": 0.5,
+     "unite": "piece",
+     "prep": "en lanières"
+    },
+    {
+     "ing": "poivron-vert",
+     "qte": 0.3,
+     "unite": "piece",
+     "prep": "en lanières"
+    },
+    {
+     "ing": "oignon-jaune",
+     "qte": 0.3,
+     "unite": "piece",
+     "prep": "en quartiers"
+    },
+    {
+     "ing": "riz-jasmin",
+     "qte": 65,
+     "unite": "g"
+    },
+    {
+     "ing": "huile-neutre",
+     "qte": 8,
+     "unite": "ml"
+    },
+    {
+     "ing": "sauce-soja",
+     "qte": 8,
+     "unite": "ml",
+     "groupe": "marinade"
+    },
+    {
+     "ing": "maizena",
+     "qte": 3,
+     "unite": "g",
+     "groupe": "marinade"
+    },
+    {
+     "ing": "sauce-huitre",
+     "qte": 10,
+     "unite": "ml",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "sauce-soja",
+     "qte": 5,
+     "unite": "ml",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "ail",
+     "qte": 0.5,
+     "unite": "piece",
+     "groupe": "sauce",
+     "prep": "haché"
+    },
+    {
+     "ing": "gingembre-frais",
+     "qte": 4,
+     "unite": "g",
+     "groupe": "sauce",
+     "prep": "haché"
+    }
+   ],
+   "etapes": [
+    {
+     "texte": "Riz : mets le riz dans une passoire et rince-le sous l'eau froide en le remuant avec la main, jusqu'à ce que l'eau soit presque claire (3 rinçages, 1 minute).",
+     "type": "actif",
+     "action": "rincer"
+    },
+    {
+     "texte": "Mets le riz dans une casserole avec 1,5 fois son volume d'eau froide (1 verre de riz = 1 verre et demi d'eau) et une pincée de sel. Porte à ébullition à feu vif sans couvercle (3 à 4 minutes).",
+     "type": "actif",
+     "action": "cuire-eau",
+     "duree": 240
+    },
+    {
+     "texte": "Dès que ça bout, mets le couvercle et baisse le feu au minimum. Laisse cuire 12 minutes sans ouvrir. Puis éteins et laisse reposer 5 minutes, toujours couvert. Égraine à la fourchette avant de servir.",
+     "type": "attente",
+     "action": "cuire-eau",
+     "duree": 1020
+    },
+    {
+     "texte": "Coupe le bœuf en lamelles fines contre les fibres (les petites lignes de la viande doivent être coupées en travers, c'est ce qui le rend tendre). Mélange-le avec la sauce soja de la marinade et la maïzena.",
+     "type": "actif",
+     "action": "mariner"
+    },
+    {
+     "texte": "Épépine les poivrons (enlève le pied, les graines et les parties blanches) et coupe-les en lanières de 1 cm. Coupe l'oignon en 8 quartiers. Hache l'ail et le gingembre.",
+     "type": "actif",
+     "action": "emincer"
+    },
+    {
+     "texte": "Wok ou grande poêle à feu très vif, la moitié de l'huile. Saisis le bœuf 2 minutes en l'étalant bien : il doit dorer, pas bouillir. Retire-le dans une assiette.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 180
+    },
+    {
+     "texte": "Reste de l'huile : oignon et poivrons 3 à 4 minutes en remuant. Ils doivent rester un peu croquants.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 240
+    },
+    {
+     "texte": "Ajoute l'ail et le gingembre 30 secondes, puis remets le bœuf avec la sauce huître, la sauce soja et 2 cuillères à soupe d'eau. Mélange 1 minute.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 60
+    },
+    {
+     "texte": "Sers sur le riz.",
+     "type": "actif",
+     "action": "dresser"
+    },
+    {
+     "texte": "Boîtes du lendemain : refroidir 20 minutes, frigo. 2 minutes au micro-ondes.",
+     "type": "actif",
+     "action": "boites"
+    }
+   ]
+  },
+  {
+   "id": "cn-porc-aigre-doux-leger",
+   "nom": "Porc aigre-doux léger à l'ananas et au poivron, riz jasmin",
+   "cuisine": "Chine",
+   "continent": "Asie",
+   "creneau": [
+    "soir",
+    "midi"
+   ],
+   "profil": [
+    "sain",
+    "muscle",
+    "famille"
+   ],
+   "temps_actif": 30,
+   "temps_total": 30,
+   "difficulte": 1,
+   "tags": [
+    "rechauffe"
+   ],
+   "proteine": "porc",
+   "feculent": "riz",
+   "sante": 80,
+   "pourquoi": "Le classique du restaurant, mais sans la friture : filet mignon simplement poêlé, et une sauce maison peu sucrée faite avec de l'ananas frais.",
+   "ingredients": [
+    {
+     "ing": "filet-mignon-porc",
+     "qte": 120,
+     "unite": "g",
+     "prep": "en dés de 2 cm"
+    },
+    {
+     "ing": "ananas",
+     "qte": 0.12,
+     "unite": "piece",
+     "prep": "en morceaux"
+    },
+    {
+     "ing": "poivron-rouge",
+     "qte": 0.5,
+     "unite": "piece",
+     "prep": "en carrés"
+    },
+    {
+     "ing": "oignon-jaune",
+     "qte": 0.3,
+     "unite": "piece",
+     "prep": "en carrés"
+    },
+    {
+     "ing": "riz-jasmin",
+     "qte": 65,
+     "unite": "g"
+    },
+    {
+     "ing": "huile-neutre",
+     "qte": 8,
+     "unite": "ml"
+    },
+    {
+     "ing": "maizena",
+     "qte": 3,
+     "unite": "g",
+     "groupe": "marinade"
+    },
+    {
+     "ing": "sauce-soja",
+     "qte": 5,
+     "unite": "ml",
+     "groupe": "marinade"
+    },
+    {
+     "ing": "vinaigre-riz",
+     "qte": 10,
+     "unite": "ml",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "concentre-tomate",
+     "qte": 8,
+     "unite": "g",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "miel",
+     "qte": 6,
+     "unite": "g",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "sauce-soja",
+     "qte": 8,
+     "unite": "ml",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "maizena",
+     "qte": 3,
+     "unite": "g",
+     "groupe": "sauce"
+    }
+   ],
+   "etapes": [
+    {
+     "texte": "Riz : mets le riz dans une passoire et rince-le sous l'eau froide en le remuant avec la main, jusqu'à ce que l'eau soit presque claire (3 rinçages, 1 minute).",
+     "type": "actif",
+     "action": "rincer"
+    },
+    {
+     "texte": "Mets le riz dans une casserole avec 1,5 fois son volume d'eau froide (1 verre de riz = 1 verre et demi d'eau) et une pincée de sel. Porte à ébullition à feu vif sans couvercle (3 à 4 minutes).",
+     "type": "actif",
+     "action": "cuire-eau",
+     "duree": 240
+    },
+    {
+     "texte": "Dès que ça bout, mets le couvercle et baisse le feu au minimum. Laisse cuire 12 minutes sans ouvrir. Puis éteins et laisse reposer 5 minutes, toujours couvert. Égraine à la fourchette avant de servir.",
+     "type": "attente",
+     "action": "cuire-eau",
+     "duree": 1020
+    },
+    {
+     "texte": "Coupe le porc en dés de 2 cm et mélange-le avec la maïzena et la sauce soja de la marinade.",
+     "type": "actif",
+     "action": "couper-des"
+    },
+    {
+     "texte": "Ananas : coupe le haut et le bas, pose-le debout et enlève la peau de haut en bas avec un grand couteau. Coupe en quatre dans la longueur, enlève le cœur dur, puis coupe en morceaux. Coupe le poivron et l'oignon en carrés de 2 cm.",
+     "type": "actif",
+     "action": "eplucher"
+    },
+    {
+     "texte": "Sauce : mélange le vinaigre, le concentré de tomate, le miel, la sauce soja, la maïzena et 4 cuillères à soupe d'eau par personne.",
+     "type": "actif",
+     "action": "melanger"
+    },
+    {
+     "texte": "Grande poêle à feu vif, la moitié de l'huile : fais dorer le porc 5 à 6 minutes en le retournant. Retire-le.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 360
+    },
+    {
+     "texte": "Reste de l'huile : oignon et poivron 3 minutes, puis l'ananas 1 minute.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 240
+    },
+    {
+     "texte": "Remets le porc, verse la sauce (remue-la avant) et laisse bouillonner 1 à 2 minutes : elle épaissit et devient brillante.",
+     "type": "actif",
+     "action": "mijoter",
+     "duree": 120
+    },
+    {
+     "texte": "Sers sur le riz.",
+     "type": "actif",
+     "action": "dresser"
+    },
+    {
+     "texte": "Boîtes du lendemain : refroidir 20 minutes, frigo. 2 minutes au micro-ondes.",
+     "type": "actif",
+     "action": "boites"
+    }
+   ]
+  },
+  {
+   "id": "th-pad-thai-crevettes",
+   "nom": "Pad thaï aux crevettes, germes de soja, cacahuètes et citron vert",
+   "cuisine": "Thaïlande",
+   "continent": "Asie",
+   "creneau": [
+    "soir"
+   ],
+   "profil": [
+    "sain",
+    "muscle",
+    "famille"
+   ],
+   "temps_actif": 30,
+   "temps_total": 30,
+   "difficulte": 2,
+   "tags": [
+    "rapide"
+   ],
+   "proteine": "crevettes",
+   "feculent": "nouilles",
+   "sante": 80,
+   "pourquoi": "Les crevettes sont très maigres, les germes de soja et l'oignon nouveau apportent du croquant. La sauce maison est moins sucrée que celle du traiteur.",
+   "ingredients": [
+    {
+     "ing": "nouille-riz-plate",
+     "qte": 70,
+     "unite": "g"
+    },
+    {
+     "ing": "crevette-crue-surgele",
+     "qte": 100,
+     "unite": "g",
+     "prep": "décongelées"
+    },
+    {
+     "ing": "oeuf",
+     "qte": 1,
+     "unite": "piece"
+    },
+    {
+     "ing": "germes-soja",
+     "qte": 60,
+     "unite": "g"
+    },
+    {
+     "ing": "oignon-nouveau",
+     "qte": 0.15,
+     "unite": "botte",
+     "prep": "en tronçons"
+    },
+    {
+     "ing": "ail",
+     "qte": 0.5,
+     "unite": "piece",
+     "prep": "haché"
+    },
+    {
+     "ing": "cacahuete-non-salee",
+     "qte": 10,
+     "unite": "g",
+     "prep": "concassées"
+    },
+    {
+     "ing": "citron-vert",
+     "qte": 0.3,
+     "unite": "piece"
+    },
+    {
+     "ing": "huile-neutre",
+     "qte": 8,
+     "unite": "ml"
+    },
+    {
+     "ing": "nuoc-mam",
+     "qte": 10,
+     "unite": "ml",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "sauce-soja",
+     "qte": 5,
+     "unite": "ml",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "cassonade",
+     "qte": 5,
+     "unite": "g",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "concentre-tomate",
+     "qte": 4,
+     "unite": "g",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "piment-flocons",
+     "qte": 0.2,
+     "unite": "g",
+     "facultatif": true
+    }
+   ],
+   "etapes": [
+    {
+     "texte": "La veille ou le matin, mets les crevettes à décongeler au frigo. Si tu as oublié : mets-les dans un saladier d'eau froide 15 minutes.",
+     "type": "actif",
+     "action": "reposer"
+    },
+    {
+     "texte": "Nouilles : fais-les tremper dans de l'eau très chaude (pas bouillante) 6 à 8 minutes, comme écrit sur le paquet. Elles doivent être souples mais encore un peu fermes, car elles finissent de cuire dans la poêle. Égoutte et rince à l'eau froide.",
+     "type": "actif",
+     "action": "cuire-eau",
+     "duree": 360
+    },
+    {
+     "texte": "Sauce : mélange le nuoc-mâm, la sauce soja, la cassonade, le concentré de tomate et 1 cuillère à soupe d'eau par personne. Goûte : c'est salé, sucré et un peu acide.",
+     "type": "actif",
+     "action": "melanger"
+    },
+    {
+     "texte": "Wok à feu vif avec la moitié de l'huile : crevettes et ail 2 à 3 minutes, jusqu'à ce que les crevettes deviennent roses. Pousse-les sur le côté.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 180
+    },
+    {
+     "texte": "Casse les œufs dans l'espace libre et brouille-les 1 minute avec une spatule.",
+     "type": "actif",
+     "action": "battre-oeufs",
+     "duree": 60
+    },
+    {
+     "texte": "Ajoute le reste de l'huile, les nouilles et la sauce. Mélange 2 à 3 minutes avec deux spatules (en soulevant, comme une salade), jusqu'à ce que les nouilles aient bu la sauce.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 180
+    },
+    {
+     "texte": "Ajoute les germes de soja et l'oignon nouveau, mélange 30 secondes. Ils doivent rester croquants.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 60
+    },
+    {
+     "texte": "Sers avec les cacahuètes concassées, un quartier de citron vert à presser et un peu de piment pour ceux qui aiment.",
+     "type": "actif",
+     "action": "dresser"
+    }
+   ]
+  },
+  {
+   "id": "th-porc-basilic-haricots",
+   "nom": "Pad kra pao, porc haché au basilic et haricots verts, riz jasmin et œuf au plat",
+   "cuisine": "Thaïlande",
+   "continent": "Asie",
+   "creneau": [
+    "soir",
+    "midi"
+   ],
+   "profil": [
+    "sain",
+    "muscle",
+    "famille"
+   ],
+   "temps_actif": 20,
+   "temps_total": 25,
+   "difficulte": 1,
+   "tags": [
+    "rapide",
+    "rechauffe"
+   ],
+   "proteine": "porc",
+   "feculent": "riz",
+   "sante": 80,
+   "pourquoi": "Le plat le plus populaire de Thaïlande, prêt en 20 minutes. Il y a autant de haricots verts que de viande, et l'œuf apporte encore des protéines.",
+   "ingredients": [
+    {
+     "ing": "porc-hache",
+     "qte": 110,
+     "unite": "g"
+    },
+    {
+     "ing": "haricot-vert-frais",
+     "qte": 80,
+     "unite": "g",
+     "prep": "en tronçons"
+    },
+    {
+     "ing": "poivron-rouge",
+     "qte": 0.3,
+     "unite": "piece",
+     "prep": "en dés"
+    },
+    {
+     "ing": "ail",
+     "qte": 1,
+     "unite": "piece",
+     "prep": "haché"
+    },
+    {
+     "ing": "basilic-frais",
+     "qte": 0.15,
+     "unite": "botte"
+    },
+    {
+     "ing": "riz-jasmin",
+     "qte": 65,
+     "unite": "g"
+    },
+    {
+     "ing": "oeuf",
+     "qte": 1,
+     "unite": "piece"
+    },
+    {
+     "ing": "huile-neutre",
+     "qte": 8,
+     "unite": "ml"
+    },
+    {
+     "ing": "piment-frais",
+     "qte": 0.2,
+     "unite": "piece",
+     "prep": "émincé",
+     "facultatif": true
+    },
+    {
+     "ing": "sauce-soja",
+     "qte": 8,
+     "unite": "ml",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "sauce-huitre",
+     "qte": 8,
+     "unite": "ml",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "nuoc-mam",
+     "qte": 4,
+     "unite": "ml",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "cassonade",
+     "qte": 2,
+     "unite": "g",
+     "groupe": "sauce"
+    }
+   ],
+   "etapes": [
+    {
+     "texte": "Riz : mets le riz dans une passoire et rince-le sous l'eau froide en le remuant avec la main, jusqu'à ce que l'eau soit presque claire (3 rinçages, 1 minute).",
+     "type": "actif",
+     "action": "rincer"
+    },
+    {
+     "texte": "Mets le riz dans une casserole avec 1,5 fois son volume d'eau froide (1 verre de riz = 1 verre et demi d'eau) et une pincée de sel. Porte à ébullition à feu vif sans couvercle (3 à 4 minutes).",
+     "type": "actif",
+     "action": "cuire-eau",
+     "duree": 240
+    },
+    {
+     "texte": "Dès que ça bout, mets le couvercle et baisse le feu au minimum. Laisse cuire 12 minutes sans ouvrir. Puis éteins et laisse reposer 5 minutes, toujours couvert. Égraine à la fourchette avant de servir.",
+     "type": "attente",
+     "action": "cuire-eau",
+     "duree": 1020
+    },
+    {
+     "texte": "Équeute les haricots verts (coupe les deux bouts) et coupe-les en tronçons de 2 cm. Coupe le poivron en petits dés, hache l'ail. Effeuille le basilic.",
+     "type": "actif",
+     "action": "couper-des"
+    },
+    {
+     "texte": "Sauce : mélange la sauce soja, la sauce huître, le nuoc-mâm, la cassonade et 1 cuillère à soupe d'eau par personne.",
+     "type": "actif",
+     "action": "melanger"
+    },
+    {
+     "texte": "Plonge les haricots verts 3 minutes dans l'eau bouillante salée, égoutte.",
+     "type": "actif",
+     "action": "cuire-eau",
+     "duree": 180
+    },
+    {
+     "texte": "Grande poêle à feu vif, la moitié de l'huile : ail et piment 20 secondes, puis le porc haché. Casse-le à la spatule pendant 5 minutes, jusqu'à ce qu'il soit doré et plus du tout rose.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 360
+    },
+    {
+     "texte": "Ajoute les haricots, le poivron et la sauce, mélange 2 minutes. Éteins et ajoute le basilic : il fond tout de suite.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 120
+    },
+    {
+     "texte": "Œufs au plat : dans une autre poêle avec le reste de l'huile, cuis les œufs 3 minutes à feu moyen, jusqu'à ce que le blanc soit bien pris.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 180
+    },
+    {
+     "texte": "Riz, porc au basilic à côté, œuf au plat dessus.",
+     "type": "actif",
+     "action": "dresser"
+    },
+    {
+     "texte": "Boîtes du lendemain : porc et riz seulement (refais un œuf si tu veux). 2 minutes au micro-ondes.",
+     "type": "actif",
+     "action": "boites"
+    }
+   ]
+  },
+  {
+   "id": "vn-pho-boeuf-express",
+   "nom": "Phở express au bœuf, bouillon épicé, nouilles de riz et herbes fraîches",
+   "cuisine": "Vietnam",
+   "continent": "Asie",
+   "creneau": [
+    "soir"
+   ],
+   "profil": [
+    "sain",
+    "perte",
+    "muscle",
+    "famille"
+   ],
+   "temps_actif": 30,
+   "temps_total": 45,
+   "difficulte": 2,
+   "tags": [
+    "hiver"
+   ],
+   "proteine": "boeuf",
+   "feculent": "nouilles",
+   "sante": 86,
+   "pourquoi": "Une grande soupe-repas très légère : bouillon parfumé aux épices, bœuf maigre coupé très fin qui cuit dans le bol, et beaucoup d'herbes.",
+   "ingredients": [
+    {
+     "ing": "boeuf-a-sauter",
+     "qte": 90,
+     "unite": "g",
+     "prep": "en tranches très fines"
+    },
+    {
+     "ing": "nouille-riz-plate",
+     "qte": 70,
+     "unite": "g"
+    },
+    {
+     "ing": "oignon-jaune",
+     "qte": 0.5,
+     "unite": "piece"
+    },
+    {
+     "ing": "gingembre-frais",
+     "qte": 8,
+     "unite": "g"
+    },
+    {
+     "ing": "anis-etoile",
+     "qte": 0.3,
+     "unite": "piece"
+    },
+    {
+     "ing": "cannelle",
+     "qte": 0.3,
+     "unite": "g"
+    },
+    {
+     "ing": "bouillon-volaille-cube",
+     "qte": 0.5,
+     "unite": "piece"
+    },
+    {
+     "ing": "nuoc-mam",
+     "qte": 10,
+     "unite": "ml"
+    },
+    {
+     "ing": "germes-soja",
+     "qte": 50,
+     "unite": "g"
+    },
+    {
+     "ing": "coriandre-fraiche",
+     "qte": 0.15,
+     "unite": "botte"
+    },
+    {
+     "ing": "menthe-fraiche",
+     "qte": 0.1,
+     "unite": "botte"
+    },
+    {
+     "ing": "citron-vert",
+     "qte": 0.25,
+     "unite": "piece"
+    },
+    {
+     "ing": "oignon-nouveau",
+     "qte": 0.1,
+     "unite": "botte"
+    },
+    {
+     "ing": "piment-frais",
+     "qte": 0.2,
+     "unite": "piece",
+     "facultatif": true
+    }
+   ],
+   "etapes": [
+    {
+     "texte": "Mets le bœuf 20 minutes au congélateur avant de le couper : il sera assez ferme pour faire des tranches très fines (comme du papier).",
+     "type": "actif",
+     "action": "reposer"
+    },
+    {
+     "texte": "Coupe l'oignon (avec la peau) et le gingembre en deux. Fais-les noircir à sec dans une poêle très chaude, face coupée en bas, 5 minutes. C'est ce qui donne le goût du phở.",
+     "type": "actif",
+     "action": "griller",
+     "duree": 300
+    },
+    {
+     "texte": "Dans une grande casserole, mets l'oignon, le gingembre, l'anis étoilé, la cannelle et les cubes de bouillon avec de l'eau (500 ml par personne). Fais frémir 25 minutes à couvert, puis ajoute le nuoc-mâm et retire les morceaux avec une écumoire.",
+     "type": "attente",
+     "action": "mijoter",
+     "duree": 1500
+    },
+    {
+     "texte": "Pendant ce temps, coupe le bœuf en tranches très fines, rince les germes de soja, effeuille la coriandre et la menthe, émince l'oignon nouveau, coupe le citron vert en quartiers.",
+     "type": "actif",
+     "action": "emincer"
+    },
+    {
+     "texte": "Nouilles : fais-les cuire ou tremper comme écrit sur le paquet, égoutte et répartis-les dans de grands bols.",
+     "type": "actif",
+     "action": "cuire-eau",
+     "duree": 300
+    },
+    {
+     "texte": "Pose les tranches de bœuf cru sur les nouilles, puis verse le bouillon bouillant directement dessus : le bœuf cuit en 30 secondes. Chacun ajoute à table les germes de soja, les herbes, le citron vert et le piment.",
+     "type": "actif",
+     "action": "dresser"
+    }
+   ]
+  },
+  {
+   "id": "vn-poulet-citronnelle",
+   "nom": "Poulet à la citronnelle caramélisé, riz jasmin et pickles de carotte-concombre",
+   "cuisine": "Vietnam",
+   "continent": "Asie",
+   "creneau": [
+    "soir",
+    "midi"
+   ],
+   "profil": [
+    "sain",
+    "perte",
+    "muscle",
+    "famille"
+   ],
+   "temps_actif": 30,
+   "temps_total": 35,
+   "difficulte": 1,
+   "tags": [
+    "rechauffe"
+   ],
+   "proteine": "poulet",
+   "feculent": "riz",
+   "sante": 84,
+   "pourquoi": "Beaucoup de goût avec peu de gras : citronnelle, ail et nuoc-mâm. Les pickles minute apportent la fraîcheur et des légumes crus.",
+   "ingredients": [
+    {
+     "ing": "haut-cuisse-poulet",
+     "qte": 140,
+     "unite": "g",
+     "prep": "en morceaux"
+    },
+    {
+     "ing": "citronnelle",
+     "qte": 0.5,
+     "unite": "tige",
+     "prep": "hachée"
+    },
+    {
+     "ing": "ail",
+     "qte": 1,
+     "unite": "piece",
+     "prep": "haché"
+    },
+    {
+     "ing": "oignon-rouge",
+     "qte": 0.3,
+     "unite": "piece",
+     "prep": "en lamelles"
+    },
+    {
+     "ing": "riz-jasmin",
+     "qte": 65,
+     "unite": "g"
+    },
+    {
+     "ing": "huile-neutre",
+     "qte": 8,
+     "unite": "ml"
+    },
+    {
+     "ing": "nuoc-mam",
+     "qte": 10,
+     "unite": "ml",
+     "groupe": "marinade"
+    },
+    {
+     "ing": "cassonade",
+     "qte": 4,
+     "unite": "g",
+     "groupe": "marinade"
+    },
+    {
+     "ing": "carotte",
+     "qte": 50,
+     "unite": "g",
+     "groupe": "pickles",
+     "prep": "en bâtonnets"
+    },
+    {
+     "ing": "concombre",
+     "qte": 0.3,
+     "unite": "piece",
+     "groupe": "pickles",
+     "prep": "en bâtonnets"
+    },
+    {
+     "ing": "vinaigre-riz",
+     "qte": 10,
+     "unite": "ml",
+     "groupe": "pickles"
+    },
+    {
+     "ing": "sucre",
+     "qte": 2,
+     "unite": "g",
+     "groupe": "pickles"
+    },
+    {
+     "ing": "piment-frais",
+     "qte": 0.2,
+     "unite": "piece",
+     "facultatif": true
+    }
+   ],
+   "etapes": [
+    {
+     "texte": "Riz : mets le riz dans une passoire et rince-le sous l'eau froide en le remuant avec la main, jusqu'à ce que l'eau soit presque claire (3 rinçages, 1 minute).",
+     "type": "actif",
+     "action": "rincer"
+    },
+    {
+     "texte": "Mets le riz dans une casserole avec 1,5 fois son volume d'eau froide (1 verre de riz = 1 verre et demi d'eau) et une pincée de sel. Porte à ébullition à feu vif sans couvercle (3 à 4 minutes).",
+     "type": "actif",
+     "action": "cuire-eau",
+     "duree": 240
+    },
+    {
+     "texte": "Dès que ça bout, mets le couvercle et baisse le feu au minimum. Laisse cuire 12 minutes sans ouvrir. Puis éteins et laisse reposer 5 minutes, toujours couvert. Égraine à la fourchette avant de servir.",
+     "type": "attente",
+     "action": "cuire-eau",
+     "duree": 1020
+    },
+    {
+     "texte": "Citronnelle : enlève les 2 premières feuilles dures, coupe le bout du bas et garde seulement les 10 cm du bas (la partie blanche). Hache-la très finement. Hache l'ail.",
+     "type": "actif",
+     "action": "hacher"
+    },
+    {
+     "texte": "Coupe le poulet en morceaux de 3 cm et mélange-le avec la citronnelle, l'ail, le nuoc-mâm et la cassonade. Laisse mariner pendant que tu fais les pickles.",
+     "type": "actif",
+     "action": "mariner"
+    },
+    {
+     "texte": "Pickles : épluche la carotte, coupe-la avec le concombre en bâtonnets fins. Mélange avec le vinaigre de riz, le sucre et une pincée de sel. Laisse reposer au moins 15 minutes.",
+     "type": "actif",
+     "action": "melanger"
+    },
+    {
+     "texte": "Grande poêle à feu moyen-vif avec l'huile : mets le poulet en une couche et laisse dorer 5 minutes sans toucher, puis retourne et compte encore 4 à 5 minutes. Les bords doivent caraméliser (devenir bruns et brillants). Ajoute l'oignon rouge les 3 dernières minutes.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 600
+    },
+    {
+     "texte": "Verse 2 cuillères à soupe d'eau et gratte le fond de la poêle avec une spatule pour récupérer les sucs. Vérifie qu'il n'y a plus de rose au centre d'un morceau.",
+     "type": "actif",
+     "action": "mijoter",
+     "duree": 60
+    },
+    {
+     "texte": "Sers le poulet sur le riz, les pickles égouttés à côté, et du piment pour ceux qui aiment.",
+     "type": "actif",
+     "action": "dresser"
+    },
+    {
+     "texte": "Boîtes du lendemain : pickles dans un petit pot à part. 2 minutes au micro-ondes pour le poulet et le riz.",
+     "type": "actif",
+     "action": "boites"
+    }
+   ]
+  },
+  {
+   "id": "in-poulet-tikka-masala-leger",
+   "nom": "Poulet tikka masala léger au yaourt, riz basmati et coriandre",
+   "cuisine": "Inde",
+   "continent": "Asie",
+   "creneau": [
+    "soir",
+    "midi"
+   ],
+   "profil": [
+    "sain",
+    "muscle",
+    "famille"
+   ],
+   "temps_actif": 30,
+   "temps_total": 45,
+   "difficulte": 1,
+   "tags": [
+    "rechauffe",
+    "hiver",
+    "batch"
+   ],
+   "proteine": "poulet",
+   "feculent": "riz",
+   "sante": 82,
+   "pourquoi": "La sauce est faite avec des tomates et un peu de crème légère au lieu de beaucoup de crème et de beurre. Le poulet mariné au yaourt reste très tendre.",
+   "ingredients": [
+    {
+     "ing": "blanc-poulet",
+     "qte": 140,
+     "unite": "g",
+     "prep": "en morceaux"
+    },
+    {
+     "ing": "yaourt-nature",
+     "qte": 0.4,
+     "unite": "piece"
+    },
+    {
+     "ing": "tomate-concassee",
+     "qte": 100,
+     "unite": "g"
+    },
+    {
+     "ing": "oignon-jaune",
+     "qte": 0.5,
+     "unite": "piece",
+     "prep": "haché"
+    },
+    {
+     "ing": "ail",
+     "qte": 1,
+     "unite": "piece",
+     "prep": "haché"
+    },
+    {
+     "ing": "gingembre-frais",
+     "qte": 5,
+     "unite": "g",
+     "prep": "râpé"
+    },
+    {
+     "ing": "creme-fraiche-legere",
+     "qte": 20,
+     "unite": "ml"
+    },
+    {
+     "ing": "riz-basmati",
+     "qte": 60,
+     "unite": "g"
+    },
+    {
+     "ing": "huile-neutre",
+     "qte": 8,
+     "unite": "ml"
+    },
+    {
+     "ing": "coriandre-fraiche",
+     "qte": 0.1,
+     "unite": "botte"
+    },
+    {
+     "ing": "garam-masala",
+     "qte": 2,
+     "unite": "g",
+     "groupe": "épices"
+    },
+    {
+     "ing": "cumin-moulu",
+     "qte": 1,
+     "unite": "g",
+     "groupe": "épices"
+    },
+    {
+     "ing": "paprika",
+     "qte": 1,
+     "unite": "g",
+     "groupe": "épices"
+    },
+    {
+     "ing": "curcuma",
+     "qte": 0.5,
+     "unite": "g",
+     "groupe": "épices"
+    }
+   ],
+   "etapes": [
+    {
+     "texte": "Coupe le poulet en morceaux de 3 cm. Mélange-le dans un saladier avec le yaourt, la moitié des épices et une pincée de sel. Laisse au frigo au moins 15 minutes (jusqu'à une nuit).",
+     "type": "actif",
+     "action": "mariner"
+    },
+    {
+     "texte": "Riz : mets le riz dans une passoire et rince-le sous l'eau froide en le remuant avec la main, jusqu'à ce que l'eau soit presque claire (3 rinçages, 1 minute).",
+     "type": "actif",
+     "action": "rincer"
+    },
+    {
+     "texte": "Mets le riz dans une casserole avec 1,5 fois son volume d'eau froide (1 verre de riz = 1 verre et demi d'eau) et une pincée de sel. Porte à ébullition à feu vif sans couvercle (3 à 4 minutes).",
+     "type": "actif",
+     "action": "cuire-eau",
+     "duree": 240
+    },
+    {
+     "texte": "Dès que ça bout, mets le couvercle et baisse le feu au minimum. Laisse cuire 12 minutes sans ouvrir. Puis éteins et laisse reposer 5 minutes, toujours couvert. Égraine à la fourchette avant de servir.",
+     "type": "attente",
+     "action": "cuire-eau",
+     "duree": 1020
+    },
+    {
+     "texte": "Grande sauteuse à feu moyen, l'huile : oignon 5 à 6 minutes jusqu'à ce qu'il soit doré.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 360
+    },
+    {
+     "texte": "Ajoute l'ail, le gingembre et le reste des épices, remue 1 minute (ça doit sentir fort, sans brûler).",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 60
+    },
+    {
+     "texte": "Verse les tomates et un demi-verre d'eau. Laisse mijoter 10 minutes à feu doux : la sauce épaissit.",
+     "type": "attente",
+     "action": "mijoter",
+     "duree": 600
+    },
+    {
+     "texte": "Ajoute le poulet avec sa marinade, mélange et laisse cuire 10 minutes à feu doux, à couvert, en remuant de temps en temps. Coupe un morceau : plus de rose au centre.",
+     "type": "actif",
+     "action": "mijoter",
+     "duree": 600
+    },
+    {
+     "texte": "Hors du feu, ajoute la crème, mélange et goûte : sale si besoin.",
+     "type": "actif",
+     "action": "assaisonner"
+    },
+    {
+     "texte": "Sers sur le riz, coriandre ciselée dessus.",
+     "type": "actif",
+     "action": "dresser"
+    },
+    {
+     "texte": "Boîtes du lendemain : refroidir 20 minutes, frigo. 2 minutes au micro-ondes. C'est encore meilleur le lendemain.",
+     "type": "actif",
+     "action": "boites"
+    }
+   ]
+  },
+  {
+   "id": "mx-tinga-poulet-tacos",
+   "nom": "Tinga de poulet effiloché à la tomate fumée, tortillas de maïs, chou et avocat",
+   "cuisine": "Mexique",
+   "continent": "Amérique",
+   "creneau": [
+    "soir",
+    "midi"
+   ],
+   "profil": [
+    "sain",
+    "perte",
+    "muscle",
+    "famille"
+   ],
+   "temps_actif": 30,
+   "temps_total": 40,
+   "difficulte": 1,
+   "tags": [
+    "rechauffe",
+    "batch"
+   ],
+   "proteine": "poulet",
+   "feculent": "tortilla",
+   "sante": 84,
+   "pourquoi": "Le poulet est poché puis effiloché dans une sauce tomate au piment fumé : très maigre et plein de goût. Le chou cru et l'avocat font le croquant et le bon gras.",
+   "ingredients": [
+    {
+     "ing": "blanc-poulet",
+     "qte": 130,
+     "unite": "g"
+    },
+    {
+     "ing": "tomate-concassee",
+     "qte": 100,
+     "unite": "g"
+    },
+    {
+     "ing": "oignon-jaune",
+     "qte": 0.4,
+     "unite": "piece",
+     "prep": "en lamelles"
+    },
+    {
+     "ing": "ail",
+     "qte": 1,
+     "unite": "piece",
+     "prep": "haché"
+    },
+    {
+     "ing": "chipotle-adobo",
+     "qte": 5,
+     "unite": "g"
+    },
+    {
+     "ing": "origan-seche",
+     "qte": 0.3,
+     "unite": "g"
+    },
+    {
+     "ing": "bouillon-volaille-cube",
+     "qte": 0.25,
+     "unite": "piece"
+    },
+    {
+     "ing": "tortilla-mais",
+     "qte": 2,
+     "unite": "piece"
+    },
+    {
+     "ing": "chou-blanc",
+     "qte": 50,
+     "unite": "g",
+     "prep": "en fines lanières"
+    },
+    {
+     "ing": "avocat",
+     "qte": 0.3,
+     "unite": "piece"
+    },
+    {
+     "ing": "citron-vert",
+     "qte": 0.25,
+     "unite": "piece"
+    },
+    {
+     "ing": "coriandre-fraiche",
+     "qte": 0.1,
+     "unite": "botte"
+    },
+    {
+     "ing": "huile-neutre",
+     "qte": 6,
+     "unite": "ml"
+    }
+   ],
+   "etapes": [
+    {
+     "texte": "Mets les blancs de poulet entiers dans une casserole, couvre d'eau froide, ajoute le cube de bouillon. Porte à frémissement (petites bulles) et laisse 12 à 15 minutes : le centre doit être blanc. Garde un verre de bouillon.",
+     "type": "attente",
+     "action": "cuire-eau",
+     "duree": 900
+    },
+    {
+     "texte": "Pendant ce temps : émince l'oignon, hache l'ail, coupe le chou en lanières très fines, coupe le citron vert en quartiers.",
+     "type": "actif",
+     "action": "emincer"
+    },
+    {
+     "texte": "Sauteuse à feu moyen, l'huile : oignon 5 minutes, puis ail 1 minute.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 360
+    },
+    {
+     "texte": "Ajoute les tomates, le chipotle (attention, ça pique : commence par la moitié et goûte), l'origan et le verre de bouillon. Laisse mijoter 8 minutes.",
+     "type": "actif",
+     "action": "mijoter",
+     "duree": 480
+    },
+    {
+     "texte": "Effiloche le poulet avec deux fourchettes (tire dans des sens opposés) et ajoute-le à la sauce. Mélange et laisse 3 minutes. Goûte et sale.",
+     "type": "actif",
+     "action": "faconner"
+    },
+    {
+     "texte": "Chauffe les tortillas 30 secondes de chaque côté dans une poêle sèche, garde-les au chaud dans un torchon.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 120
+    },
+    {
+     "texte": "À table, chacun garnit ses tortillas : poulet, chou, avocat en lamelles, coriandre et un filet de citron vert.",
+     "type": "actif",
+     "action": "dresser"
+    },
+    {
+     "texte": "Boîtes du lendemain : poulet seul (avec du riz si tu en as) et le chou à part. 2 minutes au micro-ondes.",
+     "type": "actif",
+     "action": "boites"
+    }
+   ]
+  },
+  {
+   "id": "mx-fajitas-boeuf-poivrons",
+   "nom": "Fajitas de bœuf aux poivrons et oignons, salsa fraîche et yaourt",
+   "cuisine": "Mexique",
+   "continent": "Amérique",
+   "creneau": [
+    "soir"
+   ],
+   "profil": [
+    "sain",
+    "muscle",
+    "famille"
+   ],
+   "temps_actif": 25,
+   "temps_total": 30,
+   "difficulte": 1,
+   "tags": [
+    "rapide"
+   ],
+   "proteine": "boeuf",
+   "feculent": "tortilla",
+   "sante": 80,
+   "pourquoi": "Beaucoup de poivrons, un bœuf maigre et du yaourt grec à la place de la crème. Chacun compose sa fajita, les enfants adorent.",
+   "ingredients": [
+    {
+     "ing": "boeuf-a-sauter",
+     "qte": 110,
+     "unite": "g",
+     "prep": "en lanières"
+    },
+    {
+     "ing": "poivron-rouge",
+     "qte": 0.5,
+     "unite": "piece"
+    },
+    {
+     "ing": "poivron-vert",
+     "qte": 0.3,
+     "unite": "piece"
+    },
+    {
+     "ing": "oignon-rouge",
+     "qte": 0.4,
+     "unite": "piece"
+    },
+    {
+     "ing": "wrap-complet",
+     "qte": 1.5,
+     "unite": "piece"
+    },
+    {
+     "ing": "yaourt-grec-0",
+     "qte": 30,
+     "unite": "g"
+    },
+    {
+     "ing": "huile-neutre",
+     "qte": 8,
+     "unite": "ml"
+    },
+    {
+     "ing": "epices-tacos",
+     "qte": 3,
+     "unite": "g",
+     "groupe": "épices"
+    },
+    {
+     "ing": "tomate",
+     "qte": 0.5,
+     "unite": "piece",
+     "groupe": "salsa"
+    },
+    {
+     "ing": "oignon-rouge",
+     "qte": 0.1,
+     "unite": "piece",
+     "groupe": "salsa"
+    },
+    {
+     "ing": "coriandre-fraiche",
+     "qte": 0.1,
+     "unite": "botte",
+     "groupe": "salsa"
+    },
+    {
+     "ing": "citron-vert",
+     "qte": 0.25,
+     "unite": "piece",
+     "groupe": "salsa"
+    }
+   ],
+   "etapes": [
+    {
+     "texte": "Coupe le bœuf en lanières de 1 cm, mélange-le avec les épices et la moitié de l'huile.",
+     "type": "actif",
+     "action": "mariner"
+    },
+    {
+     "texte": "Épépine les poivrons et coupe-les en lanières. Coupe l'oignon rouge en lamelles (garde-en un petit morceau pour la salsa).",
+     "type": "actif",
+     "action": "emincer"
+    },
+    {
+     "texte": "Salsa : coupe la tomate en petits dés, hache finement le petit morceau d'oignon et la coriandre, mélange avec le jus du citron vert et une pincée de sel.",
+     "type": "actif",
+     "action": "hacher"
+    },
+    {
+     "texte": "Grande poêle à feu vif, le reste de l'huile : poivrons et oignon 5 à 6 minutes. Ils doivent dorer un peu sur les bords mais rester croquants. Mets-les dans un plat.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 360
+    },
+    {
+     "texte": "Même poêle bien chaude : le bœuf 2 à 3 minutes en remuant. Remets les légumes, mélange.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 180
+    },
+    {
+     "texte": "Chauffe les wraps 20 secondes de chaque côté dans une poêle sèche.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 120
+    },
+    {
+     "texte": "Pose tout au milieu de la table : wraps, bœuf aux poivrons, salsa et yaourt. Chacun roule sa fajita.",
+     "type": "actif",
+     "action": "dresser"
+    }
+   ]
+  },
+  {
+   "id": "mx-chili-con-carne-leger",
+   "nom": "Chili con carne léger aux haricots rouges et poivron, riz",
+   "cuisine": "Mexique",
+   "continent": "Amérique",
+   "creneau": [
+    "soir",
+    "midi"
+   ],
+   "profil": [
+    "sain",
+    "perte",
+    "muscle",
+    "famille"
+   ],
+   "temps_actif": 25,
+   "temps_total": 55,
+   "difficulte": 1,
+   "tags": [
+    "rechauffe",
+    "batch",
+    "hiver"
+   ],
+   "proteine": "boeuf",
+   "feculent": "riz",
+   "sante": 84,
+   "pourquoi": "Moitié viande maigre, moitié haricots rouges : plein de fibres et de protéines. Il est encore meilleur réchauffé, idéal pour les boîtes.",
+   "ingredients": [
+    {
+     "ing": "boeuf-hache-5",
+     "qte": 100,
+     "unite": "g"
+    },
+    {
+     "ing": "haricot-rouge-boite",
+     "qte": 100,
+     "unite": "g",
+     "prep": "égouttés"
+    },
+    {
+     "ing": "tomate-concassee",
+     "qte": 120,
+     "unite": "g"
+    },
+    {
+     "ing": "poivron-rouge",
+     "qte": 0.4,
+     "unite": "piece",
+     "prep": "en dés"
+    },
+    {
+     "ing": "oignon-jaune",
+     "qte": 0.4,
+     "unite": "piece",
+     "prep": "haché"
+    },
+    {
+     "ing": "ail",
+     "qte": 1,
+     "unite": "piece",
+     "prep": "haché"
+    },
+    {
+     "ing": "riz-basmati",
+     "qte": 55,
+     "unite": "g"
+    },
+    {
+     "ing": "huile-neutre",
+     "qte": 6,
+     "unite": "ml"
+    },
+    {
+     "ing": "yaourt-grec-0",
+     "qte": 25,
+     "unite": "g"
+    },
+    {
+     "ing": "cumin-moulu",
+     "qte": 1,
+     "unite": "g",
+     "groupe": "épices"
+    },
+    {
+     "ing": "paprika-fume",
+     "qte": 1,
+     "unite": "g",
+     "groupe": "épices"
+    },
+    {
+     "ing": "chili-poudre",
+     "qte": 0.5,
+     "unite": "g",
+     "groupe": "épices"
+    },
+    {
+     "ing": "origan-seche",
+     "qte": 0.3,
+     "unite": "g",
+     "groupe": "épices"
+    },
+    {
+     "ing": "coriandre-fraiche",
+     "qte": 0.1,
+     "unite": "botte",
+     "facultatif": true
+    }
+   ],
+   "etapes": [
+    {
+     "texte": "Hache l'oignon et l'ail, coupe le poivron en petits dés (enlève les graines et le blanc).",
+     "type": "actif",
+     "action": "couper-des"
+    },
+    {
+     "texte": "Grande casserole à feu moyen, l'huile : oignon et poivron 5 minutes.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 360
+    },
+    {
+     "texte": "Ajoute le bœuf haché à feu vif et casse-le à la cuillère en bois pendant 5 à 6 minutes, jusqu'à ce qu'il n'y ait plus de rose. Ajoute l'ail et les épices, remue 1 minute.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 360
+    },
+    {
+     "texte": "Ajoute les tomates, les haricots rouges (rincés dans une passoire) et un demi-verre d'eau. Sale. Laisse mijoter 25 minutes à feu doux, couvercle entrouvert, en remuant de temps en temps.",
+     "type": "attente",
+     "action": "mijoter",
+     "duree": 1500
+    },
+    {
+     "texte": "Riz : mets le riz dans une passoire et rince-le sous l'eau froide en le remuant avec la main, jusqu'à ce que l'eau soit presque claire (3 rinçages, 1 minute).",
+     "type": "actif",
+     "action": "rincer"
+    },
+    {
+     "texte": "Mets le riz dans une casserole avec 1,5 fois son volume d'eau froide (1 verre de riz = 1 verre et demi d'eau) et une pincée de sel. Porte à ébullition à feu vif sans couvercle (3 à 4 minutes).",
+     "type": "actif",
+     "action": "cuire-eau",
+     "duree": 240
+    },
+    {
+     "texte": "Dès que ça bout, mets le couvercle et baisse le feu au minimum. Laisse cuire 12 minutes sans ouvrir. Puis éteins et laisse reposer 5 minutes, toujours couvert. Égraine à la fourchette avant de servir.",
+     "type": "attente",
+     "action": "cuire-eau",
+     "duree": 1020
+    },
+    {
+     "texte": "Goûte le chili : sale, et ajoute une pincée de chili en poudre si vous aimez plus piquant.",
+     "type": "actif",
+     "action": "assaisonner"
+    },
+    {
+     "texte": "Sers sur le riz avec une cuillère de yaourt grec et un peu de coriandre.",
+     "type": "actif",
+     "action": "dresser"
+    },
+    {
+     "texte": "Boîtes du lendemain : refroidir 30 minutes, frigo. 3 minutes au micro-ondes en remuant à la moitié.",
+     "type": "actif",
+     "action": "boites"
+    }
+   ]
+  },
+  {
+   "id": "mx-tacos-poisson-baja",
+   "nom": "Tacos de poisson façon Baja, lieu noir épicé, chou rouge et sauce yaourt-citron vert",
+   "cuisine": "Mexique",
+   "continent": "Amérique",
+   "creneau": [
+    "soir"
+   ],
+   "profil": [
+    "sain",
+    "perte",
+    "muscle",
+    "famille"
+   ],
+   "temps_actif": 25,
+   "temps_total": 25,
+   "difficulte": 1,
+   "tags": [
+    "rapide"
+   ],
+   "proteine": "poisson",
+   "feculent": "tortilla",
+   "sante": 86,
+   "pourquoi": "Le poisson est simplement poêlé avec des épices au lieu d'être frit, le chou rouge cru apporte croquant et vitamines.",
+   "ingredients": [
+    {
+     "ing": "lieu-noir-filet",
+     "qte": 140,
+     "unite": "g"
+    },
+    {
+     "ing": "tortilla-mais",
+     "qte": 2.5,
+     "unite": "piece"
+    },
+    {
+     "ing": "chou-rouge",
+     "qte": 60,
+     "unite": "g",
+     "prep": "en fines lanières"
+    },
+    {
+     "ing": "citron-vert",
+     "qte": 0.4,
+     "unite": "piece"
+    },
+    {
+     "ing": "avocat",
+     "qte": 0.25,
+     "unite": "piece"
+    },
+    {
+     "ing": "huile-neutre",
+     "qte": 6,
+     "unite": "ml"
+    },
+    {
+     "ing": "coriandre-fraiche",
+     "qte": 0.1,
+     "unite": "botte"
+    },
+    {
+     "ing": "epices-tacos",
+     "qte": 2,
+     "unite": "g",
+     "groupe": "épices"
+    },
+    {
+     "ing": "yaourt-grec-0",
+     "qte": 30,
+     "unite": "g",
+     "groupe": "sauce"
+    }
+   ],
+   "etapes": [
+    {
+     "texte": "Coupe le chou rouge en lanières très fines, mélange-le avec le jus d'un demi-citron vert et une pincée de sel : il ramollit un peu en 10 minutes.",
+     "type": "actif",
+     "action": "emincer"
+    },
+    {
+     "texte": "Sauce : mélange le yaourt avec le jus du reste du citron vert et une pincée de sel.",
+     "type": "actif",
+     "action": "melanger"
+    },
+    {
+     "texte": "Sèche le poisson avec du papier essuie-tout, coupe-le en morceaux de 5 cm et saupoudre les épices des deux côtés.",
+     "type": "actif",
+     "action": "assaisonner"
+    },
+    {
+     "texte": "Poêle à feu moyen-vif avec l'huile : 3 minutes de chaque côté sans le bouger. Il est cuit quand il devient blanc et se détache en lamelles.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 360
+    },
+    {
+     "texte": "Chauffe les tortillas 30 secondes de chaque côté dans une poêle sèche.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 120
+    },
+    {
+     "texte": "Chacun garnit : poisson effeuillé, chou rouge, avocat en lamelles, sauce et coriandre.",
+     "type": "actif",
+     "action": "dresser"
+    }
+   ]
+  },
+  {
+   "id": "it-minestrone-hiver",
+   "nom": "Minestrone d'hiver aux haricots blancs, petites pâtes et parmesan",
+   "cuisine": "Italie",
+   "continent": "Europe",
+   "creneau": [
+    "soir",
+    "midi"
+   ],
+   "profil": [
+    "sain",
+    "perte",
+    "vege",
+    "famille"
+   ],
+   "temps_actif": 25,
+   "temps_total": 55,
+   "difficulte": 1,
+   "tags": [
+    "hiver",
+    "rechauffe",
+    "batch"
+   ],
+   "proteine": "vege",
+   "feculent": "pates",
+   "sante": 90,
+   "pourquoi": "Une grande soupe-repas végétarienne : plein de légumes d'hiver, des haricots pour les protéines, quelques pâtes, et le parmesan pour le goût.",
+   "ingredients": [
+    {
+     "ing": "carotte",
+     "qte": 70,
+     "unite": "g",
+     "prep": "en dés"
+    },
+    {
+     "ing": "celeri-branche",
+     "qte": 1,
+     "unite": "piece",
+     "prep": "en dés"
+    },
+    {
+     "ing": "poireau",
+     "qte": 0.3,
+     "unite": "piece",
+     "prep": "en rondelles"
+    },
+    {
+     "ing": "pomme-de-terre",
+     "qte": 80,
+     "unite": "g",
+     "prep": "en dés"
+    },
+    {
+     "ing": "chou-blanc",
+     "qte": 70,
+     "unite": "g",
+     "prep": "en lanières"
+    },
+    {
+     "ing": "oignon-jaune",
+     "qte": 0.25,
+     "unite": "piece",
+     "prep": "haché"
+    },
+    {
+     "ing": "ail",
+     "qte": 0.5,
+     "unite": "piece",
+     "prep": "haché"
+    },
+    {
+     "ing": "haricot-blanc-boite",
+     "qte": 100,
+     "unite": "g",
+     "prep": "égouttés"
+    },
+    {
+     "ing": "tomate-concassee",
+     "qte": 80,
+     "unite": "g"
+    },
+    {
+     "ing": "pates-completes-courtes",
+     "qte": 30,
+     "unite": "g"
+    },
+    {
+     "ing": "bouillon-legumes-cube",
+     "qte": 0.4,
+     "unite": "piece"
+    },
+    {
+     "ing": "huile-olive",
+     "qte": 8,
+     "unite": "ml"
+    },
+    {
+     "ing": "parmesan",
+     "qte": 10,
+     "unite": "g",
+     "prep": "râpé"
+    },
+    {
+     "ing": "herbes-provence",
+     "qte": 0.3,
+     "unite": "g"
+    },
+    {
+     "ing": "basilic-frais",
+     "qte": 0.05,
+     "unite": "botte",
+     "facultatif": true
+    }
+   ],
+   "etapes": [
+    {
+     "texte": "Épluche les carottes, la pomme de terre et l'oignon. Coupe tout en petits dés de 1 cm (carottes, céleri, pomme de terre), le poireau en rondelles, le chou en lanières. Hache l'oignon et l'ail.",
+     "type": "actif",
+     "action": "couper-des"
+    },
+    {
+     "texte": "Grande marmite à feu moyen, l'huile d'olive : oignon, carotte, céleri et poireau 6 minutes en remuant. Ils doivent devenir tendres.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 360
+    },
+    {
+     "texte": "Ajoute l'ail, les tomates, le chou, les herbes, les cubes de bouillon et de l'eau (400 ml par personne). Porte à ébullition.",
+     "type": "actif",
+     "action": "mijoter",
+     "duree": 300
+    },
+    {
+     "texte": "Baisse à feu doux et laisse cuire 20 minutes, couvercle entrouvert.",
+     "type": "attente",
+     "action": "mijoter",
+     "duree": 1200
+    },
+    {
+     "texte": "Ajoute la pomme de terre, les haricots rincés et les pâtes. Laisse cuire encore 10 à 12 minutes, jusqu'à ce que les pâtes soient cuites. Si c'est trop épais, ajoute un peu d'eau chaude.",
+     "type": "actif",
+     "action": "mijoter",
+     "duree": 720
+    },
+    {
+     "texte": "Goûte, sale et poivre.",
+     "type": "actif",
+     "action": "assaisonner"
+    },
+    {
+     "texte": "Sers dans des assiettes creuses avec le parmesan râpé et un filet d'huile d'olive.",
+     "type": "actif",
+     "action": "dresser"
+    },
+    {
+     "texte": "Boîtes du lendemain : les pâtes boivent le bouillon, ajoute un peu d'eau avant de réchauffer 3 minutes.",
+     "type": "actif",
+     "action": "boites"
+    }
+   ]
+  },
+  {
+   "id": "it-poulet-cacciatore-polenta",
+   "nom": "Poulet cacciatore aux champignons et poivrons, polenta crémeuse",
+   "cuisine": "Italie",
+   "continent": "Europe",
+   "creneau": [
+    "soir",
+    "midi"
+   ],
+   "profil": [
+    "sain",
+    "muscle",
+    "famille"
+   ],
+   "temps_actif": 30,
+   "temps_total": 55,
+   "difficulte": 1,
+   "tags": [
+    "hiver",
+    "rechauffe",
+    "batch"
+   ],
+   "proteine": "poulet",
+   "feculent": "polenta",
+   "sante": 84,
+   "pourquoi": "Le « poulet du chasseur » mijote dans une sauce tomate aux légumes, sans crème. La polenta change du riz et des pâtes.",
+   "ingredients": [
+    {
+     "ing": "haut-cuisse-poulet",
+     "qte": 150,
+     "unite": "g"
+    },
+    {
+     "ing": "champignon-paris",
+     "qte": 80,
+     "unite": "g",
+     "prep": "en quartiers"
+    },
+    {
+     "ing": "poivron-rouge",
+     "qte": 0.4,
+     "unite": "piece",
+     "prep": "en lanières"
+    },
+    {
+     "ing": "oignon-jaune",
+     "qte": 0.3,
+     "unite": "piece",
+     "prep": "émincé"
+    },
+    {
+     "ing": "ail",
+     "qte": 1,
+     "unite": "piece",
+     "prep": "haché"
+    },
+    {
+     "ing": "tomate-concassee",
+     "qte": 120,
+     "unite": "g"
+    },
+    {
+     "ing": "olive-noire",
+     "qte": 10,
+     "unite": "g"
+    },
+    {
+     "ing": "romarin-frais",
+     "qte": 0.05,
+     "unite": "botte"
+    },
+    {
+     "ing": "huile-olive",
+     "qte": 8,
+     "unite": "ml"
+    },
+    {
+     "ing": "polenta",
+     "qte": 60,
+     "unite": "g"
+    },
+    {
+     "ing": "parmesan",
+     "qte": 8,
+     "unite": "g"
+    },
+    {
+     "ing": "lait-demi-ecreme",
+     "qte": 50,
+     "unite": "ml"
+    }
+   ],
+   "etapes": [
+    {
+     "texte": "Sale et poivre le poulet. Cocotte à feu moyen-vif avec l'huile : dore les morceaux 4 minutes de chaque côté. Retire-les dans une assiette.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 480
+    },
+    {
+     "texte": "Dans la même cocotte : oignon, poivron et champignons 6 minutes. Ajoute l'ail et le romarin 1 minute.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 360
+    },
+    {
+     "texte": "Remets le poulet, ajoute les tomates et les olives et un demi-verre d'eau. Couvre et laisse mijoter 25 minutes à feu doux. Le poulet doit se détacher facilement à la fourchette.",
+     "type": "attente",
+     "action": "mijoter",
+     "duree": 1500
+    },
+    {
+     "texte": "Polenta : porte à ébullition de l'eau salée (4 fois le poids de polenta, par exemple 240 ml pour 60 g) avec le lait. Verse la polenta en pluie en fouettant sans arrêt pour éviter les grumeaux.",
+     "type": "actif",
+     "action": "cuire-eau",
+     "duree": 360
+    },
+    {
+     "texte": "Baisse le feu et remue avec une cuillère en bois 5 minutes (regarde le paquet : la polenta « instantanée » cuit en 1 à 5 minutes). Elle doit être épaisse et crémeuse. Ajoute le parmesan.",
+     "type": "actif",
+     "action": "mijoter",
+     "duree": 300
+    },
+    {
+     "texte": "Polenta dans l'assiette, poulet et sauce par-dessus.",
+     "type": "actif",
+     "action": "dresser"
+    },
+    {
+     "texte": "Boîtes du lendemain : la polenta durcit en refroidissant, c'est normal ; réchauffe-la avec un peu d'eau, en remuant.",
+     "type": "actif",
+     "action": "boites"
+    }
+   ]
+  },
+  {
+   "id": "it-risotto-champignons-poireaux",
+   "nom": "Risotto aux champignons et poireaux, parmesan, salade de roquette",
+   "cuisine": "Italie",
+   "continent": "Europe",
+   "creneau": [
+    "soir"
+   ],
+   "profil": [
+    "sain",
+    "vege",
+    "famille"
+   ],
+   "temps_actif": 35,
+   "temps_total": 40,
+   "difficulte": 2,
+   "tags": [
+    "hiver"
+   ],
+   "proteine": "vege",
+   "feculent": "riz",
+   "sante": 78,
+   "pourquoi": "Un risotto sans beaucoup de beurre ni de crème : c'est le riz qui le rend crémeux. Les champignons et les poireaux font le volume.",
+   "ingredients": [
+    {
+     "ing": "riz-arborio",
+     "qte": 75,
+     "unite": "g"
+    },
+    {
+     "ing": "champignon-paris",
+     "qte": 100,
+     "unite": "g",
+     "prep": "en lamelles"
+    },
+    {
+     "ing": "poireau",
+     "qte": 0.5,
+     "unite": "piece",
+     "prep": "en rondelles"
+    },
+    {
+     "ing": "echalote",
+     "qte": 0.5,
+     "unite": "piece",
+     "prep": "hachée"
+    },
+    {
+     "ing": "bouillon-legumes-cube",
+     "qte": 0.5,
+     "unite": "piece"
+    },
+    {
+     "ing": "parmesan",
+     "qte": 15,
+     "unite": "g",
+     "prep": "râpé"
+    },
+    {
+     "ing": "beurre",
+     "qte": 5,
+     "unite": "g"
+    },
+    {
+     "ing": "huile-olive",
+     "qte": 8,
+     "unite": "ml"
+    },
+    {
+     "ing": "roquette",
+     "qte": 30,
+     "unite": "g"
+    },
+    {
+     "ing": "persil-plat",
+     "qte": 0.05,
+     "unite": "botte",
+     "facultatif": true
+    }
+   ],
+   "etapes": [
+    {
+     "texte": "Dans une casserole, dissous les cubes de bouillon dans de l'eau (300 ml par personne) et garde ce bouillon chaud sur feu très doux tout le long.",
+     "type": "actif",
+     "action": "cuire-eau",
+     "duree": 300
+    },
+    {
+     "texte": "Champignons en lamelles, poireau en rondelles fines (bien rincé), échalote hachée.",
+     "type": "actif",
+     "action": "emincer"
+    },
+    {
+     "texte": "Grande sauteuse à feu moyen, la moitié de l'huile : champignons 5 minutes pour qu'ils dorent. Retire-les.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 360
+    },
+    {
+     "texte": "Reste de l'huile : échalote et poireau 4 à 5 minutes, tendres.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 300
+    },
+    {
+     "texte": "Ajoute le riz (sans le rincer) et remue 2 minutes : les grains deviennent un peu transparents sur les bords.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 120
+    },
+    {
+     "texte": "Verse une louche de bouillon chaud et remue jusqu'à ce qu'il soit absorbé, puis une autre louche, et ainsi de suite pendant 18 minutes. Remue souvent : c'est ce qui rend le risotto crémeux. Goûte : le grain doit être tendre avec un tout petit cœur ferme.",
+     "type": "attente",
+     "action": "mijoter",
+     "duree": 1080
+    },
+    {
+     "texte": "Éteins, ajoute les champignons, le beurre et le parmesan, mélange fort 30 secondes et couvre 2 minutes. Il doit être coulant (il « fait la vague » quand tu secoues la casserole).",
+     "type": "actif",
+     "action": "melanger"
+    },
+    {
+     "texte": "Sers tout de suite avec la roquette à côté.",
+     "type": "actif",
+     "action": "dresser"
+    }
+   ]
+  },
+  {
+   "id": "it-pasta-e-fagioli",
+   "nom": "Pasta e fagioli, soupe épaisse de pâtes et haricots au romarin",
+   "cuisine": "Italie",
+   "continent": "Europe",
+   "creneau": [
+    "soir",
+    "midi"
+   ],
+   "profil": [
+    "sain",
+    "perte",
+    "vege",
+    "famille"
+   ],
+   "temps_actif": 20,
+   "temps_total": 35,
+   "difficulte": 1,
+   "tags": [
+    "hiver",
+    "rechauffe",
+    "rapide"
+   ],
+   "proteine": "vege",
+   "feculent": "pates",
+   "sante": 86,
+   "pourquoi": "Le plat des grands-mères italiennes : pas cher, rassasiant, plein de fibres et de protéines végétales. Une partie des haricots est écrasée pour rendre le bouillon crémeux.",
+   "ingredients": [
+    {
+     "ing": "haricot-blanc-boite",
+     "qte": 150,
+     "unite": "g",
+     "prep": "égouttés"
+    },
+    {
+     "ing": "pates-completes-courtes",
+     "qte": 50,
+     "unite": "g"
+    },
+    {
+     "ing": "tomate-concassee",
+     "qte": 80,
+     "unite": "g"
+    },
+    {
+     "ing": "carotte",
+     "qte": 50,
+     "unite": "g",
+     "prep": "en petits dés"
+    },
+    {
+     "ing": "celeri-branche",
+     "qte": 1,
+     "unite": "piece",
+     "prep": "en petits dés"
+    },
+    {
+     "ing": "oignon-jaune",
+     "qte": 0.25,
+     "unite": "piece",
+     "prep": "haché"
+    },
+    {
+     "ing": "ail",
+     "qte": 1,
+     "unite": "piece",
+     "prep": "haché"
+    },
+    {
+     "ing": "romarin-frais",
+     "qte": 0.05,
+     "unite": "botte"
+    },
+    {
+     "ing": "bouillon-legumes-cube",
+     "qte": 0.4,
+     "unite": "piece"
+    },
+    {
+     "ing": "huile-olive",
+     "qte": 8,
+     "unite": "ml"
+    },
+    {
+     "ing": "parmesan",
+     "qte": 10,
+     "unite": "g"
+    },
+    {
+     "ing": "piment-flocons",
+     "qte": 0.2,
+     "unite": "g",
+     "facultatif": true
+    }
+   ],
+   "etapes": [
+    {
+     "texte": "Coupe la carotte et le céleri en petits dés, hache l'oignon et l'ail.",
+     "type": "actif",
+     "action": "couper-des"
+    },
+    {
+     "texte": "Grande casserole à feu moyen, l'huile : oignon, carotte, céleri 6 minutes. Ajoute l'ail et le romarin 1 minute.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 360
+    },
+    {
+     "texte": "Ajoute les tomates, les haricots rincés, les cubes de bouillon et de l'eau (300 ml par personne). Laisse frémir 10 minutes.",
+     "type": "actif",
+     "action": "mijoter",
+     "duree": 600
+    },
+    {
+     "texte": "Prends une louche de haricots avec un peu de bouillon, écrase-les à la fourchette (ou au mixeur) et remets dans la casserole : la soupe devient crémeuse.",
+     "type": "actif",
+     "action": "mixer"
+    },
+    {
+     "texte": "Ajoute les pâtes et laisse cuire le temps écrit sur le paquet en remuant souvent (elles attachent). Ajoute de l'eau chaude si c'est trop épais : ça doit rester une soupe épaisse.",
+     "type": "actif",
+     "action": "mijoter",
+     "duree": 660
+    },
+    {
+     "texte": "Retire le romarin. Sers avec le parmesan, un filet d'huile d'olive et du piment pour ceux qui aiment.",
+     "type": "actif",
+     "action": "dresser"
+    },
+    {
+     "texte": "Boîtes du lendemain : ajoute un demi-verre d'eau avant de réchauffer, ça épaissit beaucoup.",
+     "type": "actif",
+     "action": "boites"
+    }
+   ]
+  },
+  {
+   "id": "gr-poulet-citron-pommes-de-terre",
+   "nom": "Kotopoulo lemonato, poulet au citron, origan et pommes de terre au four, salade grecque",
+   "cuisine": "Grèce",
+   "continent": "Europe",
+   "creneau": [
+    "soir",
+    "midi"
+   ],
+   "profil": [
+    "sain",
+    "muscle",
+    "famille"
+   ],
+   "temps_actif": 20,
+   "temps_total": 65,
+   "difficulte": 1,
+   "tags": [
+    "rechauffe",
+    "batch"
+   ],
+   "proteine": "poulet",
+   "feculent": "pomme de terre",
+   "sante": 82,
+   "pourquoi": "Tout cuit dans le même plat au four, avec du citron et de l'origan à la place du beurre. La salade grecque légère apporte les crudités.",
+   "ingredients": [
+    {
+     "ing": "haut-cuisse-poulet",
+     "qte": 150,
+     "unite": "g"
+    },
+    {
+     "ing": "pomme-de-terre",
+     "qte": 180,
+     "unite": "g",
+     "prep": "en quartiers"
+    },
+    {
+     "ing": "citron",
+     "qte": 0.4,
+     "unite": "piece"
+    },
+    {
+     "ing": "ail",
+     "qte": 1,
+     "unite": "piece",
+     "prep": "écrasé"
+    },
+    {
+     "ing": "origan-seche",
+     "qte": 0.5,
+     "unite": "g"
+    },
+    {
+     "ing": "huile-olive",
+     "qte": 10,
+     "unite": "ml"
+    },
+    {
+     "ing": "bouillon-volaille-cube",
+     "qte": 0.2,
+     "unite": "piece"
+    },
+    {
+     "ing": "concombre",
+     "qte": 0.3,
+     "unite": "piece",
+     "groupe": "salade"
+    },
+    {
+     "ing": "tomate",
+     "qte": 0.5,
+     "unite": "piece",
+     "groupe": "salade"
+    },
+    {
+     "ing": "oignon-rouge",
+     "qte": 0.1,
+     "unite": "piece",
+     "groupe": "salade"
+    },
+    {
+     "ing": "feta",
+     "qte": 20,
+     "unite": "g",
+     "groupe": "salade"
+    },
+    {
+     "ing": "olive-noire",
+     "qte": 8,
+     "unite": "g",
+     "groupe": "salade"
+    }
+   ],
+   "etapes": [
+    {
+     "texte": "Allume le four à 200 °C (180 °C en chaleur tournante).",
+     "type": "actif",
+     "action": "four"
+    },
+    {
+     "texte": "Épluche les pommes de terre et coupe-les en quartiers dans la longueur (comme des grosses frites).",
+     "type": "actif",
+     "action": "eplucher"
+    },
+    {
+     "texte": "Dans un grand plat à four, mélange les pommes de terre, le poulet, l'ail écrasé, l'origan, l'huile, le jus de citron, du sel et du poivre. Dissous le cube dans un verre d'eau chaude (50 ml par personne) et verse au fond du plat.",
+     "type": "actif",
+     "action": "melanger"
+    },
+    {
+     "texte": "Enfourne 45 à 50 minutes en retournant tout à la moitié. C'est prêt quand les pommes de terre sont dorées et tendres et que le jus du poulet est clair quand tu piques la viande.",
+     "type": "attente",
+     "action": "four",
+     "duree": 3000
+    },
+    {
+     "texte": "Salade : coupe le concombre et la tomate en morceaux, l'oignon rouge en fines lamelles. Ajoute les olives, la feta émiettée, un filet d'huile d'olive et une pincée d'origan.",
+     "type": "actif",
+     "action": "couper-des"
+    },
+    {
+     "texte": "Sers le poulet et les pommes de terre arrosés du jus du plat, la salade à côté.",
+     "type": "actif",
+     "action": "dresser"
+    },
+    {
+     "texte": "Boîtes du lendemain : poulet et pommes de terre seulement (la salade se garde mal). 2 minutes au micro-ondes.",
+     "type": "actif",
+     "action": "boites"
+    }
+   ]
+  },
+  {
+   "id": "gr-fasolada",
+   "nom": "Fasolada, soupe grecque de haricots blancs, carottes et céleri, pain et feta",
+   "cuisine": "Grèce",
+   "continent": "Europe",
+   "creneau": [
+    "soir",
+    "midi"
+   ],
+   "profil": [
+    "sain",
+    "perte",
+    "vege",
+    "famille"
+   ],
+   "temps_actif": 20,
+   "temps_total": 45,
+   "difficulte": 1,
+   "tags": [
+    "hiver",
+    "rechauffe",
+    "batch"
+   ],
+   "proteine": "vege",
+   "feculent": "pain",
+   "sante": 88,
+   "pourquoi": "La soupe nationale grecque : des haricots, des légumes et de l'huile d'olive. Très rassasiante et pleine de protéines végétales.",
+   "ingredients": [
+    {
+     "ing": "haricot-blanc-boite",
+     "qte": 160,
+     "unite": "g",
+     "prep": "égouttés"
+    },
+    {
+     "ing": "carotte",
+     "qte": 70,
+     "unite": "g",
+     "prep": "en rondelles"
+    },
+    {
+     "ing": "celeri-branche",
+     "qte": 1,
+     "unite": "piece",
+     "prep": "en tronçons"
+    },
+    {
+     "ing": "oignon-jaune",
+     "qte": 0.3,
+     "unite": "piece",
+     "prep": "haché"
+    },
+    {
+     "ing": "tomate-concassee",
+     "qte": 80,
+     "unite": "g"
+    },
+    {
+     "ing": "concentre-tomate",
+     "qte": 5,
+     "unite": "g"
+    },
+    {
+     "ing": "huile-olive",
+     "qte": 12,
+     "unite": "ml"
+    },
+    {
+     "ing": "laurier",
+     "qte": 0.2,
+     "unite": "piece"
+    },
+    {
+     "ing": "origan-seche",
+     "qte": 0.3,
+     "unite": "g"
+    },
+    {
+     "ing": "citron",
+     "qte": 0.15,
+     "unite": "piece"
+    },
+    {
+     "ing": "feta",
+     "qte": 20,
+     "unite": "g"
+    },
+    {
+     "ing": "pain-complet-tranche",
+     "qte": 1,
+     "unite": "tranche"
+    }
+   ],
+   "etapes": [
+    {
+     "texte": "Épluche la carotte et coupe-la en rondelles, coupe le céleri en tronçons de 1 cm, hache l'oignon.",
+     "type": "actif",
+     "action": "couper-des"
+    },
+    {
+     "texte": "Grande casserole à feu moyen, la moitié de l'huile : oignon, carotte et céleri 6 minutes.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 360
+    },
+    {
+     "texte": "Ajoute le concentré de tomate et remue 1 minute, puis les tomates, le laurier et l'origan.",
+     "type": "actif",
+     "action": "mijoter",
+     "duree": 180
+    },
+    {
+     "texte": "Ajoute les haricots rincés et de l'eau (250 ml par personne). Laisse frémir 25 minutes à couvert : les carottes doivent être bien tendres.",
+     "type": "attente",
+     "action": "mijoter",
+     "duree": 1500
+    },
+    {
+     "texte": "Ajoute le reste de l'huile d'olive et le jus de citron, sale, poivre. Retire le laurier.",
+     "type": "actif",
+     "action": "assaisonner"
+    },
+    {
+     "texte": "Sers avec la feta émiettée dessus et le pain grillé.",
+     "type": "actif",
+     "action": "dresser"
+    },
+    {
+     "texte": "Boîtes du lendemain : 3 minutes au micro-ondes. Feta et pain à part.",
+     "type": "actif",
+     "action": "boites"
+    }
+   ]
+  },
+  {
+   "id": "gr-spanakorizo-oeufs",
+   "nom": "Spanakorizo, riz aux épinards, citron et aneth, œufs mollets et yaourt",
+   "cuisine": "Grèce",
+   "continent": "Europe",
+   "creneau": [
+    "soir",
+    "midi"
+   ],
+   "profil": [
+    "sain",
+    "perte",
+    "vege",
+    "famille"
+   ],
+   "temps_actif": 25,
+   "temps_total": 35,
+   "difficulte": 1,
+   "tags": [
+    "rapide",
+    "rechauffe"
+   ],
+   "proteine": "oeuf",
+   "feculent": "riz",
+   "sante": 86,
+   "pourquoi": "Un plat grec simple où les épinards sont la star : on en met beaucoup. Les œufs et le yaourt apportent les protéines.",
+   "ingredients": [
+    {
+     "ing": "epinard-surgele",
+     "qte": 200,
+     "unite": "g"
+    },
+    {
+     "ing": "riz-basmati",
+     "qte": 60,
+     "unite": "g"
+    },
+    {
+     "ing": "oignon-jaune",
+     "qte": 0.3,
+     "unite": "piece",
+     "prep": "haché"
+    },
+    {
+     "ing": "oignon-nouveau",
+     "qte": 0.1,
+     "unite": "botte",
+     "prep": "émincé"
+    },
+    {
+     "ing": "aneth-frais",
+     "qte": 0.1,
+     "unite": "botte"
+    },
+    {
+     "ing": "citron",
+     "qte": 0.25,
+     "unite": "piece"
+    },
+    {
+     "ing": "bouillon-legumes-cube",
+     "qte": 0.3,
+     "unite": "piece"
+    },
+    {
+     "ing": "huile-olive",
+     "qte": 10,
+     "unite": "ml"
+    },
+    {
+     "ing": "oeuf",
+     "qte": 1.5,
+     "unite": "piece"
+    },
+    {
+     "ing": "yaourt-grec-0",
+     "qte": 40,
+     "unite": "g"
+    },
+    {
+     "ing": "feta",
+     "qte": 15,
+     "unite": "g"
+    }
+   ],
+   "etapes": [
+    {
+     "texte": "Hache l'oignon, émince l'oignon nouveau et l'aneth.",
+     "type": "actif",
+     "action": "hacher"
+    },
+    {
+     "texte": "Sauteuse à feu moyen, l'huile : oignon et oignon nouveau 5 minutes.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 300
+    },
+    {
+     "texte": "Ajoute les épinards encore surgelés et laisse-les fondre 5 minutes en remuant.",
+     "type": "actif",
+     "action": "mijoter",
+     "duree": 300
+    },
+    {
+     "texte": "Ajoute le riz, les cubes de bouillon et de l'eau (150 ml par personne). Mélange, couvre et laisse cuire 15 minutes à feu doux, jusqu'à ce que le riz soit tendre. Remue une ou deux fois.",
+     "type": "attente",
+     "action": "mijoter",
+     "duree": 900
+    },
+    {
+     "texte": "Œufs mollets : plonge-les délicatement avec une cuillère dans l'eau bouillante, 6 minutes exactement, puis dans l'eau froide 2 minutes. Écale-les doucement.",
+     "type": "actif",
+     "action": "cuire-eau",
+     "duree": 360
+    },
+    {
+     "texte": "Ajoute au riz l'aneth et le jus de citron, sale et poivre.",
+     "type": "actif",
+     "action": "assaisonner"
+    },
+    {
+     "texte": "Sers avec un œuf mollet coupé en deux, une cuillère de yaourt et la feta émiettée.",
+     "type": "actif",
+     "action": "dresser"
+    },
+    {
+     "texte": "Boîtes du lendemain : riz et yaourt à part. Refais un œuf ou prends-le dur (10 minutes de cuisson).",
+     "type": "actif",
+     "action": "boites"
+    }
+   ]
+  },
+  {
+   "id": "fr-boeuf-carottes-leger",
+   "nom": "Bœuf carottes mijoté, pommes de terre vapeur et persil",
+   "cuisine": "France",
+   "continent": "Europe",
+   "creneau": [
+    "soir",
+    "midi"
+   ],
+   "profil": [
+    "sain",
+    "muscle",
+    "famille"
+   ],
+   "temps_actif": 25,
+   "temps_total": 165,
+   "difficulte": 1,
+   "tags": [
+    "hiver",
+    "rechauffe",
+    "batch"
+   ],
+   "proteine": "boeuf",
+   "feculent": "pomme de terre",
+   "sante": 82,
+   "pourquoi": "Le plat du dimanche qui se prépare presque tout seul. On met beaucoup de carottes, on enlève le gras visible du bœuf et la sauce n'a pas besoin de farine.",
+   "ingredients": [
+    {
+     "ing": "boeuf-a-mijoter",
+     "qte": 140,
+     "unite": "g",
+     "prep": "en cubes de 4 cm"
+    },
+    {
+     "ing": "carotte",
+     "qte": 200,
+     "unite": "g",
+     "prep": "en rondelles épaisses"
+    },
+    {
+     "ing": "oignon-jaune",
+     "qte": 0.4,
+     "unite": "piece",
+     "prep": "en quartiers"
+    },
+    {
+     "ing": "ail",
+     "qte": 1,
+     "unite": "piece",
+     "prep": "écrasé"
+    },
+    {
+     "ing": "concentre-tomate",
+     "qte": 6,
+     "unite": "g"
+    },
+    {
+     "ing": "bouillon-legumes-cube",
+     "qte": 0.3,
+     "unite": "piece"
+    },
+    {
+     "ing": "thym-seche",
+     "qte": 0.2,
+     "unite": "g"
+    },
+    {
+     "ing": "laurier",
+     "qte": 0.2,
+     "unite": "piece"
+    },
+    {
+     "ing": "huile-olive",
+     "qte": 6,
+     "unite": "ml"
+    },
+    {
+     "ing": "pomme-de-terre",
+     "qte": 150,
+     "unite": "g"
+    },
+    {
+     "ing": "persil-plat",
+     "qte": 0.1,
+     "unite": "botte"
+    }
+   ],
+   "etapes": [
+    {
+     "texte": "Coupe le bœuf en cubes de 4 cm et enlève les gros morceaux de gras blanc. Sale et poivre. Épluche les carottes et coupe-les en rondelles de 1,5 cm. Coupe l'oignon en quartiers.",
+     "type": "actif",
+     "action": "couper-des"
+    },
+    {
+     "texte": "Cocotte à feu vif avec l'huile : fais dorer la viande en 2 fois (si tu en mets trop d'un coup, elle bout au lieu de dorer), 4 à 5 minutes par fournée. Retire-la.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 600
+    },
+    {
+     "texte": "Même cocotte, feu moyen : oignon 3 minutes, puis le concentré de tomate et l'ail 1 minute. Gratte le fond avec la cuillère en bois.",
+     "type": "actif",
+     "action": "poeler",
+     "duree": 240
+    },
+    {
+     "texte": "Remets la viande, ajoute les carottes, le thym, le laurier, les cubes de bouillon et de l'eau jusqu'à couvrir à peine. Porte à ébullition.",
+     "type": "actif",
+     "action": "mijoter",
+     "duree": 300
+    },
+    {
+     "texte": "Couvre et laisse mijoter 2 h 15 à 2 h 30 à feu très doux (de toutes petites bulles). Regarde toutes les 45 minutes et ajoute un peu d'eau si besoin. C'est prêt quand la viande se défait à la fourchette.",
+     "type": "attente",
+     "action": "mijoter",
+     "duree": 8400
+    },
+    {
+     "texte": "Pommes de terre : épluche-les à l'économe, rince-les et coupe-les en morceaux de la même taille (environ 4 cm) pour qu'ils cuisent en même temps.",
+     "type": "actif",
+     "action": "eplucher"
+    },
+    {
+     "texte": "Mets-les dans une casserole, couvre d'eau froide de 2 doigts, ajoute 1 cuillère à café de sel. Porte à ébullition puis laisse cuire 20 minutes à feu moyen, couvercle entrouvert. Elles sont cuites quand la pointe d'un couteau entre et ressort toute seule. Égoutte.",
+     "type": "attente",
+     "action": "cuire-eau",
+     "duree": 1500
+    },
+    {
+     "texte": "Goûte la sauce, sale et poivre. Si elle est trop liquide, enlève le couvercle et laisse bouillir 10 minutes. Retire le laurier.",
+     "type": "actif",
+     "action": "assaisonner"
+    },
+    {
+     "texte": "Sers avec les pommes de terre et le persil haché.",
+     "type": "actif",
+     "action": "dresser"
+    },
+    {
+     "texte": "Boîtes du lendemain : encore meilleur réchauffé. 3 minutes au micro-ondes.",
+     "type": "actif",
+     "action": "boites"
+    }
+   ]
+  },
+  {
+   "id": "fr-blanquette-dinde-legere",
+   "nom": "Blanquette de dinde légère aux carottes et champignons, riz",
+   "cuisine": "France",
+   "continent": "Europe",
+   "creneau": [
+    "soir",
+    "midi"
+   ],
+   "profil": [
+    "sain",
+    "perte",
+    "muscle",
+    "famille"
+   ],
+   "temps_actif": 30,
+   "temps_total": 60,
+   "difficulte": 2,
+   "tags": [
+    "hiver",
+    "rechauffe",
+    "batch"
+   ],
+   "proteine": "dinde",
+   "feculent": "riz",
+   "sante": 84,
+   "pourquoi": "Une blanquette avec de la dinde maigre à la place du veau, et une sauce liée au jaune d'œuf et à la crème légère au lieu de beaucoup de crème et de beurre.",
+   "ingredients": [
+    {
+     "ing": "escalope-dinde",
+     "qte": 140,
+     "unite": "g",
+     "prep": "en cubes de 3 cm"
+    },
+    {
+     "ing": "carotte",
+     "qte": 100,
+     "unite": "g",
+     "prep": "en rondelles"
+    },
+    {
+     "ing": "champignon-paris",
+     "qte": 80,
+     "unite": "g",
+     "prep": "en quartiers"
+    },
+    {
+     "ing": "oignon-jaune",
+     "qte": 0.3,
+     "unite": "piece"
+    },
+    {
+     "ing": "bouillon-volaille-cube",
+     "qte": 0.4,
+     "unite": "piece"
+    },
+    {
+     "ing": "laurier",
+     "qte": 0.2,
+     "unite": "piece"
+    },
+    {
+     "ing": "thym-seche",
+     "qte": 0.2,
+     "unite": "g"
+    },
+    {
+     "ing": "riz-basmati",
+     "qte": 60,
+     "unite": "g"
+    },
+    {
+     "ing": "creme-fraiche-legere",
+     "qte": 25,
+     "unite": "ml",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "oeuf",
+     "qte": 0.25,
+     "unite": "piece",
+     "groupe": "sauce",
+     "prep": "le jaune"
+    },
+    {
+     "ing": "maizena",
+     "qte": 4,
+     "unite": "g",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "citron",
+     "qte": 0.1,
+     "unite": "piece",
+     "groupe": "sauce"
+    },
+    {
+     "ing": "persil-plat",
+     "qte": 0.05,
+     "unite": "botte",
+     "facultatif": true
+    }
+   ],
+   "etapes": [
+    {
+     "texte": "Coupe la dinde en cubes de 3 cm, les carottes en rondelles, les champignons en quartiers. Épluche l'oignon et laisse-le entier.",
+     "type": "actif",
+     "action": "couper-des"
+    },
+    {
+     "texte": "Dans une cocotte, mets la dinde, les carottes, l'oignon, le laurier, le thym et les cubes de bouillon. Couvre d'eau froide et porte à frémissement. Enlève avec une cuillère la mousse grise qui monte à la surface.",
+     "type": "actif",
+     "action": "mijoter",
+     "duree": 300
+    },
+    {
+     "texte": "Laisse frémir 25 minutes à couvert. Ajoute les champignons pour les 10 dernières minutes.",
+     "type": "attente",
+     "action": "mijoter",
+     "duree": 1500
+    },
+    {
+     "texte": "Riz : mets le riz dans une passoire et rince-le sous l'eau froide en le remuant avec la main, jusqu'à ce que l'eau soit presque claire (3 rinçages, 1 minute).",
+     "type": "actif",
+     "action": "rincer"
+    },
+    {
+     "texte": "Mets le riz dans une casserole avec 1,5 fois son volume d'eau froide (1 verre de riz = 1 verre et demi d'eau) et une pincée de sel. Porte à ébullition à feu vif sans couvercle (3 à 4 minutes).",
+     "type": "actif",
+     "action": "cuire-eau",
+     "duree": 240
+    },
+    {
+     "texte": "Dès que ça bout, mets le couvercle et baisse le feu au minimum. Laisse cuire 12 minutes sans ouvrir. Puis éteins et laisse reposer 5 minutes, toujours couvert. Égraine à la fourchette avant de servir.",
+     "type": "attente",
+     "action": "cuire-eau",
+     "duree": 1020
+    },
+    {
+     "texte": "Avec une écumoire, sors la viande et les légumes dans un plat et garde-les au chaud. Retire l'oignon et le laurier. Garde le bouillon (environ 150 ml par personne).",
+     "type": "actif",
+     "action": "egoutter"
+    },
+    {
+     "texte": "Sauce : délaye la maïzena dans un peu d'eau froide, verse-la dans le bouillon qui frémit en fouettant, 2 minutes : ça épaissit. Hors du feu, mélange la crème, le jaune d'œuf et le jus de citron dans un bol, ajoute une louche de sauce chaude en fouettant, puis reverse tout dans la cocotte. Ne fais plus bouillir, sinon l'œuf fait des grumeaux.",
+     "type": "actif",
+     "action": "melanger",
+     "duree": 300
+    },
+    {
+     "texte": "Remets la viande et les légumes dans la sauce, mélange doucement. Sers avec le riz et du persil.",
+     "type": "actif",
+     "action": "dresser"
+    },
+    {
+     "texte": "Boîtes du lendemain : réchauffe doucement (2 minutes à puissance moyenne) pour ne pas faire tourner la sauce.",
+     "type": "actif",
+     "action": "boites"
+    }
+   ]
+  },
+  {
+   "id": "fr-pot-au-feu-leger",
+   "nom": "Pot-au-feu léger, légumes d'hiver et bouillon, moutarde et cornichons",
+   "cuisine": "France",
+   "continent": "Europe",
+   "creneau": [
+    "soir",
+    "midi"
+   ],
+   "profil": [
+    "sain",
+    "perte",
+    "muscle",
+    "famille"
+   ],
+   "temps_actif": 30,
+   "temps_total": 195,
+   "difficulte": 1,
+   "tags": [
+    "hiver",
+    "rechauffe",
+    "batch"
+   ],
+   "proteine": "boeuf",
+   "feculent": "pomme de terre",
+   "sante": 86,
+   "pourquoi": "Un plat très complet et très peu gras quand on choisit un morceau maigre et qu'on dégraisse le bouillon. Le bouillon qui reste fait une soupe pour un autre soir.",
+   "ingredients": [
+    {
+     "ing": "boeuf-a-mijoter",
+     "qte": 150,
+     "unite": "g",
+     "prep": "en gros morceaux"
+    },
+    {
+     "ing": "carotte",
+     "qte": 120,
+     "unite": "g",
+     "prep": "en tronçons"
+    },
+    {
+     "ing": "navet",
+     "qte": 0.5,
+     "unite": "piece",
+     "prep": "en quartiers"
+    },
+    {
+     "ing": "poireau",
+     "qte": 0.4,
+     "unite": "piece",
+     "prep": "en tronçons"
+    },
+    {
+     "ing": "celeri-branche",
+     "qte": 1,
+     "unite": "piece"
+    },
+    {
+     "ing": "pomme-de-terre",
+     "qte": 150,
+     "unite": "g"
+    },
+    {
+     "ing": "oignon-jaune",
+     "qte": 0.3,
+     "unite": "piece"
+    },
+    {
+     "ing": "clou-girofle",
+     "qte": 0.2,
+     "unite": "g"
+    },
+    {
+     "ing": "laurier",
+     "qte": 0.2,
+     "unite": "piece"
+    },
+    {
+     "ing": "thym-seche",
+     "qte": 0.2,
+     "unite": "g"
+    },
+    {
+     "ing": "bouillon-legumes-cube",
+     "qte": 0.3,
+     "unite": "piece"
+    },
+    {
+     "ing": "moutarde",
+     "qte": 10,
+     "unite": "g"
+    },
+    {
+     "ing": "cornichon",
+     "qte": 15,
+     "unite": "g"
+    },
+    {
+     "ing": "fleur-de-sel",
+     "qte": 1,
+     "unite": "g"
+    }
+   ],
+   "etapes": [
+    {
+     "texte": "Mets la viande dans un grand faitout, couvre largement d'eau froide et porte doucement à ébullition (15 minutes). Une mousse grise monte : enlève-la avec une louche ou une écumoire, plusieurs fois.",
+     "type": "actif",
+     "action": "mijoter",
+     "duree": 900
+    },
+    {
+     "texte": "Ajoute l'oignon piqué des clous de girofle (enfonce-les dans l'oignon), le laurier, le thym et les cubes de bouillon. Laisse frémir 2 heures, couvercle entrouvert. Ne fais pas bouillir fort, la viande deviendrait sèche.",
+     "type": "attente",
+     "action": "mijoter",
+     "duree": 7200
+    },
+    {
+     "texte": "Pendant ce temps, épluche les carottes, les navets et les pommes de terre. Coupe les carottes en tronçons de 5 cm, les navets en quartiers. Fends les poireaux, rince-les, attache-les en botte avec une ficelle si tu en as.",
+     "type": "actif",
+     "action": "eplucher"
+    },
+    {
+     "texte": "Ajoute les carottes, les navets, les poireaux et le céleri. Laisse cuire 30 minutes.",
+     "type": "attente",
+     "action": "mijoter",
+     "duree": 1800
+    },
+    {
+     "texte": "Cuis les pommes de terre à part dans de l'eau salée (25 minutes), sinon elles troublent le bouillon.",
+     "type": "actif",
+     "action": "cuire-eau",
+     "duree": 1500
+    },
+    {
+     "texte": "Sers la viande et les légumes dans un grand plat avec un peu de bouillon, la fleur de sel, la moutarde et les cornichons à côté. Le bouillon se boit en entrée dans une tasse.",
+     "type": "actif",
+     "action": "dresser"
+    },
+    {
+     "texte": "Boîtes du lendemain : viande et légumes avec un peu de bouillon. Le reste du bouillon se garde 3 jours au frigo pour une soupe.",
+     "type": "actif",
+     "action": "boites"
+    }
+   ]
   }
  ]
 }
